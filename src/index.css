@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+
+  @apply bg-black text-white;
+}
+
+
+.revealed-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  inset: 0;
+  background: radial-gradient(circle 400px at 50% 50%,
+      transparent 10%,
+      rgba(0, 0, 0, 0.98));
+  pointer-events: none;
+}
+
+/* .revealed-area-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  inset: 0;
+   background: radial-gradient(circle 140px at 50% 50%,
+      transparent 10%,
+      rgba(0, 0, 0, 0.98)); 
+  pointer-events: none;
+} */
+/* --- Default Style (for screens larger than 500px) --- */
+.revealed-area-2 {
+  position: absolute;
+  /* `inset: 0;` is a modern shorthand for top, right, bottom, and left set to 0. */
+  inset: 0;
+  background: radial-gradient(circle 140px at 50% 50%,
+      transparent 10%,
+      rgba(0, 0, 0, 0.9));
+  pointer-events: none;
+}
+
+@media (min-width: 450px) {
+  .revealed-area-2 {
+    background: radial-gradient(circle 200px at 50% 50%,
+        transparent 10%,
+        rgba(0, 0, 0, 0.9));
+  }
+}
+
+/* In your global CSS file, like index.css */
+.slick-dots li.slick-active button div {
+  background-color: #22c55e; /* This is Tailwind's green-500 */
+}
