@@ -6,13 +6,22 @@ import Slider from "react-slick";
 
 export const Testimonials = () => {
   var settings = {
-    dots: false,
-    infinite: false,
-    arrrow:false,
+    dots: true,
+    infinite: true,
+    arrows: false,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
     variableWidth: false,
+    adaptiveHeight: false,
+    dotsClass: "slick-dots custom-dots",
+    customPaging: function (i) {
+      return (
+        <div className="custom-dot mt-6">
+          <div className="dot-inner"></div>
+        </div>
+      );
+    },
     responsive: [
       {
         breakpoint: 900,
@@ -32,6 +41,21 @@ export const Testimonials = () => {
       },
     ],
   };
+  const renderStars = (rating) => {
+    const stars = [];
+    for (let i = 0; i < 5; i++) {
+      stars.push(
+        <img
+          key={i}
+          src="starSymbol.svg"
+          alt="star"
+          className={`w-4 h-4 ${i < rating ? "opacity-100" : "opacity-30"}`}
+        />
+      );
+    }
+    return stars;
+  };
+
   const clientTestimonials = [
     {
       image: "1.png",
@@ -39,9 +63,8 @@ export const Testimonials = () => {
       title: "Flawless Execution & Fast Response Times",
       feedback: (
         <>
-          <span className="font-bold  text-primary">Soft</span>buses
-          showcased excellent cooperation, timely delivery, and quick
-          responsiveness!
+          <span className="font-bold  text-primary">Soft</span>buses showcased
+          excellent cooperation, timely delivery, and quick responsiveness!
         </>
       ),
       focus: "Project Delivery & Communication",
@@ -91,23 +114,27 @@ export const Testimonials = () => {
         </>
       ),
       focus: "Design Precision & Reliability",
-      rating: 5,
+      rating:   4,
     },
   ];
 
   return (
-    <section className="~/xl:~mt-8/20">
+    <section className="~/xl:~mt-8/20 mb-20">
       <div className="w-full mx-auto max-w-[1660px] inline-block flex-col items-center justify-center ~/xl:~px-6/40   gap-y-8">
         <div className="w-full">
           <SectionHeading firstTitle="Client" secondTitle="Testimonials" />
         </div>
 
-        <div className="mt-8">
+        <div className="mt-8 md:mt-12">
           <Slider className="" {...settings}>
             {clientTestimonials.map((testimonial, index) => (
-              <div key={index} className="h-full px-2">
+              <div
+                key={index}
+                className="!flex px-2"
+                style={{ height: "auto" }}
+              >
                 <div
-                  className={`h-full flex flex-col items-center justify-between w-full border-[2px] border-white/50 gap-y-4  px-4 py-8 ${
+                  className={`flex flex-col items-center justify-between w-full border-[2px] border-white/50 gap-y-4 px-4 py-8 min-h-[400px] ${
                     index % 2 === 0 ? "bg-black" : "bg-[#2B6604]"
                   }`}
                 >
@@ -120,17 +147,18 @@ export const Testimonials = () => {
                   <span className="~sm/xl:~text-base/xl font-bold">
                     {testimonial.name}
                   </span>
-                  <div className="w-6">
-                    <img src="starSymbol.svg" alt="" />
+                  <div className="flex items-center gap-1">
+                    {renderStars(testimonial.rating)}
                   </div>
+
                   <span
-                    className={`~sm/xl:~text-xs/base font-bold flex-1 ${
+                    className={`~sm/xl:~text-xs/base font-bold  text-center ${
                       index % 2 === 0 ? "text-primary" : "text-white"
                     }`}
                   >
                     {testimonial.title}
                   </span>
-                  <p className="~sm/xl:~text-xs/base ">
+                  <p className="~sm/xl:~text-xs/base flex-1 ">
                     {testimonial.feedback}
                   </p>
                   <div className="flex items-center w-full justify-between">

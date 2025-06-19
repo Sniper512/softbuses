@@ -9,6 +9,10 @@ import { Projects } from "../components/Projects";
 import { TechGridDesktop } from "../components/TechGridDesktop";
 import { TechGridMobile } from "../components/TechGridMobile";
 import { Testimonials } from "../components/Testimonials";
+import { CoCreateSection } from "../components/CoCreateSection";
+import Extra from "../components/Extra";
+import {Footer} from "../components/Footer";
+import { Blogs } from "../components/Blogs";
 
 export const LandingPage = () => {
   return (
@@ -21,7 +25,10 @@ export const LandingPage = () => {
       <Projects />
       <TechGridDesktop />
       <TechGridMobile />
+      <Blogs/>  
       <Testimonials />
+      <CoCreateSection/>
+      <Footer/>
     </div>
   );
 };

@@ -37,9 +37,6 @@ export const TechGridDesktop = () => {
         <div className="relative">
           <div className="revealed-area z-50 "></div>
           <div className="grid grid-cols-5 gap-6 w-full ~md/xl:~max-w-[38rem]/[72rem] mx-auto  relative ">
-            {/* <div className=" absolute left-0 top-0 bg-gradient-to-r from-black via-transparent to-black w-full h-full z-99" /> */}
-            {/* <div className=" absolute left-0 top-0 bg-gradient-to-b from-black via-transparent to-black w-full h-full z-99" /> */}
-
             {tech.map((item, index) => (
               <div
                 key={index}

@@ -29,10 +29,8 @@ body {
       rgba(0, 0, 0, 0.98)); 
   pointer-events: none;
 } */
-/* --- Default Style (for screens larger than 500px) --- */
 .revealed-area-2 {
   position: absolute;
-  /* `inset: 0;` is a modern shorthand for top, right, bottom, and left set to 0. */
   inset: 0;
   background: radial-gradient(circle 140px at 50% 50%,
       transparent 10%,
@@ -48,7 +46,72 @@ body {
   }
 }
 
-/* In your global CSS file, like index.css */
-.slick-dots li.slick-active button div {
-  background-color: #22c55e; /* This is Tailwind's green-500 */
+
+/* Slider Slick */
+
+.slick-slider .slick-list {
+  overflow: hidden;
+}
+
+.slick-slider .slick-track {
+  display: flex !important;
+  align-items: stretch;
+}
+
+.slick-slider .slick-slide {
+  height: auto;
+  display: flex !important;
+  align-items: stretch;
+}
+
+.slick-slider .slick-slide>div {
+  height: 100%;
+  display: flex;
+}
+
+.custom-dots {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.custom-dots li {
+  width: 40px;
+  height: 40px;
+  margin: 0;
+}
+
+.custom-dot {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.custom-dot:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: scale(1.1);
+}
+
+.dot-inner {
+  width: 16px;
+  height: 16px;
+  background-color: rgba(255, 255, 255, 0.3);
+
+  transition: all 0.3s ease;
+}
+
+.slick-active .custom-dot {
+  border-color: #69FF00;
+  background-color: rgba(43, 102, 4, 0.1);
+}
+
+.slick-active .dot-inner {
+  background-color: #69FF00;
+  transform: scale(1.2);
 }
