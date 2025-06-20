@@ -16,11 +16,11 @@ import { Blogs } from "../components/Blogs";
 
 export const LandingPage = () => {
   return (
-    <div>
+    <div className=" ">
       <HeaderMobile />
       <HeaderDesktop />
       <Hero />
-      <About />
+       <About />
       <Services />
       <Projects />
       <TechGridDesktop />

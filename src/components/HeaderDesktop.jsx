@@ -10,8 +10,8 @@ export const HeaderDesktop = () => {
   };
 
   return (
-    <nav className="hidden md:block">
-      <header className="flex justify-between items-center px-10 lg:px-20 xl:px-36 py-6 ">
+    <nav className="hidden md:block ">
+      <header className=" flex justify-between items-center px-10 lg:px-20 xl:px-36 py-6 ">
         {/* Logo */}
         <div className="w-36">
           <img src="horizontalLogo.svg" className="w-full h-auto" alt="" />

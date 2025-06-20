@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 import fluid, { extract, screens, fontSize } from "fluid-tailwind";
+import { BiFontFamily } from "react-icons/bi";
 
 export default {
   content: {
@@ -10,6 +11,10 @@ export default {
     screens,
     fontSize,
     extend: {
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+        bebas: ["Bebas Neue", "sans-serif"],
+      },
       colors: {
         primary: "#69FF00",
       },
