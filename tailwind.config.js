@@ -19,7 +19,7 @@ export default {
         dark: "#121212",
       },
       backgroundImage: {
-        hero: "url('./public/heroBg.svg')",
+        hero: "url('/heroBg.svg')",
       },
     },
   },
