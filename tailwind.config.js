@@ -18,6 +18,9 @@ export default {
       colors: {
         primary: "#69FF00",
       },
+      backgroundImage: {
+        hero: "url('./public/heroBg.svg')",
+      },
     },
   },
   plugins: [fluid],

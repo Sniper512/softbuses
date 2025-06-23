@@ -2,7 +2,7 @@ import React from "react";
 
 export const Hero = () => {
   return (
-    <section className="mt-8 bg-black">
+    <section className="pt-40">
       <div className="w-full mx-auto max-w-[1660px] flex flex-col items-center justify-center  px-4 text-center gap-y-10 lg:gap-y-14">
         {/* Logo */}
         <div className="w-[110px] h-auto">
@@ -38,7 +38,7 @@ export const Hero = () => {
           </div>
         </div>
       </div>
-        <div className="mx-auto ~sm/xl:~mt-8/16 w-[75%] h-[1px] bg-white/20 " />
+      <div className="mx-auto ~sm/xl:~mt-8/16 w-[75%] h-[1px] bg-white/20 " />
     </section>
   );
 };

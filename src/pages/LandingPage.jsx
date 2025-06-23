@@ -11,7 +11,7 @@ import { TechGridMobile } from "../components/TechGridMobile";
 import { Testimonials } from "../components/Testimonials";
 import { CoCreateSection } from "../components/CoCreateSection";
 import Extra from "../components/Extra";
-import {Footer} from "../components/Footer";
+import { Footer } from "../components/Footer";
 import { Blogs } from "../components/Blogs";
 
 export const LandingPage = () => {
@@ -19,16 +19,18 @@ export const LandingPage = () => {
     <div className=" ">
       <HeaderMobile />
       <HeaderDesktop />
-      <Hero />
-       <About />
-      <Services />
+      <div className="bg-hero bg-cover bg-center bg-no-repeat">
+        <Hero />
+        <About />
+      </div>
+        <Services />
       <Projects />
       <TechGridDesktop />
       <TechGridMobile />
-      <Blogs/>  
+      <Blogs />
       <Testimonials />
-      <CoCreateSection/>
-      <Footer/>
+      <CoCreateSection />
+      <Footer />
     </div>
   );
 };
