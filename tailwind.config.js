@@ -1,6 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 import fluid, { extract, screens, fontSize } from "fluid-tailwind";
-import { BiFontFamily } from "react-icons/bi";
 
 export default {
   content: {
@@ -13,10 +12,11 @@ export default {
     extend: {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
-        bebas: ["Bebas Neue", "sans-serif"],
+        consolas: ["Consolas", "monospace"],
       },
       colors: {
         primary: "#69FF00",
+        dark: "#121212",
       },
       backgroundImage: {
         hero: "url('./public/heroBg.svg')",

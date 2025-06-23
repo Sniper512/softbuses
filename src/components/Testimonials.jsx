@@ -3,6 +3,7 @@ import { SectionHeading } from "./SectionHeading";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import SoftBuses from "./SoftBuses";
 
 export const Testimonials = () => {
   var settings = {
@@ -15,7 +16,7 @@ export const Testimonials = () => {
     variableWidth: false,
     adaptiveHeight: false,
     dotsClass: "slick-dots custom-dots",
-    customPaging: function (i) {
+    customPaging: function () {
       return (
         <div className="custom-dot mt-6">
           <div className="dot-inner"></div>
@@ -63,7 +64,7 @@ export const Testimonials = () => {
       title: "Flawless Execution & Fast Response Times",
       feedback: (
         <>
-          <span className="font-bold  text-primary">Soft</span>buses showcased
+          <SoftBuses /> showcased
           excellent cooperation, timely delivery, and quick responsiveness!
         </>
       ),
@@ -77,7 +78,7 @@ export const Testimonials = () => {
       title: "Exceptional Code & Collaboration",
       feedback: (
         <>
-          <span className="font-semibold text-primary">Soft</span>buses did an
+          <SoftBuses /> did an
           EXCEPTIONAL job with his professional work and code expertise. His
           attention to detail and timely delivery were spot on. Plus, his deep
           understanding and politeness made working together a breeze.
@@ -114,7 +115,7 @@ export const Testimonials = () => {
         </>
       ),
       focus: "Design Precision & Reliability",
-      rating:   4,
+      rating: 4,
     },
   ];
 
@@ -134,9 +135,8 @@ export const Testimonials = () => {
                 style={{ height: "auto" }}
               >
                 <div
-                  className={`flex flex-col items-center justify-between w-full border-[2px] border-white/50 gap-y-4 px-4 py-8 min-h-[400px] ${
-                    index % 2 === 0 ? "bg-black" : "bg-[#2B6604]"
-                  }`}
+                  className={`flex flex-col items-center justify-between w-full border-[2px] border-white/50 gap-y-4 px-4 py-8 min-h-[400px] ${index % 2 === 0 ? "bg-black" : "bg-[#2B6604]"
+                    }`}
                 >
                   <div className=" w-20 h-auto flex items-center  justify-center  rounded-full border-2 object-cover object-top border-primary overflow-hidden">
                     <img
@@ -152,9 +152,8 @@ export const Testimonials = () => {
                   </div>
 
                   <span
-                    className={`~sm/xl:~text-xs/base font-bold  text-center ${
-                      index % 2 === 0 ? "text-primary" : "text-white"
-                    }`}
+                    className={`~sm/xl:~text-xs/base font-bold  text-center ${index % 2 === 0 ? "text-primary" : "text-white"
+                      }`}
                   >
                     {testimonial.title}
                   </span>
@@ -167,11 +166,10 @@ export const Testimonials = () => {
                     </span>
                     <span>
                       <img
-                        src={`${
-                          index % 2 === 0
-                            ? "commaSymbolGreen.svg"
-                            : "commaSymbolWhite.svg"
-                        }`}
+                        src={`${index % 2 === 0
+                          ? "commaSymbolGreen.svg"
+                          : "commaSymbolWhite.svg"
+                          }`}
                         alt=""
                       />
                     </span>

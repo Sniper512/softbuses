@@ -23,7 +23,7 @@ export const LandingPage = () => {
         <Hero />
         <About />
       </div>
-        <Services />
+      <Services />
       <Projects />
       <TechGridDesktop />
       <TechGridMobile />

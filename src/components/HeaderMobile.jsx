@@ -32,7 +32,7 @@ export const HeaderMobile = () => {
     <nav
       className="md:hidden fixed top-0 left-0 w-full z-50"
       style={{
-        background: `rgba(0,0,0,${bgOpacity})`,
+        background: `rgba(18, 18, 18, ${bgOpacity})`,
         transition: "background 0.2s",
       }}
     >

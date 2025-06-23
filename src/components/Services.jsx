@@ -7,7 +7,7 @@ const Services = () => {
     return (
       <div className={`flex items-center justify-center  `}>
         <div className="relative  ">
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 relative px-5 py-3 bg-black  text-primary text-lg font-bold ">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 relative px-5 py-3 bg-dark text-primary text-lg font-bold ">
             {servicesAvailable.map((item, index) => (
               <div key={index} className="relative group">
                 <div className="absolute top-2 left-2 w-full h-full bg-primary group-hover:bg-white transition-colors duration-300"></div>
@@ -42,8 +42,7 @@ const Services = () => {
         <div>{sections()}</div>
         {/* button */}
         <div className="relative group mt-5 md:mt-8">
-          <div className="absolute top-1 left-1 w-full h-full bg-primary group-hover:bg-white transition-colors duration-300"></div>
-          <button className="relative ~sm/xl:~px-5/16 py-3  w-full bg-black group-hover:bg-primary group-hover:border-black border-2 border-white text-primary group-hover:text-black text-lg font-bold transition-colors duration-300  cursor-pointer">
+          <button className="relative ~sm/xl:~px-5/16 py-3  w-full group-hover:bg-primary group-hover:border-dark border-2 border-white text-primary group-hover:text-dark text-lg font-bold transition-colors duration-300 cursor-pointer shadow-[4px_4px_0_0_#69FF00] hover:shadow-[4px_4px_0_0_#fff]">
             Get a Quote
           </button>
         </div>

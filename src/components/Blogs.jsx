@@ -1,5 +1,6 @@
 import React from "react";
 import { SectionHeading } from "./SectionHeading";
+import SoftBuses from "./SoftBuses";
 
 export const Blogs = () => {
   return (
@@ -23,9 +24,9 @@ export const Blogs = () => {
               <div className="mt-3">
                 <p className="font-medium ~sm/xl:~text-sm/xl self-start text-left ">
                   <span className="text-primary"> "</span>How{" "}
-                  <span className="text-primary">Soft</span>Buses Is
+                  <SoftBuses fontSize="~sm/xl:~text-base/2xl" /> Is
                   <span className="text-primary">
-                    Engineering Intelligence{" "}
+                    {" "}Engineering Intelligence{" "}
                     <span className="text-primary">"</span>
                   </span>{" "}
                   Into Everyday Digital Life
@@ -36,7 +37,7 @@ export const Blogs = () => {
                     could grow with you?
                   </p>
                   <p className="text-xs font-light">
-                    At SoftBuses, we don't just code—we engineer intelligent
+                    <SoftBuses fontSize="text-sm" />, we don't just code—we engineer intelligent
                     ecosystems. We're moving beyond traditional development to
                     build digital organisms: systems that learn, adapt, and
                     evolve with your business.
@@ -56,7 +57,7 @@ export const Blogs = () => {
                   to digital partners. Your website is no longer a static
                   presence—it's an active contributor. Your apps aren't just
                   tools—they're team members. <br />
-                  That's why at SoftBuses, we embed every project with a layer
+                  That's why at <SoftBuses fontSize="text-xs" />, we embed every project with a layer
                   of: <br />
                   Behavioral intelligence (AI that adapts) <br />
                   Realtime evolution (live data flow, A/B engines) <br />
@@ -82,8 +83,8 @@ export const Blogs = () => {
               <div className="w-[90%] mx-auto flex flex-col items-start border-[1px] border-primary px-4 py-6 gap-y-5 mt-6">
                 <p className="text-xs leading-4">
 
-                That's what <span className="text-primary">Soft</span>Buses is about. <br className="hidden md:block" /> Not just shipping
-                software—but shaping the next generation of <span className="text-primary">living technology.</span>
+                  That's what <SoftBuses fontSize="text-xs" /> is about. <br className="hidden md:block" /> Not just shipping
+                  software—but shaping the next generation of <span className="text-primary">living technology.</span>
                 </p>
               </div>
             </div>

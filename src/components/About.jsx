@@ -1,5 +1,5 @@
-import React from "react";
 import { SectionHeading } from "./SectionHeading";
+import SoftBuses from "./SoftBuses";
 
 export const About = () => {
   return (
@@ -8,7 +8,7 @@ export const About = () => {
         <SectionHeading firstTitle="About" secondTitle="Us" />
         <div className="w-full flex items-center justify-center px-4 ">
           <p className="w-full md:max-w-3xl xl:max-w-4xl px-4 py-6 border border-primary text-white text-base md:text-lg">
-            <span className="text-primary font-semibold">Soft</span> Buses is a dynamic
+            <SoftBuses /> is a dynamic
             startup composed of incredibly passionate and exceptionally talented
             software engineers. They harness the most advanced and innovative
             cutting-edge technologies to create web and mobile applications that

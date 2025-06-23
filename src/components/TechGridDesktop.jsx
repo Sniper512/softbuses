@@ -16,7 +16,7 @@ export const TechGridDesktop = () => {
         revealedArea.style.background = `radial-gradient(
           circle 400px at ${gradientCenterX}% ${gradientCenterY}%,
           transparent 10%,
-          rgba(0, 0, 0, 0.98)
+          rgba(18, 18, 18, 0.98)
         )`;
       }
     };
