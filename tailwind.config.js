@@ -25,21 +25,17 @@ export default {
         "circle-pulse": {
           "0%, 100%": {
             opacity: "0.1",
-            transform: "translate(0, 0)",
           },
           "50%": {
             opacity: "1",
-            transform: "translate(10px, -10px)",
           },
         },
         "ellipse-pulse": {
           "0%, 100%": {
             opacity: "0.1",
-            transform: "translate(0, 0)",
           },
           "50%": {
             opacity: "1",
-            transform: "translate(20px, -20px)",
           },
         },
       },

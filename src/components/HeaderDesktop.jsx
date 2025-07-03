@@ -14,23 +14,36 @@ export const HeaderDesktop = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId.toLowerCase());
+    if (element) {
+      const headerHeight = 80; // Approximate header height
+      const elementPosition = element.offsetTop - headerHeight;
+
+      window.scrollTo({
+        top: elementPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   // Interpolate values based on scroll
   const maxScroll = 300;
   const progress = scroll / maxScroll;
   const bgOpacity = 0.85 * progress;
-  const logoMin = 120;
+  const logoMin = 110;
   const logoMax = 144;
   const logoWidth = logoMax - (logoMax - logoMin) * progress;
-  const padMin = 12;
+  const padMin = 8;
   const padMax = 24;
   const padY = padMax - (padMax - padMin) * progress;
-  const btnMin = 0.85;
+  const btnMin = 0.7;
   const btnMax = 1;
   const btnScale = btnMax - (btnMax - btnMin) * progress;
 
   return (
     <nav
-      className="hidden md:block fixed top-0 left-0 w-full z-50"
+      className="hidden md:block fixed top-0 left-0 w-full z-[999]"
       style={{
         background: `rgba(18, 18, 18, ${bgOpacity})`,
         transition: "background 0.2s",
@@ -58,6 +71,7 @@ export const HeaderDesktop = () => {
           {links.map((link, index) => (
             <button
               key={index}
+              onClick={() => scrollToSection(link)}
               className=" text-white font-extralight tracking-widest hover:text-primary cursor-pointer"
             >
               {link}

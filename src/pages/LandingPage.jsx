@@ -14,25 +14,35 @@ import Extra from "../components/Extra";
 import { Footer } from "../components/Footer";
 import { Blogs } from "../components/Blogs";
 import HeroBg from "../components/HeroBg";
+import { ScrollToTopButton } from "../components/ScrollToTopButton";
 
 export const LandingPage = () => {
   return (
-    <div className=" ">
+    <div className="">
       <HeaderMobile />
       <HeaderDesktop />
-      <div className="relative">
+      <div id="home" className="relative">
         <HeroBg />
         <Hero />
         <About />
       </div>
-      <Services />
-      <Projects />
-      <TechGridDesktop />
-      <TechGridMobile />
+      <div id="services">
+        <Services />
+      </div>
+      <div id="projects">
+        <Projects />
+      </div>
+      <div id="technologies">
+        <TechGridDesktop />
+        <TechGridMobile />
+      </div>
       <Blogs />
       <Testimonials />
       <CoCreateSection />
       <Footer />
+      
+      {/* Scroll to Top Button */}
+      <ScrollToTopButton />
     </div>
   );
 };
