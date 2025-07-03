@@ -13,13 +13,15 @@ import { CoCreateSection } from "../components/CoCreateSection";
 import Extra from "../components/Extra";
 import { Footer } from "../components/Footer";
 import { Blogs } from "../components/Blogs";
+import HeroBg from "../components/HeroBg";
 
 export const LandingPage = () => {
   return (
     <div className=" ">
       <HeaderMobile />
       <HeaderDesktop />
-      <div className="bg-hero bg-cover bg-center bg-no-repeat">
+      <div className="relative">
+        <HeroBg />
         <Hero />
         <About />
       </div>

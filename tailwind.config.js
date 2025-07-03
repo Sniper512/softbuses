@@ -21,6 +21,32 @@ export default {
       backgroundImage: {
         hero: "url('/heroBg.svg')",
       },
+      keyframes: {
+        "circle-pulse": {
+          "0%, 100%": {
+            opacity: "0.1",
+            transform: "translate(0, 0)",
+          },
+          "50%": {
+            opacity: "1",
+            transform: "translate(10px, -10px)",
+          },
+        },
+        "ellipse-pulse": {
+          "0%, 100%": {
+            opacity: "0.1",
+            transform: "translate(0, 0)",
+          },
+          "50%": {
+            opacity: "1",
+            transform: "translate(20px, -20px)",
+          },
+        },
+      },
+      animation: {
+        "circle-pulse": "circle-pulse 3s 1.5s ease-in-out infinite",
+        "ellipse-pulse": "ellipse-pulse 3s ease-in-out infinite",
+      },
     },
   },
   plugins: [fluid],

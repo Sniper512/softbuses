@@ -3,7 +3,7 @@ import SoftBuses from "./SoftBuses";
 
 export const Hero = () => {
   return (
-    <section className="pt-32">
+    <section className="pt-32 relative z-[1]">
       <div className="w-full mx-auto max-w-[1660px] flex flex-col items-center justify-center  px-4 text-center gap-y-10 lg:gap-y-14">
         {/* Logo */}
         <div className="w-[110px] h-auto">

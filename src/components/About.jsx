@@ -3,7 +3,7 @@ import SoftBuses from "./SoftBuses";
 
 export const About = () => {
   return (
-    <section className="~/xl:~mt-8/20">
+    <section className="~/xl:~mt-8/20 relative z-[1]">
       <div className="w-full mx-auto max-w-[1660px] flex flex-col items-center justify-center ~/xl:~px-6/40   gap-y-8">
         <SectionHeading firstTitle="About" secondTitle="Us" />
         <div className="w-full flex items-center justify-center px-4 ">
