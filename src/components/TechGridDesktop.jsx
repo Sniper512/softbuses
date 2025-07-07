@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { tech } from "./arrays";
 import { SectionHeading } from "./SectionHeading";
 

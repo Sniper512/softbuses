@@ -14,6 +14,9 @@ export default {
         poppins: ["Poppins", "sans-serif"],
         consolas: ["Consolas", "monospace"],
       },
+      fontSize: {
+        xxs: ["0.625rem", { lineHeight: "1rem" }],
+      },
       colors: {
         primary: "#69FF00",
         dark: "#121212",

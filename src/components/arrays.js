@@ -80,18 +80,6 @@ export const servicesAvailable = [
   },
 ];
 
-export const projects = [
-  { icon: "empoweredLearningLogo.svg", title: "Empowered Learnings" },
-  { icon: "empoweredLearningLogo.svg", title: "Empowered Learnings" },
-  { icon: "empoweredLearningLogo.svg", title: "Empowered Learnings" },
-  { icon: "empoweredLearningLogo.svg", title: "Empowered Learnings" },
-  { icon: "empoweredLearningLogo.svg", title: "Empowered Learnings" },
-  { icon: "empoweredLearningLogo.svg", title: "Empowered Learnings" },
-  { icon: "empoweredLearningLogo.svg", title: "Empowered Learnings" },
-  { icon: "empoweredLearningLogo.svg", title: "Empowered Learnings" },
-  { icon: "empoweredLearningLogo.svg", title: "Empowered Learnings" },
-];
-
 export const tech = [
   // Row a
   { icon: "1a", icon2: "greenTech/1a", text: "Generative AI" },
@@ -135,4 +123,3 @@ export const tech = [
   { icon: "4f", icon2: "greenTech/4f", text: "tailwind css" },
   { icon: "5f", icon2: "greenTech/5f", text: "Puppeteer" },
 ];
-

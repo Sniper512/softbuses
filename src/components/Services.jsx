@@ -5,9 +5,9 @@ import { servicesAvailable } from "./arrays";
 const Services = () => {
   const sections = () => {
     return (
-      <div className={`flex items-center justify-center  `}>
+      <div id="services" className={`flex items-center justify-center z-[1] relative`}>
         <div className="relative  ">
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 relative px-5 py-3 bg-dark text-primary text-lg font-bold ">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 relative px-5 py-3 text-primary text-lg font-bold ">
             {servicesAvailable.map((item, index) => (
               <div key={index} className="relative group">
                 <div className="absolute top-2 left-2 w-full h-full bg-primary group-hover:bg-white transition-colors duration-300"></div>

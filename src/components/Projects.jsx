@@ -1,113 +1,243 @@
-import React from "react";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 import { SectionHeading } from "./SectionHeading";
-import { projects } from "./arrays";
+
+const projects = [
+  {
+    logo: "/projects/empoweredLearningsLogo.svg",
+    title: "Empowered Learnings",
+    mobile: "/projects/empoweredLearningsMobile.svg",
+    laptop: "/projects/empoweredLearningsLaptop.svg",
+    facilities: [
+      "Live & Recorded Learning Options",
+      "Expert Tutors & Life Coaches",
+      "Personalized Learning Experience",
+      "Built with Modern Web Technologies",
+      "Secure Payments & Easy Access",
+      "Fast, Scalable, and Reliable Hosting",
+    ],
+  },
+  {
+    logo: "/projects/mamoonVaanLogo.svg",
+    title: "Mamoon Vaan",
+    mobile: "/projects/mamoonVaanMobile.svg",
+    laptop: "/projects/mamoonVaanLaptop.svg",
+    facilities: [
+      "Premium Vehicle Listings",
+      "Advanced Search & Filtering",
+      "Secure Payment Processing",
+      "Real-time Chat Support",
+      "Mobile-First Design",
+      "Fast Loading & SEO Optimized",
+    ],
+  },
+  {
+    logo: "/projects/shoperzLogo.svg",
+    title: "Shoperz",
+    mobile: "/projects/shoperzMobile.svg",
+    laptop: "/projects/shoperzLaptop.svg",
+    facilities: [
+      "Multi-vendor Marketplace",
+      "Secure Payment Gateway",
+      "Real-time Inventory Management",
+      "Advanced Analytics Dashboard",
+      "Mobile App Integration",
+      "Cloud-based Infrastructure",
+    ],
+  },
+  {
+    logo: "/projects/immersalynxLogo.svg",
+    title: "Immersalynx",
+    mobile: "/projects/immersalynxMobile.svg",
+    laptop: "/projects/immersalynxLaptop.svg",
+    facilities: [
+      "Immersive VR/AR Experiences",
+      "Cross-platform Compatibility",
+      "Real-time 3D Rendering",
+      "Interactive User Interface",
+      "High-performance Graphics",
+      "Scalable Cloud Architecture",
+    ],
+  },
+  {
+    logo: "/projects/mRamirezLogo.svg",
+    title: "M Ramirez",
+    mobile: "/projects/mRamirezMobile.svg",
+    laptop: "/projects/mRamirezLaptop.svg",
+    facilities: [
+      "Customizable Learning Paths",
+      "Expert Tutors & Mentors",
+      "Interactive Learning Tools",
+      "Real-time Progress Tracking",
+      "Flexible Scheduling Options",
+      "Secure Payment Processing",
+    ],
+  }
+];
+
 
 export const Projects = () => {
-  const facilities = [
-    "Live & Recorded Learning Options",
-    "Expert Tutors & Life Coaches",
-    "Personalized Learning Experience",
-    "Built with Modern Web Technologies",
-    "Secure Payments & Easy Access",
-    "Fast, Scalable, and Reliable Hosting",
-  ];
-  var settings = {
-    dots: false,
-    arrows: false,
-    autoplay: true,
-    pauseOnHover: false,
-    autoplaySpeed: 1000,
-    speed: 1000,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    cssEase: "linear",
-    responsive: [
-      {
-        breakpoint: 1440, // From 900 to 1100
-        settings: {
-          slidesToShow: 4,
-        },
-      },
-      {
-        breakpoint: 1100, // From 768 to 900
-        settings: {
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 600, // Below 768
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-    ],
+  const [selectedProject, setSelectedProject] = useState(0);
+
+  const handleProjectSelect = (index) => {
+    if (index !== selectedProject) {
+      setSelectedProject(index);
+    }
   };
+
   return (
-    <section className="~/xl:~mt-8/20 mb-20">
-      <div className="w-full mx-auto max-w-[1660px]  ~/xl:~px-6/40    ">
+    <section id="projects" className="~/xl:~mt-8/20 mb-20 z-[1] relative">
+      <div className="w-full mx-auto max-w-[1660px] ~/xl:~px-6/40">
         <div>
           <SectionHeading firstTitle="Our" secondTitle="Projects" />
         </div>
-        {/* First Part */}
-        <div className="mt-8">
-          <Slider className="" {...settings}>
-            {projects.map((project, index) => (
-              <div className="px-2 md:px-6 " key={index}>
-                <div className=" flex  flex-col items-center justify-center p-4  bg-white/10 border-2 border-primary/60 rounded-lg space-y-2 hover:border-primary transition-colors duration-300 ease-in-out ">
-                  <div className="~sm/xl:~w-7/12  h-auto  mx-auto">
-                    <img src={project.icon} className="w-full h-auto" />
-                  </div>
-                  <h3 className="~sm/xl:~text-xs/base text-center text-[#A98BFF]">
-                    {project.title}
-                  </h3>
-                </div>
-              </div>
-            ))}
-          </Slider>
-        </div>
-        <div className="mx-auto ~sm/xl:~mt-8/16 w-[75%] h-[1px] bg-white/20 " />
+      </div>
 
-        {/* Second Part */}
-        <div className=" ~sm/xl:~mt-8/20 bg-[#1B1B1B]  w-full flex flex-col  md:flex-row-reverse  items-center justify-between ~sm/xl:~py-6/12 border-primary  border border-opacity-45  gap-y-12 ~md/xl:~px-6/12 ">
+      {/* First Part */}
+      <div className="w-full mx-auto relative overflow-hidden before:absolute before:top-0 before:left-0 before:bottom-0 before:w-1/12 before:bg-gradient-to-r before:from-dark before:to-dark/0 before:z-[1] after:absolute after:top-0 after:right-0 after:bottom-0 after:w-1/12 after:bg-gradient-to-l after:from-dark after:to-dark/0 after:z-[1]">
+        <div className="mt-8 flex items-center justify-center ~gap-4/8 w-max mx-auto ~py-2/4">
+          {projects.map((project, index) => (
+            <button
+              key={index}
+              onClick={() => handleProjectSelect(index)}
+              className={`flex flex-col items-center justify-center py-3 ~px-4/7 border-2 rounded-xl space-y-2 transition-all duration-300 ease-in-out transform ${selectedProject === index
+                ? 'border-primary bg-white/10 shadow-lg'
+                : 'bg-white/30 border-primary/30 hover:border-primary hover:bg-white/0'
+                }`}
+            >
+              <div className="~sm/xl:~h-8/12 w-auto mx-auto">
+                <img src={project.logo} className="h-full w-auto" alt={project.title} />
+              </div>
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Second Part */}
+      <div className="w-full mx-auto max-w-[1660px] ~/xl:~px-6/40">
+        <div className="~sm/xl:~mt-8/20 w-full flex flex-col md:flex-row-reverse items-center justify-between ~sm/xl:~py-6/12 border-primary border border-opacity-45 gap-y-12 ~md/xl:~px-6/12 relative">
           {/* Image Section */}
-          <div className="  w-full md:w-[55%] xl:w-[65%] flex items-center justify-center md:justify-end">
-            <div className="~sm/lg:~w-[23.4rem]/[40rem] h-auto ">
-              <img src="mobileAndLaptop.svg" alt="" className="w-full h-auto" />
+          <div className="w-full md:w-[55%] xl:w-[65%] flex items-center justify-center md:justify-end">
+            <div className="~sm/lg:~w-[23.4rem]/[40rem] h-auto relative project-image-container">
+              {/* Invisible placeholder for height stability */}
+              <div className="relative w-full h-full opacity-0 pointer-events-none">
+                <img
+                  src={projects[selectedProject].laptop}
+                  alt=""
+                  className="w-full h-auto"
+                />
+                <img
+                  src={projects[selectedProject].mobile}
+                  alt=""
+                  className="absolute bottom-0 right-0 h-2/3 w-auto"
+                />
+              </div>
+
+              {/* Visible animated content */}
+              <div className="absolute inset-0">
+                <AnimatePresence mode="wait" initial={false}>
+                  <motion.div
+                    key={`images-${selectedProject}`}
+                    className="relative w-full h-full"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.5, ease: "easeInOut" }}
+                  >
+                    <img
+                      src={projects[selectedProject].laptop}
+                      alt={`${projects[selectedProject].title} laptop view`}
+                      className="w-full h-auto"
+                    />
+                    <motion.img
+                      src={projects[selectedProject].mobile}
+                      alt={`${projects[selectedProject].title} mobile view`}
+                      className="absolute bottom-0 right-0 h-2/3 w-auto"
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.5, delay: 0.1, ease: "easeInOut" }}
+                    />
+                  </motion.div>
+                </AnimatePresence>
+              </div>
             </div>
           </div>
           {/* Text Section */}
-          <div className="flex w-full  h-full md:w-[45%] xl:w-[35%] flex-col items-center md:items-start  justify-between gap-y-3 ">
-            <div className="flex items-center justify-start gap-x-5">
-              <div>
-                <img src="empoweredLearningLogo.svg" alt="" />
+          <div className="flex w-full h-full md:w-[45%] xl:w-[35%] flex-col items-center md:items-start justify-between gap-y-3 relative">
+            {/* Invisible placeholder for height stability */}
+            <div className="w-full opacity-0 pointer-events-none">
+              <div className="flex items-center justify-start gap-x-5 mb-3">
+                <div>
+                  <img src={projects[selectedProject].logo} alt="" />
+                </div>
+                <h3 className="~sm/xl:~text-lg/3xl font-semibold">
+                  {projects[selectedProject].title}
+                </h3>
               </div>
-              <h3 className="~sm/xl:~text-lg/3xl  font-semibold">
-                Empower<span className="text-[#7C4DFF] mr-2">Ed</span> Learnings
-              </h3>
+              <ul>
+                {projects[selectedProject].facilities.map((facility, index) => (
+                  <li
+                    key={`placeholder-${selectedProject}-${index}`}
+                    className="text-sm md:text-base xl:text-[17px] font-medium flex items-center justify-start gap-x-5 ~sm/xl:~mt-1.5/3.5"
+                  >
+                    <div className="relative h-5 w-5 flex-shrink-0">
+                      <div className="absolute top-[3px] left-[3px] h-4 w-4 bg-primary"></div>
+                      <div className="absolute top-0 left-0 h-4 w-4 bg-black border-[2px] border-white"></div>
+                    </div>
+                    <span>{facility}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <ul>
-              {facilities.map((facility, index) => (
-                <li
-                  key={index}
-                  className="text-sm md:text-base xl:text-[17px] font-medium  flex  items-center justify-start  gap-x-5 ~sm/xl:~mt-1.5/3.5 "
-                >
-                  <div className="relative h-5 w-5">
-                    <div className="absolute top-[3px] left-[3px] h-4 w-4 bg-primary"></div>
 
-                    <div className="absolute top-0 left-0 h-4 w-4 bg-black border-[2px] border-white"></div>
+            {/* Visible animated content */}
+            <div className="absolute inset-0">
+              <AnimatePresence mode="wait" initial={false}>
+                <motion.div
+                  key={`content-${selectedProject}`}
+                  className="w-full"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.4, ease: "easeInOut" }}
+                >
+                  <div className="flex items-center justify-start gap-x-5 mb-3">
+                    <div>
+                      <img src={projects[selectedProject].logo} alt={projects[selectedProject].title} />
+                    </div>
+                    <h3 className="~sm/xl:~text-lg/3xl font-semibold">
+                      {projects[selectedProject].title}
+                    </h3>
                   </div>
-                  <span>{facility}</span>
-                </li>
-              ))}
-            </ul>
+                  <ul>
+                    {projects[selectedProject].facilities.map((facility, index) => (
+                      <motion.li
+                        key={`${selectedProject}-${index}`}
+                        className="text-sm md:text-base xl:text-[17px] font-medium flex items-center justify-start gap-x-5 ~sm/xl:~mt-1.5/3.5"
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{
+                          duration: 0.4,
+                          delay: 0.2 + index * 0.1,
+                          ease: "easeInOut"
+                        }}
+                      >
+                        <div className="relative h-5 w-5 flex-shrink-0">
+                          <div className="absolute top-[3px] left-[3px] h-4 w-4 bg-primary"></div>
+                          <div className="absolute top-0 left-0 h-4 w-4 bg-black border-[2px] border-white"></div>
+                        </div>
+                        <span>{facility}</span>
+                      </motion.li>
+                    ))}
+                  </ul>
+                </motion.div>
+              </AnimatePresence>
+            </div>
           </div>
         </div>
         <div className="mx-auto ~sm/xl:~mt-8/16 w-[75%] h-[1px] bg-white/20 " />
       </div>
-    </section>
+    </section >
   );
 };

@@ -1,5 +1,3 @@
-import React from "react";
-
 import { HeaderMobile } from "../components/HeaderMobile";
 import { HeaderDesktop } from "../components/HeaderDesktop";
 import { Hero } from "../components/Hero";
@@ -15,6 +13,7 @@ import { Footer } from "../components/Footer";
 import { Blogs } from "../components/Blogs";
 import HeroBg from "../components/HeroBg";
 import { ScrollToTopButton } from "../components/ScrollToTopButton";
+import ProjectsBg from "../components/ProjectsBg";
 
 export const LandingPage = () => {
   return (
@@ -26,10 +25,9 @@ export const LandingPage = () => {
         <Hero />
         <About />
       </div>
-      <div id="services">
+      <div className="relative">
+        <ProjectsBg />
         <Services />
-      </div>
-      <div id="projects">
         <Projects />
       </div>
       <div id="technologies">
@@ -40,7 +38,7 @@ export const LandingPage = () => {
       <Testimonials />
       <CoCreateSection />
       <Footer />
-      
+
       {/* Scroll to Top Button */}
       <ScrollToTopButton />
     </div>
