@@ -4,12 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
+    "animejs": "^4.0.2",
     "framer-motion": "^12.23.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
@@ -25,7 +26,7 @@
     "autoprefixer": "^10.4.21",
     "eslint": "^9.25.0",
     "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-re`fr`esh": "^0.4.19",
+    "eslint-plugin-react-refresh": "^0.4.19",
     "fluid-tailwind": "^1.0.4",
     "globals": "^16.0.0",
     "postcss": "^8.5.5",

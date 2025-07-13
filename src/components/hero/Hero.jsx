@@ -1,13 +1,16 @@
-import React from "react";
-import SoftBuses from "./SoftBuses";
+import SoftBuses from "../SoftBuses";
+import HeroLogoSection from "./HeroLogoSection";
 
 export const Hero = () => {
   return (
-    <section className="pt-32 relative z-[1]">
-      <div className="w-full mx-auto max-w-[1660px] flex flex-col items-center justify-center  px-4 text-center gap-y-10 lg:gap-y-14">
+    <section className="pt-28 md:pt-32 relative z-[1]">
+      <div className="w-full mx-auto max-w-[1660px] flex flex-col items-center justify-center  px-4 text-center gap-y-6 lg:gap-y-12">
         {/* Logo */}
-        <div className="w-[110px] h-auto">
+        {/* <div className="w-[110px] h-auto">
           <img src="verticalLogo.svg" alt="" className="w-full h-auto" />
+        </div> */}
+        <div className="w-32 lg:w-40 h-auto">
+          <HeroLogoSection />
         </div>
         {/* Main Text */}
         <div className="">
@@ -37,7 +40,7 @@ export const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="mx-auto ~sm/xl:~mt-8/16 w-[75%] h-[1px] bg-white/20 " />
+      {/* <div className="mx-auto ~sm/xl:~mt-8/16 w-[75%] h-[1px] bg-white/20 " /> */}
     </section>
   );
 };
