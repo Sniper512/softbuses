@@ -4,7 +4,7 @@ import { SectionHeading } from "./SectionHeading";
 
 export const TechGridMobile = () => {
   return (
-    <section className=" mx-auto p-6">
+    <section id="technologies" className="mx-auto pt-20 p-6">
       <div className="md:hidden flex flex-col gap-y-12   ">
         <SectionHeading firstTitle="Our" secondTitle="Technologies" />
         <div className="relative">

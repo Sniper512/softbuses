@@ -14,32 +14,17 @@ export const HeaderMobile = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId.toLowerCase());
-    if (element) {
-      const headerHeight = 80; // Approximate header height
-      const elementPosition = element.offsetTop - headerHeight;
-
-      window.scrollTo({
-        top: elementPosition,
-        behavior: "smooth",
-      });
-    }
-    setIsOpen(false); // Close menu after navigation
-  };
-
   // Interpolate values based on scroll
   const maxScroll = 200;
   const progress = scroll / maxScroll;
-  const bgOpacity = 0.85 * progress;
   const logoMin = 120; // px (w-22)
-  const logoMax = 144; // px (w-36)
+  const logoMax = 132; // px (w-36)
   const logoWidth = logoMax - (logoMax - logoMin) * progress;
-  const padMin = 24; // px (py-2)
-  const padMax = 36; // px (py-9)
+  const padMin = 16; // px (py-2)
+  const padMax = 24; // px (py-9)
   const padY = padMax - (padMax - padMin) * progress;
-  const toggleBtnMin = 0.7; // Scale for toggle button
-  const toggleBtnMax = 1; // Scale for toggle button
+  const toggleBtnMin = 0.6; // Scale for toggle button
+  const toggleBtnMax = 0.9; // Scale for toggle button
   const toggleBtnScale = toggleBtnMax - (toggleBtnMax - toggleBtnMin) * progress;
 
   const toggleMenu = () => {
@@ -48,14 +33,13 @@ export const HeaderMobile = () => {
 
   return (
     <>
-      <nav
-        className="md:hidden fixed top-0 left-0 w-full z-50"
+      <header
+        className="md:hidden fixed top-0 left-0 w-full z-50 bg-gradient-to-b from-black"
         style={{
-          background: `rgba(18, 18, 18, ${bgOpacity})`,
           transition: "background 0.2s",
         }}
       >
-        <header
+        <div
           className="flex justify-between items-center px-6"
           style={{
             paddingTop: padY,
@@ -70,8 +54,9 @@ export const HeaderMobile = () => {
           <button className="w-9" onClick={toggleMenu}>
             <img src="menuIcon.svg" className="w-full h-auto" alt="Menu Icon" style={{ transform: `scale(${toggleBtnScale})`, transition: "transform 0.2s" }} />
           </button>
-        </header>
-      </nav>
+        </div>
+        <hr className="h-[1px] border-0 w-full bg-gradient-to-r from-primary/0 via-primary/30 to-primary/0" />
+      </header>
 
       {/* Mobile Menu Overlay */}
       <div
@@ -89,13 +74,14 @@ export const HeaderMobile = () => {
           <div className="overflow-hidden">
             <nav className="flex flex-col space-y-6 p-6 pt-24">
               {links.map((link, index) => (
-                <button
+                <a
                   key={index}
-                  onClick={() => scrollToSection(link)}
+                  href={`#${link.toLowerCase()}`}
+                  onClick={() => setIsOpen(false)}
                   className="text-left text-white text-lg font-light tracking-wider hover:text-primary transition-colors duration-200 py-2"
                 >
                   {link}
-                </button>
+                </a>
               ))}
             </nav>
           </div>

@@ -18,9 +18,9 @@ import ProjectsBg from "../components/ProjectsBg";
 export const LandingPage = () => {
   return (
     <div className="">
-      <HeaderMobile />
-      <HeaderDesktop />
       <div id="home" className="relative">
+        <HeaderMobile />
+        <HeaderDesktop />
         <HeroBg />
         <Hero />
         <About />

@@ -29,7 +29,7 @@ export const TechGridDesktop = () => {
   }, []);
 
   return (
-    <section className=" mx-auto  hidden md:flex  max-w-[1660px]">
+    <section className="pt-20 mx-auto hidden md:flex max-w-[1660px]">
       <div className="flex flex-col items-start justify-center gap-y-12  mx-auto  ~md/xl:~px-[3.1rem]/[10rem]">
         <div className="px-0 ">
           <SectionHeading firstTitle="Our" secondTitle="Technologies" />

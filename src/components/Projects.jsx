@@ -87,7 +87,7 @@ export const Projects = () => {
   };
 
   return (
-    <section id="projects" className="~/xl:~mt-8/20 mb-20 z-[1] relative">
+    <section id="projects" className="pt-20 mb-20 z-[1] relative">
       <div className="w-full mx-auto max-w-[1660px] ~/xl:~px-6/40">
         <div>
           <SectionHeading firstTitle="Our" secondTitle="Projects" />
@@ -236,7 +236,7 @@ export const Projects = () => {
             </div>
           </div>
         </div>
-        <div className="mx-auto ~sm/xl:~mt-8/16 w-[75%] h-[1px] bg-white/20 " />
+        <hr className="h-[1px] border-0 ~sm/xl:~mt-8/16 w-full bg-gradient-to-r from-primary/0 via-primary/30 to-primary/0" />
       </div>
     </section >
   );
