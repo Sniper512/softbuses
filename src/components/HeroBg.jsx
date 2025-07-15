@@ -23,15 +23,15 @@ const HeroBg = () => {
           </g>
           <g filter="url(#filter6_f_6_1600)" className="animate-float-7">
             <circle cx="388.292" cy="974.292" r="4.2921" fill="white" />
-            <circle cx="388.292" cy="974.292" r="2.5" stroke="white" stroke-width="3.5842" />
+            <circle cx="388.292" cy="974.292" r="2.5" stroke="white" strokeWidth="3.5842" />
           </g>
           <g filter="url(#filter7_f_6_1600)" className="animate-float-3">
             <circle cx="181.861" cy="917.861" r="2.8614" fill="white" />
-            <circle cx="181.861" cy="917.861" r="2.5" stroke="white" stroke-width="0.722802" />
+            <circle cx="181.861" cy="917.861" r="2.5" stroke="white" strokeWidth="0.722802" />
           </g>
           <g filter="url(#filter8_f_6_1600)" className="animate-float-9">
             <circle cx="1621.86" cy="327.861" r="2.8614" fill="white" />
-            <circle cx="1621.86" cy="327.861" r="2.5" stroke="white" stroke-width="0.722802" />
+            <circle cx="1621.86" cy="327.861" r="2.5" stroke="white" strokeWidth="0.722802" />
           </g>
           <g filter="url(#filter9_f_6_1600)" className="animate-float-2">
             <circle cx="775.792" cy="1025.81" r="2.14605" fill="white" />
@@ -41,23 +41,23 @@ const HeroBg = () => {
           </g>
           <g filter="url(#filter11_f_6_1600)" className="animate-float-4">
             <circle cx="1312.58" cy="447.577" r="3.57675" fill="white" />
-            <circle cx="1312.58" cy="447.577" r="2.5" stroke="white" stroke-width="2.1535" />
+            <circle cx="1312.58" cy="447.577" r="2.5" stroke="white" strokeWidth="2.1535" />
           </g>
           <g filter="url(#filter12_f_6_1600)" className="animate-float-10">
             <circle cx="638.444" cy="1247.57" r="3.57675" fill="white" />
-            <circle cx="638.444" cy="1247.57" r="2.5" stroke="white" stroke-width="2.1535" />
+            <circle cx="638.444" cy="1247.57" r="2.5" stroke="white" strokeWidth="2.1535" />
           </g>
           <g filter="url(#filter13_f_6_1600)" className="animate-float-5">
             <circle cx="1320.26" cy="839.198" r="4.2921" fill="white" />
-            <circle cx="1320.26" cy="839.198" r="2.5" stroke="white" stroke-width="3.5842" />
+            <circle cx="1320.26" cy="839.198" r="2.5" stroke="white" strokeWidth="3.5842" />
           </g>
           <g filter="url(#filter14_f_6_1600)" className="animate-float-6">
             <circle cx="1817.86" cy="608.861" r="2.8614" fill="white" />
-            <circle cx="1817.86" cy="608.861" r="2.5" stroke="white" stroke-width="0.722802" />
+            <circle cx="1817.86" cy="608.861" r="2.5" stroke="white" strokeWidth="0.722802" />
           </g>
           <g filter="url(#filter15_f_6_1600)" className="animate-float-1">
             <circle cx="1616.25" cy="880.703" r="2.8614" fill="white" />
-            <circle cx="1616.25" cy="880.703" r="2.5" stroke="white" stroke-width="0.722802" />
+            <circle cx="1616.25" cy="880.703" r="2.5" stroke="white" strokeWidth="0.722802" />
           </g>
           <g filter="url(#filter16_f_6_1600)" className="animate-float-7">
             <circle cx="1715.76" cy="1025.81" r="2.14605" fill="white" />
@@ -67,23 +67,23 @@ const HeroBg = () => {
           </g>
           <g filter="url(#filter18_f_6_1600)" className="animate-float-9">
             <circle cx="1454.58" cy="602.577" r="3.57675" fill="white" />
-            <circle cx="1454.58" cy="602.577" r="2.5" stroke="white" stroke-width="2.1535" />
+            <circle cx="1454.58" cy="602.577" r="2.5" stroke="white" strokeWidth="2.1535" />
           </g>
           <g filter="url(#filter19_f_6_1600)" className="animate-float-2">
             <circle cx="1578.41" cy="1247.57" r="3.57675" fill="white" />
-            <circle cx="1578.41" cy="1247.57" r="2.5" stroke="white" stroke-width="2.1535" />
+            <circle cx="1578.41" cy="1247.57" r="2.5" stroke="white" strokeWidth="2.1535" />
           </g>
           <g filter="url(#filter20_f_6_1600)" className="animate-float-8">
             <circle cx="550.292" cy="1310.29" r="4.2921" fill="white" />
-            <circle cx="550.292" cy="1310.29" r="2.5" stroke="white" stroke-width="3.5842" />
+            <circle cx="550.292" cy="1310.29" r="2.5" stroke="white" strokeWidth="3.5842" />
           </g>
           <g filter="url(#filter21_f_6_1600)" className="animate-float-4">
             <circle cx="266.861" cy="1542.86" r="2.8614" fill="white" />
-            <circle cx="266.861" cy="1542.86" r="2.5" stroke="white" stroke-width="0.722802" />
+            <circle cx="266.861" cy="1542.86" r="2.5" stroke="white" strokeWidth="0.722802" />
           </g>
           <g filter="url(#filter22_f_6_1600)" className="animate-float-10">
             <circle cx="736.283" cy="1361.8" r="2.8614" fill="white" />
-            <circle cx="736.283" cy="1361.8" r="2.5" stroke="white" stroke-width="0.722802" />
+            <circle cx="736.283" cy="1361.8" r="2.5" stroke="white" strokeWidth="0.722802" />
           </g>
           <g filter="url(#filter23_f_6_1600)" className="animate-float-5">
             <circle cx="885.792" cy="1436.91" r="2.14605" fill="white" />
@@ -93,23 +93,23 @@ const HeroBg = () => {
           </g>
           <g filter="url(#filter25_f_6_1600)" className="animate-float-1">
             <circle cx="1141.58" cy="1424.58" r="3.57675" fill="white" />
-            <circle cx="1141.58" cy="1424.58" r="2.5" stroke="white" stroke-width="2.1535" />
+            <circle cx="1141.58" cy="1424.58" r="2.5" stroke="white" strokeWidth="2.1535" />
           </g>
           <g filter="url(#filter26_f_6_1600)" className="animate-float-7">
             <circle cx="748.444" cy="1658.67" r="3.57675" fill="white" />
-            <circle cx="748.444" cy="1658.67" r="2.5" stroke="white" stroke-width="2.1535" />
+            <circle cx="748.444" cy="1658.67" r="2.5" stroke="white" strokeWidth="2.1535" />
           </g>
           <g filter="url(#filter27_f_6_1600)" className="animate-float-3">
             <circle cx="1926.29" cy="747.292" r="4.2921" fill="white" />
-            <circle cx="1926.29" cy="747.292" r="2.5" stroke="white" stroke-width="3.5842" />
+            <circle cx="1926.29" cy="747.292" r="2.5" stroke="white" strokeWidth="3.5842" />
           </g>
           <g filter="url(#filter28_f_6_1600)" className="animate-float-9">
             <circle cx="2343.86" cy="356.861" r="2.8614" fill="white" />
-            <circle cx="2343.86" cy="356.861" r="2.5" stroke="white" stroke-width="0.722802" />
+            <circle cx="2343.86" cy="356.861" r="2.5" stroke="white" strokeWidth="0.722802" />
           </g>
           <g filter="url(#filter29_f_6_1600)" className="animate-float-2">
             <circle cx="2231.86" cy="595.861" r="2.8614" fill="white" />
-            <circle cx="2231.86" cy="595.861" r="2.5" stroke="white" stroke-width="0.722802" />
+            <circle cx="2231.86" cy="595.861" r="2.5" stroke="white" strokeWidth="0.722802" />
           </g>
           <g filter="url(#filter30_f_6_1600)" className="animate-float-8">
             <circle cx="2349.15" cy="837.146" r="2.14605" fill="white" />
@@ -119,23 +119,23 @@ const HeroBg = () => {
           </g>
           <g filter="url(#filter32_f_6_1600)" className="animate-float-10">
             <circle cx="2193.58" cy="924.577" r="3.57675" fill="white" />
-            <circle cx="2193.58" cy="924.577" r="2.5" stroke="white" stroke-width="2.1535" />
+            <circle cx="2193.58" cy="924.577" r="2.5" stroke="white" strokeWidth="2.1535" />
           </g>
           <g filter="url(#filter33_f_6_1600)" className="animate-float-5">
             <circle cx="2293.58" cy="1206.58" r="3.57675" fill="white" />
-            <circle cx="2293.58" cy="1206.58" r="2.5" stroke="white" stroke-width="2.1535" />
+            <circle cx="2293.58" cy="1206.58" r="2.5" stroke="white" strokeWidth="2.1535" />
           </g>
           <g filter="url(#filter34_f_6_1600)" className="animate-float-6">
             <circle cx="799.292" cy="1969.29" r="4.2921" fill="white" />
-            <circle cx="799.292" cy="1969.29" r="2.5" stroke="white" stroke-width="3.5842" />
+            <circle cx="799.292" cy="1969.29" r="2.5" stroke="white" strokeWidth="3.5842" />
           </g>
           <g filter="url(#filter35_f_6_1600)" className="animate-float-1">
             <circle cx="1935.35" cy="1237.18" r="2.8614" fill="white" />
-            <circle cx="1935.35" cy="1237.18" r="2.5" stroke="white" stroke-width="0.722802" />
+            <circle cx="1935.35" cy="1237.18" r="2.5" stroke="white" strokeWidth="0.722802" />
           </g>
           <g filter="url(#filter36_f_6_1600)" className="animate-float-7">
             <circle cx="2081.28" cy="1265.8" r="2.8614" fill="white" />
-            <circle cx="2081.28" cy="1265.8" r="2.5" stroke="white" stroke-width="0.722802" />
+            <circle cx="2081.28" cy="1265.8" r="2.5" stroke="white" strokeWidth="0.722802" />
           </g>
           <g filter="url(#filter37_f_6_1600)" className="animate-float-3">
             <circle cx="2278.15" cy="1071.15" r="2.14605" fill="white" />
@@ -145,23 +145,23 @@ const HeroBg = () => {
           </g>
           <g filter="url(#filter39_f_6_1600)" className="animate-float-2">
             <circle cx="2232.22" cy="1421.03" r="3.57675" fill="white" />
-            <circle cx="2232.22" cy="1421.03" r="2.5" stroke="white" stroke-width="2.1535" />
+            <circle cx="2232.22" cy="1421.03" r="2.5" stroke="white" strokeWidth="2.1535" />
           </g>
           <g filter="url(#filter40_f_6_1600)" className="animate-float-8">
             <circle cx="273.577" cy="498.577" r="3.57675" fill="white" />
-            <circle cx="273.577" cy="498.577" r="2.5" stroke="white" stroke-width="2.1535" />
+            <circle cx="273.577" cy="498.577" r="2.5" stroke="white" strokeWidth="2.1535" />
           </g>
           <g filter="url(#filter41_f_6_1600)" className="animate-float-4">
             <circle cx="1773.29" cy="959.292" r="4.2921" fill="white" />
-            <circle cx="1773.29" cy="959.292" r="2.5" stroke="white" stroke-width="3.5842" />
+            <circle cx="1773.29" cy="959.292" r="2.5" stroke="white" strokeWidth="3.5842" />
           </g>
           <g filter="url(#filter42_f_6_1600)" className="animate-float-10">
             <circle cx="2039.86" cy="1030.86" r="2.8614" fill="white" />
-            <circle cx="2039.86" cy="1030.86" r="2.5" stroke="white" stroke-width="0.722802" />
+            <circle cx="2039.86" cy="1030.86" r="2.5" stroke="white" strokeWidth="0.722802" />
           </g>
           <g filter="url(#filter43_f_6_1600)" className="animate-float-5">
             <circle cx="1190.86" cy="1109.86" r="2.8614" fill="white" />
-            <circle cx="1190.86" cy="1109.86" r="2.5" stroke="white" stroke-width="0.722802" />
+            <circle cx="1190.86" cy="1109.86" r="2.5" stroke="white" strokeWidth="0.722802" />
           </g>
           <g filter="url(#filter44_f_6_1600)" className="animate-float-6">
             <circle cx="1285.79" cy="1473.91" r="2.14605" fill="white" />
@@ -171,11 +171,11 @@ const HeroBg = () => {
           </g>
           <g filter="url(#filter46_f_6_1600)" className="animate-float-7">
             <circle cx="1287.22" cy="1554.03" r="3.57675" fill="white" />
-            <circle cx="1287.22" cy="1554.03" r="2.5" stroke="white" stroke-width="2.1535" />
+            <circle cx="1287.22" cy="1554.03" r="2.5" stroke="white" strokeWidth="2.1535" />
           </g>
           <g filter="url(#filter47_f_6_1600)" className="animate-float-3">
             <circle cx="1148.44" cy="1695.67" r="3.57675" fill="white" />
-            <circle cx="1148.44" cy="1695.67" r="2.5" stroke="white" stroke-width="2.1535" />
+            <circle cx="1148.44" cy="1695.67" r="2.5" stroke="white" strokeWidth="2.1535" />
           </g>
           <g filter="url(#filter48_f_6_1600)" className="animate-float-9">
             <circle cx="557.146" cy="1612.15" r="2.14605" fill="white" />
@@ -185,42 +185,42 @@ const HeroBg = () => {
           </g>
           <g filter="url(#filter50_f_6_1600)" className="animate-float-8">
             <circle cx="2380.58" cy="1749.58" r="3.57675" fill="white" />
-            <circle cx="2380.58" cy="1749.58" r="2.5" stroke="white" stroke-width="2.1535" />
+            <circle cx="2380.58" cy="1749.58" r="2.5" stroke="white" strokeWidth="2.1535" />
           </g>
           <g filter="url(#filter51_f_6_1600)" className="animate-float-4">
             <circle cx="910.577" cy="242.577" r="3.57675" fill="white" />
-            <circle cx="910.577" cy="242.577" r="2.5" stroke="white" stroke-width="2.1535" />
+            <circle cx="910.577" cy="242.577" r="2.5" stroke="white" strokeWidth="2.1535" />
           </g>
           <g filter="url(#filter52_f_6_1600)" className="animate-float-10">
             <circle cx="2120.29" cy="653.292" r="4.2921" fill="white" />
-            <circle cx="2120.29" cy="653.292" r="2.5" stroke="white" stroke-width="3.5842" />
+            <circle cx="2120.29" cy="653.292" r="2.5" stroke="white" strokeWidth="3.5842" />
           </g>
           <g filter="url(#filter53_f_6_1600)" className="animate-float-5">
             <circle cx="2042.86" cy="356.861" r="2.8614" fill="white" />
-            <circle cx="2042.86" cy="356.861" r="2.5" stroke="white" stroke-width="0.722802" />
+            <circle cx="2042.86" cy="356.861" r="2.5" stroke="white" strokeWidth="0.722802" />
           </g>
           <g filter="url(#filter54_f_6_1600)" className="animate-float-6">
             <circle cx="1376.86" cy="1007.86" r="2.8614" fill="white" />
-            <circle cx="1376.86" cy="1007.86" r="2.5" stroke="white" stroke-width="0.722802" />
+            <circle cx="1376.86" cy="1007.86" r="2.5" stroke="white" strokeWidth="0.722802" />
           </g>
           <g filter="url(#filter55_f_6_1600)" className="animate-float-1">
             <circle cx="1528.34" cy="1313.39" r="2.14605" fill="white" />
           </g>
           <g filter="url(#filter56_f_6_1600)" className="animate-float-7">
             <circle cx="997.55" cy="1214.67" r="3.57675" fill="white" />
-            <circle cx="997.55" cy="1214.67" r="2.5" stroke="white" stroke-width="2.1535" />
+            <circle cx="997.55" cy="1214.67" r="2.5" stroke="white" strokeWidth="2.1535" />
           </g>
           <g filter="url(#filter57_f_6_1600)" className="animate-float-3">
             <circle cx="1329.29" cy="955.292" r="4.2921" fill="white" />
-            <circle cx="1329.29" cy="955.292" r="2.5" stroke="white" stroke-width="3.5842" />
+            <circle cx="1329.29" cy="955.292" r="2.5" stroke="white" strokeWidth="3.5842" />
           </g>
           <g filter="url(#filter58_f_6_1600)" className="animate-float-9">
             <circle cx="2086.86" cy="1861.86" r="2.8614" fill="white" />
-            <circle cx="2086.86" cy="1861.86" r="2.5" stroke="white" stroke-width="0.722802" />
+            <circle cx="2086.86" cy="1861.86" r="2.5" stroke="white" strokeWidth="0.722802" />
           </g>
           <g filter="url(#filter59_f_6_1600)" className="animate-float-2">
             <circle cx="1769.86" cy="1318.86" r="2.8614" fill="white" />
-            <circle cx="1769.86" cy="1318.86" r="2.5" stroke="white" stroke-width="0.722802" />
+            <circle cx="1769.86" cy="1318.86" r="2.5" stroke="white" strokeWidth="0.722802" />
           </g>
           <g filter="url(#filter60_f_6_1600)" className="animate-float-8">
             <circle cx="1719.8" cy="1457.14" r="2.14605" fill="white" />
@@ -230,11 +230,11 @@ const HeroBg = () => {
           </g>
           <g filter="url(#filter62_f_6_1600)" className="animate-float-10">
             <circle cx="1751.23" cy="1617.26" r="3.57675" fill="white" />
-            <circle cx="1751.23" cy="1617.26" r="2.5" stroke="white" stroke-width="2.1535" />
+            <circle cx="1751.23" cy="1617.26" r="2.5" stroke="white" strokeWidth="2.1535" />
           </g>
           <g filter="url(#filter63_f_6_1600)" className="animate-float-5">
             <circle cx="1582.45" cy="1678.9" r="3.57675" fill="white" />
-            <circle cx="1582.45" cy="1678.9" r="2.5" stroke="white" stroke-width="2.1535" />
+            <circle cx="1582.45" cy="1678.9" r="2.5" stroke="white" strokeWidth="2.1535" />
           </g>
           <defs>
             <filter id="filter0_f_6_1600" x="655.382" y="316.381" width="2173.24" height="1802.24" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">

@@ -1,3 +1,4 @@
+import Bar from "./Bar";
 import Button from "./Button";
 import { SectionHeading } from "./SectionHeading";
 import { servicesAvailable } from "./arrays";
@@ -5,22 +6,24 @@ import { servicesAvailable } from "./arrays";
 const Services = () => {
 
   return (
-    <section id="services" className="pt-20">
-      <div className="w-full mx-auto max-w-[1660px] flex flex-col items-center justify-center ~/xl:~px-6/40   gap-y-8">
-        <SectionHeading firstTitle="See Our" secondTitle="Services" />
-        <div>
-          <ServicesSections />
-        </div>
-        {/* button */}
-        <Button text="Get a Quote" type="link" href="#co-create" />
-        {/* <div className="relative group mt-5 md:mt-8 group">
+    <>
+      <section id="services" className="py-20">
+        <div className="w-full mx-auto max-w-[1660px] flex flex-col items-center justify-center ~/xl:~px-6/40   gap-y-8">
+          <SectionHeading firstTitle="See Our" secondTitle="Services" />
+          <div>
+            <ServicesSections />
+          </div>
+          {/* button */}
+          <Button text="Get a Quote" type="link" href="#co-create" />
+          {/* <div className="relative group mt-5 md:mt-8 group">
           <button className="relative ~sm/xl:~px-5/16 py-3  w-full border-2 border-white text-primary text-lg font-bold transition-colors duration-300 cursor-pointer group-hover:shadow-[4px_4px_0_0_#69FF00]">
             Get a Quote
           </button>
         </div> */}
-      </div>
-      <hr className="h-[1px] border-0 ~sm/xl:~mt-8/16 w-full bg-gradient-to-r from-primary/0 via-primary/30 to-primary/0" />
-    </section>
+        </div>
+      </section>
+      <Bar />
+    </>
   );
 };
 

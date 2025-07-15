@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { links } from "./arrays";
+import Bar from "./Bar";
 
 export const HeaderMobile = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -55,7 +56,7 @@ export const HeaderMobile = () => {
             <img src="menuIcon.svg" className="w-full h-auto" alt="Menu Icon" style={{ transform: `scale(${toggleBtnScale})`, transition: "transform 0.2s" }} />
           </button>
         </div>
-        <hr className="h-[1px] border-0 w-full bg-gradient-to-r from-primary/0 via-primary/30 to-primary/0" />
+        <Bar />
       </header>
 
       {/* Mobile Menu Overlay */}

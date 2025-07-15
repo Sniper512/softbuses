@@ -1,4 +1,5 @@
 import { links } from "./arrays";
+import Bar from "./Bar";
 import { ContactButton } from "./ContactButton";
 import { useState, useEffect } from "react";
 
@@ -30,7 +31,7 @@ export const HeaderDesktop = () => {
           <ContactButton />
         </div>
       </header>
-      <hr className="h-[1px] border-0 w-full bg-gradient-to-r from-primary/0 via-primary/30 to-primary/0" />
+      <Bar />
 
       {/* Fixed Navigation Links with blur background */}
       <nav

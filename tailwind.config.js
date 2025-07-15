@@ -23,6 +23,11 @@ export default {
         "primary-dark": "#255900",
         dark: "#121212",
       },
+      boxShadow: {
+        glow: "0 0 10px rgba(105, 255, 0, 0.3), 0 0 20px rgba(105, 255, 0, 0.2), 0 0 40px rgba(105, 255, 0, 0.1), -5px 0 15px rgba(105, 255, 0, 0.05), 5px 0 15px rgba(105, 255, 0, 0.05)",
+        "glow-2":
+          "0 0 5px rgba(105, 255, 0, 0.6), 0 0 10px rgba(105, 255, 0, 0.1), 0 0 20px rgba(105, 255, 0, 0.05), -3px 0 8px rgba(105, 255, 0, 0.03), 3px 0 8px rgba(105, 255, 0, 0.03)",
+      },
       backgroundImage: {
         hero: "url('/heroBg.svg')",
       },
@@ -43,11 +48,11 @@ export default {
           },
           "45%": {
             transform: "translate(120px, 120px)",
-            opacity: "0.3",
+            opacity: "0.9",
           },
           "70%": {
             transform: "translate(150px, 150px)",
-            opacity: "0.2",
+            opacity: "0.8",
           },
           "85%": {
             transform: "translate(170px, 170px)",
@@ -377,6 +382,20 @@ export default {
             opacity: "0",
           },
         },
+        "bar-left-right": {
+          "0%": {
+            left: "0",
+            transform: "translateX(0)",
+          },
+          "50%": {
+            left: "100%",
+            transform: "translateX(-100%)",
+          },
+          "100%": {
+            left: "0",
+            transform: "translateX(0)",
+          },
+        },
       },
       animation: {
         "float-1": "float-1 100s linear infinite",
@@ -389,6 +408,7 @@ export default {
         "float-8": "float-8 100s linear infinite",
         "float-9": "float-9 100s linear infinite",
         "float-10": "float-10 100s linear infinite",
+        "bar-left-right": "bar-left-right 40s linear infinite",
       },
     },
   },

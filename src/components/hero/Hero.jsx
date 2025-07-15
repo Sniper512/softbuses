@@ -1,3 +1,4 @@
+import Bar from "../Bar";
 import Button from "../Button";
 import SoftBuses from "../SoftBuses";
 import HeroLogoSection from "./HeroLogoSection";
@@ -35,7 +36,7 @@ export const Hero = () => {
           </div>
         </div>
       </section>
-      <hr className="h-[1px] border-0 w-full bg-gradient-to-r from-primary/0 via-primary/30 to-primary/0" />
+      <Bar />
     </>
   );
 };
