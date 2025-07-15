@@ -7,8 +7,8 @@ const projects = [
   {
     logo: "/projects/empoweredLearningsLogo.svg",
     title: "Empowered Learnings",
-    mobile: "/projects/empoweredLearningsMobile.svg",
-    laptop: "/projects/empoweredLearningsLaptop.svg",
+    mobile: "/projects/empoweredLearningsMobile.png",
+    laptop: "/projects/empoweredLearningsLaptop.png",
     facilities: [
       "Live & Recorded Learning Options",
       "Expert Tutors & Life Coaches",
@@ -21,8 +21,8 @@ const projects = [
   {
     logo: "/projects/mamoonVaanLogo.svg",
     title: "Mamoon Vaan",
-    mobile: "/projects/mamoonVaanMobile.svg",
-    laptop: "/projects/mamoonVaanLaptop.svg",
+    mobile: "/projects/mamoonVaanMobile.png",
+    laptop: "/projects/mamoonVaanLaptop.png",
     facilities: [
       "Premium Vehicle Listings",
       "Advanced Search & Filtering",
@@ -35,8 +35,8 @@ const projects = [
   {
     logo: "/projects/shoperzLogo.svg",
     title: "Shoperz",
-    mobile: "/projects/shoperzMobile.svg",
-    laptop: "/projects/shoperzLaptop.svg",
+    mobile: "/projects/shoperzMobile.png",
+    laptop: "/projects/shoperzLaptop.png",
     facilities: [
       "Multi-vendor Marketplace",
       "Secure Payment Gateway",
@@ -49,8 +49,8 @@ const projects = [
   {
     logo: "/projects/immersalynxLogo.svg",
     title: "Immersalynx",
-    mobile: "/projects/immersalynxMobile.svg",
-    laptop: "/projects/immersalynxLaptop.svg",
+    mobile: "/projects/immersalynxMobile.png",
+    laptop: "/projects/immersalynxLaptop.png",
     facilities: [
       "Immersive VR/AR Experiences",
       "Cross-platform Compatibility",
@@ -63,8 +63,8 @@ const projects = [
   {
     logo: "/projects/mRamirezLogo.svg",
     title: "M Ramirez",
-    mobile: "/projects/mRamirezMobile.svg",
-    laptop: "/projects/mRamirezLaptop.svg",
+    mobile: "/projects/mRamirezMobile.png",
+    laptop: "/projects/mRamirezLaptop.png",
     facilities: [
       "Customizable Learning Paths",
       "Expert Tutors & Mentors",
@@ -87,7 +87,7 @@ export const Projects = () => {
   };
 
   return (
-    <section id="projects" className="pt-20 mb-20 z-[1] relative">
+    <section id="projects" className="py-20 mb-20 z-[1] relative">
       <div className="w-full mx-auto max-w-[1660px] ~/xl:~px-6/40">
         <div>
           <SectionHeading firstTitle="Our" secondTitle="Projects" />
@@ -102,8 +102,8 @@ export const Projects = () => {
               key={index}
               onClick={() => handleProjectSelect(index)}
               className={`flex flex-col items-center justify-center py-3 ~px-4/7 border-2 rounded-xl space-y-2 transition-all duration-300 ease-in-out transform ${selectedProject === index
-                ? 'border-primary bg-white/10 shadow-lg'
-                : 'bg-white/30 border-primary/30 hover:border-primary hover:bg-white/0'
+                ? 'border-primary bg-white/40'
+                : 'border-white bg-white/50 hover:border-primary hover:bg-white/40'
                 }`}
             >
               <div className="~sm/xl:~h-8/12 w-auto mx-auto">
@@ -167,14 +167,9 @@ export const Projects = () => {
           <div className="flex w-full h-full md:w-[45%] xl:w-[35%] flex-col items-center md:items-start justify-between gap-y-3 relative">
             {/* Invisible placeholder for height stability */}
             <div className="w-full opacity-0 pointer-events-none">
-              <div className="flex items-center justify-start gap-x-5 mb-3">
-                <div>
-                  <img src={projects[selectedProject].logo} alt="" />
-                </div>
-                <h3 className="~sm/xl:~text-lg/3xl font-semibold">
-                  {projects[selectedProject].title}
-                </h3>
-              </div>
+              <h3 className="~sm/xl:~text-lg/3xl font-semibold mb-6">
+                {projects[selectedProject].title}
+              </h3>
               <ul>
                 {projects[selectedProject].facilities.map((facility, index) => (
                   <li
@@ -202,14 +197,9 @@ export const Projects = () => {
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.4, ease: "easeInOut" }}
                 >
-                  <div className="flex items-center justify-start gap-x-5 mb-3">
-                    <div>
-                      <img src={projects[selectedProject].logo} alt={projects[selectedProject].title} />
-                    </div>
-                    <h3 className="~sm/xl:~text-lg/3xl font-semibold">
-                      {projects[selectedProject].title}
-                    </h3>
-                  </div>
+                  <h3 className="~sm/xl:~text-lg/3xl font-semibold mb-6">
+                    {projects[selectedProject].title}
+                  </h3>
                   <ul>
                     {projects[selectedProject].facilities.map((facility, index) => (
                       <motion.li
@@ -236,7 +226,7 @@ export const Projects = () => {
             </div>
           </div>
         </div>
-        <hr className="h-[1px] border-0 ~sm/xl:~mt-8/16 w-full bg-gradient-to-r from-primary/0 via-primary/30 to-primary/0" />
+        <hr className="h-[1px] border-0 w-full bg-gradient-to-r from-primary/0 via-primary/30 to-primary/0" />
       </div>
     </section >
   );

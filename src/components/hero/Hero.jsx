@@ -1,3 +1,4 @@
+import Button from "../Button";
 import SoftBuses from "../SoftBuses";
 import HeroLogoSection from "./HeroLogoSection";
 
@@ -17,7 +18,7 @@ export const Hero = () => {
           <div className="">
             <h1 className="~sm/xl:~text-2xl/6xl font-bold">
               Empowering businesses with <br />
-              <span className="text-primary">optimal solutions!</span>
+              <span className="text-primary" style={{ textShadow: '0 0 5px rgba(105, 255, 0, 0.6), 0 0 10px rgba(105, 255, 0, 0.4), 0 0 20px rgba(105, 255, 0, 0.2)' }}>optimal solutions!</span>
             </h1>
           </div>
           {/* Sub Text */}
@@ -29,16 +30,8 @@ export const Hero = () => {
           </div>
           {/* Call to Action */}
           <div className="flex flex-col md:flex-row gap-x-20 w-4/5 sm:w-2/3 md:w-auto gap-y-6 ">
-            <div className="relative group pt-1 pl-1">
-              <button className="relative ~sm/xl:~px-5/16 py-3  w-full bg-primary border-2 border-black text-black text-lg font-medium transition-all duration-300 cursor-pointer group-hover:-translate-x-1 group-hover:-translate-y-1 group-hover:shadow-[4px_4px_0_0_#fff]">
-                Get a Quote
-              </button>
-            </div>
-            <div className="relative group pt-1 pl-1">
-              <button className="relative ~sm/xl:~px-5/16 py-3  w-full border-2 border-white text-primary text-lg font-medium transition-all duration-300 cursor-pointer group-hover:-translate-x-1 group-hover:-translate-y-1 group-hover:shadow-[4px_4px_0_0_#69FF00]">
-                See All Projects
-              </button>
-            </div>
+            <Button text="Get a Quote" type="link" href="#co-create" bg="green" />
+            <Button text="See All Projects" type="link" href="#projects" bg="transparent" />
           </div>
         </div>
       </section>

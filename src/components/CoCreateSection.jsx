@@ -4,7 +4,7 @@ import { ContactButton } from "./ContactButton";
 
 export const CoCreateSection = () => {
   return (
-    <section className="bg-[#121212] ~/xl:~mt-8/20 ">
+    <section id="co-create" className="bg-[#121212] ~/xl:~mt-8/20 ">
       <div className="w-full mx-auto max-w-[1660px]  ~/xl:~px-6/40 flex flex-col items-center justify-center py-12 md:py-16  ">
         <div className="mx-auto w-[75%] h-[1px] bg-white/20 " />
         <div className="w-full mt-8">
