@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-import { SectionHeading } from "./SectionHeading";
-import Bar from "./Bar";
+import { SectionHeading } from "../SectionHeading";
+import Bar from "../Bar";
+import ProjectsHeader from "./ProjectsHeader";
 
 const projects = [
   {
@@ -78,47 +79,51 @@ const projects = [
 ];
 
 
-export const Projects = () => {
+
+const VISIBLE_COUNT = 5; // Number of buttons visible at once (should be odd)
+
+const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(0);
 
-  const handleProjectSelect = (index) => {
-    if (index !== selectedProject) {
-      setSelectedProject(index);
+  // For infinite scroll, create a window of projects centered on selected
+  const getCyclicWindow = (center, count) => {
+    const len = projects.length;
+    const half = Math.floor(count / 2);
+    let window = [];
+    for (let i = -half; i <= half; i++) {
+      let idx = (center + i + len) % len;
+      window.push({ ...projects[idx], _realIndex: idx });
+    }
+    return window;
+  };
+
+  const visibleProjects = getCyclicWindow(selectedProject, VISIBLE_COUNT);
+
+  // When a button is clicked, set selectedProject to the real index
+  const handleProjectSelect = (realIndex) => {
+    if (realIndex !== selectedProject) {
+      setSelectedProject(realIndex);
     }
   };
 
   return (
     <>
-      <section id="projects" className="py-20 z-[1] relative">
+      <section id="solutions" className="py-20 z-[1] relative">
         <div className="w-full mx-auto max-w-[1660px] ~/xl:~px-6/40">
           <div>
-            <SectionHeading firstTitle="Our" secondTitle="Projects" />
+            <SectionHeading firstTitle="Our" secondTitle="Solutions" />
           </div>
         </div>
 
-        {/* First Part */}
-        <div className="w-full mx-auto relative overflow-hidden before:absolute before:top-0 before:left-0 before:bottom-0 before:w-1/12 before:bg-gradient-to-r before:from-dark before:to-dark/0 before:z-[1] after:absolute after:top-0 after:right-0 after:bottom-0 after:w-1/12 after:bg-gradient-to-l after:from-dark after:to-dark/0 after:z-[1]">
-          <div className="mt-8 flex items-center justify-center ~gap-4/8 w-max mx-auto ~py-2/4">
-            {projects.map((project, index) => (
-              <button
-                key={index}
-                onClick={() => handleProjectSelect(index)}
-                className={`flex flex-col items-center justify-center py-3 ~px-4/7 border-2 rounded-xl space-y-2 transition-all duration-300 ease-in-out transform ${selectedProject === index
-                  ? 'border-primary bg-white/40'
-                  : 'border-white bg-white/50 hover:border-primary hover:bg-white/40'
-                  }`}
-              >
-                <div className="~sm/xl:~h-8/12 w-auto mx-auto">
-                  <img src={project.logo} className="h-full w-auto" alt={project.title} />
-                </div>
-              </button>
-            ))}
-          </div>
-        </div>
+        <ProjectsHeader
+          projects={visibleProjects}
+          selectedProject={Math.floor(VISIBLE_COUNT / 2)}
+          handleProjectSelect={(i) => handleProjectSelect(visibleProjects[i]._realIndex)}
+        />
 
-        {/* Second Part */}
+        {/* Second Part (unchanged) */}
         <div className="w-full mx-auto max-w-[1660px] ~/xl:~px-6/40">
-          <div className="~sm/xl:~mt-8/20 w-full flex flex-col md:flex-row-reverse items-center justify-between ~sm/xl:~py-6/12 border-primary border border-opacity-45 gap-y-12 ~md/xl:~px-6/12 relative">
+          <div className="~sm/xl:~mt-4/12 w-full flex flex-col md:flex-row-reverse items-center justify-between shadow-glow-2 ~sm/xl:~py-6/12 border-primary border border-opacity-45 gap-y-12 ~md/xl:~px-6/12 relative">
             {/* Image Section */}
             <div className="w-full md:w-[55%] xl:w-[65%] flex items-center justify-center md:justify-end">
               <div className="~sm/lg:~w-[23.4rem]/[40rem] h-auto relative project-image-container">
@@ -165,7 +170,8 @@ export const Projects = () => {
                 </div>
               </div>
             </div>
-            {/* Text Section */}
+
+            {/* Text Section (unchanged) */}
             <div className="flex w-full h-full md:w-[45%] xl:w-[35%] flex-col items-center md:items-start justify-between gap-y-3 relative">
               {/* Invisible placeholder for height stability */}
               <div className="w-full opacity-0 pointer-events-none">
@@ -234,3 +240,5 @@ export const Projects = () => {
     </>
   );
 };
+
+export default Projects;

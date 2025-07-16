@@ -1,4 +1,4 @@
-export const links = ["Home", "About", "Services", "Projects", "Technologies"];
+export const links = ["Home", "About", "Services", "Solutions", "Technologies"];
 
 export const servicesAvailable = [
   {

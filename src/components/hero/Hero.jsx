@@ -32,7 +32,7 @@ export const Hero = () => {
           {/* Call to Action */}
           <div className="flex flex-col md:flex-row gap-x-20 w-4/5 sm:w-2/3 md:w-auto gap-y-6 ">
             <Button text="Get a Quote" type="link" href="#co-create" bg="green" />
-            <Button text="See All Projects" type="link" href="#projects" bg="transparent" />
+            <Button text="See All Projects" type="link" href="#solutions" bg="transparent" />
           </div>
         </div>
       </section>

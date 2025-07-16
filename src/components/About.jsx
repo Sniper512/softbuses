@@ -6,7 +6,7 @@ export const About = () => {
   return (
     <>
       <section id="about" className="py-20 relative z-[1]">
-        <div className="w-full mx-auto max-w-[1660px] flex flex-col items-center justify-center ~/xl:~px-6/40   gap-y-8">
+        <div className="w-full mx-auto max-w-[1660px] flex flex-col items-center justify-center ~/xl:~px-6/40 gap-y-8">
           <SectionHeading firstTitle="About" secondTitle="Us" />
           <div className="w-full flex items-center justify-center px-4 ">
             <p className="w-full md:max-w-3xl xl:max-w-4xl px-4 py-6 border border-primary text-white text-base shadow-glow-2 md:text-lg">

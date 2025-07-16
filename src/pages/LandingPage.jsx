@@ -3,7 +3,6 @@ import { HeaderDesktop } from "../components/HeaderDesktop";
 import { Hero } from "../components/hero/Hero";
 import { About } from "../components/About";
 import Services from "../components/Services";
-import { Projects } from "../components/Projects";
 import { TechGridDesktop } from "../components/TechGridDesktop";
 import { TechGridMobile } from "../components/TechGridMobile";
 import { Testimonials } from "../components/Testimonials";
@@ -14,6 +13,7 @@ import { Blogs } from "../components/Blogs";
 import HeroBg from "../components/HeroBg";
 import { ScrollToTopButton } from "../components/ScrollToTopButton";
 import ProjectsBg from "../components/ProjectsBg";
+import Projects from "../components/projects/Projects";
 
 export const LandingPage = () => {
   return (
