@@ -14,6 +14,7 @@ import HeroBg from "../components/HeroBg";
 import { ScrollToTopButton } from "../components/ScrollToTopButton";
 import ProjectsBg from "../components/ProjectsBg";
 import Projects from "../components/projects/Projects";
+import Technologies from "../components/technologies/Technologies";
 
 export const LandingPage = () => {
   return (
@@ -26,13 +27,14 @@ export const LandingPage = () => {
         <About />
       </div>
       <div className="relative">
-        <ProjectsBg />
+        {/* <ProjectsBg /> */}
         <Services />
         <Projects />
       </div>
       <div id="technologies">
-        <TechGridDesktop />
-        <TechGridMobile />
+        <Technologies />
+        {/* <TechGridDesktop />
+        <TechGridMobile /> */}
       </div>
       <Blogs />
       <Testimonials />

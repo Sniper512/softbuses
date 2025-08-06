@@ -121,6 +121,7 @@ body {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -150,8 +151,28 @@ body {
 }
 
 /* Staggered animation delays */
-.stagger-1 { animation-delay: 0.1s; }
-.stagger-2 { animation-delay: 0.2s; }
-.stagger-3 { animation-delay: 0.3s; }
-.stagger-4 { animation-delay: 0.4s; }
-.stagger-5 { animation-delay: 0.5s; }
+.stagger-1 {
+  animation-delay: 0.1s;
+}
+
+.stagger-2 {
+  animation-delay: 0.2s;
+}
+
+.stagger-3 {
+  animation-delay: 0.3s;
+}
+
+.stagger-4 {
+  animation-delay: 0.4s;
+}
+
+.stagger-5 {
+  animation-delay: 0.5s;
+}
+
+
+.technologies_section {
+  mask-image: linear-gradient(90deg, transparent 2%, rgb(217, 217, 217) 10%, rgb(217, 217, 217) 90%, transparent 98%), linear-gradient(180deg, transparent 5%, rgb(217, 217, 217) 15%, rgb(217, 217, 217) 85%, transparent 95%);
+  mask-composite: intersect;
+}

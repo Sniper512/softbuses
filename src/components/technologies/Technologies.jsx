@@ -1,0 +1,456 @@
+import { SectionHeading } from "../SectionHeading";
+import TechMainCard from "./TechMainCard"
+import TechSubCard from "./TechSubCard";
+
+const technologies = [
+  {
+    title: "Agentic AI",
+    icon: "/technologies/agenticAi.svg",
+    href: "#",
+    type: "sub"
+  },
+  {
+    title: "Android Studio",
+    icon: "/technologies/androidStudio.svg",
+    href: "https://developer.android.com/studio",
+    type: "sub"
+  },
+  {
+    title: "Angular",
+    icon: "/technologies/angular.svg",
+    href: "https://angular.io/",
+    type: "sub"
+  },
+  {
+    title: "AWS",
+    icon: "/technologies/aws.svg",
+    href: "https://aws.amazon.com/",
+    type: "sub"
+  },
+  {
+    title: "Django",
+    icon: "/technologies/django.svg",
+    href: "https://www.djangoproject.com/",
+    type: "sub"
+  },
+  {
+    title: "Docker",
+    icon: "/technologies/docker.svg",
+    href: "https://www.docker.com/",
+    type: "sub"
+  },
+  {
+    title: "express",
+    icon: "/technologies/express.svg",
+    href: "https://expressjs.com/",
+    type: "sub"
+  },
+  {
+    title: "Figma",
+    icon: "/technologies/figma.svg",
+    href: "https://www.figma.com/",
+    type: "sub"
+  },
+  {
+    title: "Flutter",
+    icon: "/technologies/flutter.svg",
+    href: "https://flutter.dev",
+    type: "sub"
+  },
+  {
+    title: "Framer",
+    icon: "/technologies/framer.svg",
+    href: "https://www.framer.com/",
+    type: "sub"
+  },
+  {
+    title: "generativeAi",
+    icon: "/technologies/generativeAi.svg",
+    href: "#",
+    type: "sub"
+  },
+  {
+    title: "GraphQL",
+    icon: "/technologies/graphql.svg",
+    href: "https://graphql.org/",
+    type: "sub"
+  },
+  {
+    title: "Kotlin",
+    icon: "/technologies/kotlin.svg",
+    href: "https://kotlinlang.org/",
+    type: "sub"
+  },
+  {
+    title: "Laravel",
+    icon: "/technologies/laravel.svg",
+    href: "https://laravel.com",
+    type: "sub"
+  },
+  {
+    title: "Next.js",
+    icon: "/technologies/nextjs.svg",
+    href: "https://nextjs.org",
+    type: "sub"
+  },
+  {
+    title: "Playwright",
+    icon: "/technologies/playwright.svg",
+    href: "https://playwright.dev/",
+    type: "sub"
+  },
+  {
+    title: "Puppeteer",
+    icon: "/technologies/puppeteer.svg",
+    href: "https://pptr.dev/",
+    type: "sub"
+  },
+  {
+    title: "Scrapy",
+    icon: "/technologies/scrapy.svg",
+    href: "https://scrapy.org",
+    type: "sub"
+  },
+  {
+    title: "Selenium",
+    icon: "/technologies/selenium.svg",
+    href: "https://www.selenium.dev/",
+    type: "sub"
+  },
+  {
+    title: "Sketch",
+    icon: "/technologies/sketch.svg",
+    href: "https://www.sketch.com/",
+    type: "sub"
+  },
+  {
+    title: "Tailwind",
+    icon: "/technologies/tailwind.svg",
+    href: "https://tailwindcss.com/",
+    type: "sub"
+  },
+  {
+    title: "Typescript",
+    icon: "/technologies/typescript.svg",
+    href: "https://www.typescriptlang.org/",
+    type: "sub"
+  },
+  {
+    title: "Vercel",
+    icon: "/technologies/vercel.svg",
+    href: "https://vercel.com",
+    type: "sub"
+  },
+  {
+    title: "React",
+    icon: "/technologies/react.svg",
+    href: "https://reactjs.org",
+    type: "main",
+    bg: "/technologies/react_bg.png"
+  },
+  {
+    title: "NodeJS",
+    icon: "/technologies/nodejs.svg",
+    href: "https://nodejs.org",
+    type: "main",
+    bg: "/technologies/nodejs_bg.png"
+  },
+  {
+    title: "Xcode",
+    icon: "/technologies/xcode.svg",
+    href: "https://developer.apple.com/xcode/",
+    type: "sub"
+  },
+  {
+    title: "Zapier",
+    icon: "/technologies/zapier.svg",
+    href: "https://zapier.com",
+    type: "sub"
+  },
+  {
+    title: "Node",
+    icon: "/technologies/nodejs.svg",
+    href: "https://nodejs.org",
+    type: "sub"
+  },
+  {
+    title: "Node",
+    icon: "/technologies/nodejs.svg",
+    href: "https://nodejs.org",
+    type: "sub"
+  },
+  {
+    title: "Node",
+    icon: "/technologies/nodejs.svg",
+    href: "https://nodejs.org",
+    type: "sub"
+  },
+  {
+    title: "Node",
+    icon: "/technologies/nodejs.svg",
+    href: "https://nodejs.org",
+    type: "sub"
+  },
+  {
+    title: "Node",
+    icon: "/technologies/nodejs.svg",
+    href: "https://nodejs.org",
+    type: "sub"
+  },
+  {
+    title: "Node",
+    icon: "/technologies/nodejs.svg",
+    href: "https://nodejs.org",
+    type: "sub"
+  },
+  {
+    title: "Node",
+    icon: "/technologies/nodejs.svg",
+    href: "https://nodejs.org",
+    type: "sub"
+  },
+  {
+    title: "Node",
+    icon: "/technologies/nodejs.svg",
+    href: "https://nodejs.org",
+    type: "sub"
+  },
+  {
+    title: "Node",
+    icon: "/technologies/nodejs.svg",
+    href: "https://nodejs.org",
+    type: "sub"
+  },
+  {
+    title: "Node",
+    icon: "/technologies/nodejs.svg",
+    href: "https://nodejs.org",
+    type: "sub"
+  },
+  {
+    title: "Firebase",
+    icon: "/technologies/firebase.svg",
+    href: "https://firebase.google.com/",
+    type: "main",
+    bg: "/technologies/firebase_bg.png"
+  },
+  {
+    title: "Ethereum",
+    icon: "/technologies/react.svg",
+    href: "https://ethereum.org/",
+    type: "main",
+    bg: "/technologies/ethereum_bg.png"
+  },
+  {
+    title: "Node",
+    icon: "/technologies/nodejs.svg",
+    href: "https://nodejs.org",
+    type: "sub"
+  },
+  {
+    title: "Node",
+    icon: "/technologies/nodejs.svg",
+    href: "https://nodejs.org",
+    type: "sub"
+  },
+  {
+    title: "Node",
+    icon: "/technologies/nodejs.svg",
+    href: "https://nodejs.org",
+    type: "sub"
+  },
+  {
+    title: "Node",
+    icon: "/technologies/nodejs.svg",
+    href: "https://nodejs.org",
+    type: "sub"
+  },
+  {
+    title: "Node",
+    icon: "/technologies/nodejs.svg",
+    href: "https://nodejs.org",
+    type: "sub"
+  },
+  {
+    title: "Node",
+    icon: "/technologies/nodejs.svg",
+    href: "https://nodejs.org",
+    type: "sub"
+  },
+  {
+    title: "Node",
+    icon: "/technologies/nodejs.svg",
+    href: "https://nodejs.org",
+    type: "sub"
+  },
+  {
+    title: "Node",
+    icon: "/technologies/nodejs.svg",
+    href: "https://nodejs.org",
+    type: "sub"
+  },
+  {
+    title: "Node",
+    icon: "/technologies/nodejs.svg",
+    href: "https://nodejs.org",
+    type: "sub"
+  },
+  {
+    title: "Node",
+    icon: "/technologies/nodejs.svg",
+    href: "https://nodejs.org",
+    type: "sub"
+  },
+  {
+    title: "Node",
+    icon: "/technologies/nodejs.svg",
+    href: "https://nodejs.org",
+    type: "sub"
+  },
+  {
+    title: "Node",
+    icon: "/technologies/nodejs.svg",
+    href: "https://nodejs.org",
+    type: "sub"
+  },
+  {
+    title: "Node",
+    icon: "/technologies/nodejs.svg",
+    href: "https://nodejs.org",
+    type: "sub"
+  },
+  {
+    title: "Node",
+    icon: "/technologies/nodejs.svg",
+    href: "https://nodejs.org",
+    type: "sub"
+  },
+  {
+    title: "Node",
+    icon: "/technologies/nodejs.svg",
+    href: "https://nodejs.org",
+    type: "sub"
+  },
+  {
+    title: "Node",
+    icon: "/technologies/nodejs.svg",
+    href: "https://nodejs.org",
+    type: "sub"
+  },
+  {
+    title: "Node",
+    icon: "/technologies/nodejs.svg",
+    href: "https://nodejs.org",
+    type: "sub"
+  },
+  {
+    title: "Node",
+    icon: "/technologies/nodejs.svg",
+    href: "https://nodejs.org",
+    type: "sub"
+  },
+  {
+    title: "Node",
+    icon: "/technologies/nodejs.svg",
+    href: "https://nodejs.org",
+    type: "sub"
+  },
+  {
+    title: "Node",
+    icon: "/technologies/nodejs.svg",
+    href: "https://nodejs.org",
+    type: "sub"
+  },
+  {
+    title: "Node",
+    icon: "/technologies/nodejs.svg",
+    href: "https://nodejs.org",
+    type: "sub"
+  },
+  {
+    title: "Node",
+    icon: "/technologies/nodejs.svg",
+    href: "https://nodejs.org",
+    type: "sub"
+  },
+  {
+    title: "Node",
+    icon: "/technologies/nodejs.svg",
+    href: "https://nodejs.org",
+    type: "sub"
+  },
+  {
+    title: "Node",
+    icon: "/technologies/nodejs.svg",
+    href: "https://nodejs.org",
+    type: "sub"
+  },
+  {
+    title: "Node",
+    icon: "/technologies/nodejs.svg",
+    href: "https://nodejs.org",
+    type: "sub"
+  },
+  {
+    title: "Node",
+    icon: "/technologies/nodejs.svg",
+    href: "https://nodejs.org",
+    type: "sub"
+  },
+  {
+    title: "Node",
+    icon: "/technologies/nodejs.svg",
+    href: "https://nodejs.org",
+    type: "sub"
+  },
+  {
+    title: "Node",
+    icon: "/technologies/nodejs.svg",
+    href: "https://nodejs.org",
+    type: "sub"
+  },
+  {
+    title: "Node",
+    icon: "/technologies/nodejs.svg",
+    href: "https://nodejs.org",
+    type: "sub"
+  },
+]
+
+const Technologies = () => {
+  return (
+    <>
+      <section className="w-full overflow-hidden pt-20 mx-auto flex flex-col items-center gap-y-12">
+        <div className="w-full ~md/xl:~px-[3.1rem]/[10rem] max-w-[1660px]">
+          <SectionHeading firstTitle="Our" secondTitle="Technologies" />
+        </div>
+        <div className="technologies_section w-max overflow-hidden grid grid-cols-10 gap-2 sm:gap-4" >
+          {Array.from({ length: 10 }).map((_, index) => (
+            <div key={index} className="min-w-[4.5rem] w-[4.5rem] sm:min-w-32 sm:w-32 h-20 bg-dark border ~rounded-xl/2xl flex items-center justify-center">
+            </div>
+          ))}
+
+          {technologies.map((tech, index) => {
+            if (tech.type === "main") {
+              return <TechMainCard key={index} title={tech.title} icon={tech.icon}
+                bg={tech.bg}
+                href={tech.href}
+              />
+            } else {
+              return <TechSubCard key={index} title={tech.title} icon={tech.icon}
+                href={tech.href}
+              />
+            }
+          })}
+
+          {Array.from({ length: 10 }).map((_, index) => (
+            <div key={index} className="min-w-[4.5rem] w-[4.5rem] sm:min-w-32 sm:w-32 h-20 bg-dark border ~rounded-xl/2xl flex items-center justify-center">
+            </div>
+          ))}
+        </div>
+      </section >
+    </>
+  );
+};
+
+export default Technologies;
