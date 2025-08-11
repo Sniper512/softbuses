@@ -6,7 +6,7 @@ const ProjectsHeader = ({ projects, selectedProject, handleProjectSelect }) => {
           <button
             key={index}
             onClick={() => handleProjectSelect(index)}
-            className={`w-full min-w-28  flex flex-col items-center justify-center py-3 px-6 rounded-xl space-y-2 transition-all duration-300 ease-in-out bg-white transform sm:min-w-40 ${selectedProject === index ? 'shadow-glow scale-110 z-10' : 'hover:shadow-glow opacity-80'}`}
+            className={`w-full min-w-28  flex flex-col items-center justify-center py-3 px-6 rounded-xl space-y-2 transition-all duration-300 ease-in-out bg-white transform sm:min-w-40 ${selectedProject === index ? 'shadow-glow z-10' : 'hover:shadow-glow opacity-80'}`}
           >
             <div className="h-10 w-auto mx-auto flex items-center justify-center">
               <img src={project.logo} className="h-full w-auto" alt={project.title} />

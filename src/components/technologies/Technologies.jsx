@@ -324,14 +324,14 @@ const technologies = [
 const Technologies = () => {
   return (
     <>
-      <section className="w-full overflow-hidden pt-20 mx-auto flex flex-col items-center gap-y-12">
+      <section id="technologies" className="w-full overflow-hidden pt-20 mx-auto flex flex-col items-center gap-y-12">
         <div className="w-full ~md/xl:~px-[3.1rem]/[10rem] max-w-[1660px]">
           <SectionHeading firstTitle="Our" secondTitle="Technologies" />
         </div>
         <div className="technologies_section w-max overflow-hidden grid grid-cols-8 gap-2 sm:gap-4" >
           {/* Placeholder for additional technology cards */}
           {Array.from({ length: 8 }).map((_, index) => (
-            <div key={index} className="min-w-[5.5rem] w-[5.5rem] sm:min-w-40 sm:w-40 h-20 bg-dark border ~rounded-xl/2xl flex items-center justify-center">
+            <div key={index} className="min-w-[5.5rem] w-[5.5rem] sm:min-w-40 sm:w-40 h-20 bg-dark border ~rounded-xl/2xl flex items-center justify-center brightness-[.4]">
             </div>
           ))}
 
@@ -349,7 +349,7 @@ const Technologies = () => {
           })}
 
           {Array.from({ length: 8 }).map((_, index) => (
-            <div key={index} className="min-w-[5.5rem] w-[5.5rem] sm:min-w-40 sm:w-40 h-20 bg-dark border ~rounded-xl/2xl flex items-center justify-center">
+            <div key={index} className="min-w-[5.5rem] w-[5.5rem] sm:min-w-40 sm:w-40 h-20 bg-dark border ~rounded-xl/2xl flex items-center justify-center brightness-[.4]">
             </div>
           ))}
         </div>

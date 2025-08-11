@@ -3,11 +3,8 @@ import { HeaderDesktop } from "../components/HeaderDesktop";
 import { Hero } from "../components/hero/Hero";
 import { About } from "../components/About";
 import Services from "../components/Services";
-import { TechGridDesktop } from "../components/TechGridDesktop";
-import { TechGridMobile } from "../components/TechGridMobile";
 import { Testimonials } from "../components/Testimonials";
 import { CoCreateSection } from "../components/CoCreateSection";
-import Extra from "../components/Extra";
 import { Footer } from "../components/Footer";
 import { Blogs } from "../components/Blogs";
 import HeroBg from "../components/HeroBg";
@@ -27,15 +24,11 @@ export const LandingPage = () => {
         <About />
       </div>
       <div className="relative">
-        {/* <ProjectsBg /> */}
+        <ProjectsBg />
         <Services />
         <Projects />
       </div>
-      <div id="technologies">
-        <Technologies />
-        {/* <TechGridDesktop />
-        <TechGridMobile /> */}
-      </div>
+      <Technologies />
       <Blogs />
       <Testimonials />
       <CoCreateSection />
