@@ -2,7 +2,6 @@
 const Bar = () => {
   // Generate a random delay between 0 and 10 seconds for each instance
   const randomDelay = Math.random() * 10;
-  console.log(`Bar animation delay: ${randomDelay}s`);
 
   return (
     <>
