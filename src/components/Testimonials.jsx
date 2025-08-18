@@ -1,20 +1,45 @@
-import React from "react";
 import { SectionHeading } from "./SectionHeading";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import SoftBuses from "./SoftBuses";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import Bar from "./Bar";
+
+// Custom Arrow Components
+const CustomPrevArrow = ({ onClick }) => (
+  <button
+    onClick={onClick}
+    className="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-primary-dark hover:bg-primary-dark/80 text-white rounded-full flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl"
+    aria-label="Previous testimonial"
+  >
+    <FaArrowLeft />
+  </button>
+);
+
+const CustomNextArrow = ({ onClick }) => (
+  <button
+    onClick={onClick}
+    className="absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-primary-dark hover:bg-primary-dark/80 text-white rounded-full flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl"
+    aria-label="Next testimonial"
+  >
+    <FaArrowRight />
+  </button>
+);
 
 export const Testimonials = () => {
   var settings = {
     dots: true,
     infinite: true,
-    arrows: false,
+    arrows: true,
+    prevArrow: <CustomPrevArrow />,
+    nextArrow: <CustomNextArrow />,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
     variableWidth: false,
     adaptiveHeight: false,
+    autoplay: true,
     dotsClass: "slick-dots custom-dots",
     customPaging: function () {
       return (
@@ -30,6 +55,8 @@ export const Testimonials = () => {
           slidesToShow: 2,
           slidesToScroll: 1,
           dots: true,
+          prevArrow: <CustomPrevArrow />,
+          nextArrow: <CustomNextArrow />,
         },
       },
       {
@@ -38,6 +65,8 @@ export const Testimonials = () => {
           slidesToShow: 1,
           slidesToScroll: 1,
           dots: true,
+          prevArrow: <CustomPrevArrow />,
+          nextArrow: <CustomNextArrow />,
         },
       },
     ],
@@ -108,8 +137,7 @@ export const Testimonials = () => {
       title: "Creative, Committed, and Consistently Impressive",
       feedback: (
         <>
-          Working with <span className="font-semibold text-primary">Soft</span>
-          buses has been a fantastic experience. From problem-solving to
+          Working with <SoftBuses /> has been a fantastic experience. From problem-solving to
           delivering pixel-perfect UI, everything was done with precision and
           passion!
         </>
@@ -120,66 +148,69 @@ export const Testimonials = () => {
   ];
 
   return (
-    <section className="~/xl:~mt-8/20 mb-20">
-      <div className="w-full mx-auto max-w-[1660px] inline-block flex-col items-center justify-center ~/xl:~px-6/40   gap-y-8">
-        <div className="w-full">
-          <SectionHeading firstTitle="Client" secondTitle="Testimonials" />
-        </div>
+    <>
+      <section className="w-full py-20">
+        <div className="w-full mx-auto max-w-[1660px] block flex-col items-center justify-center ~/xl:~px-6/40 gap-y-8 pb-16">
+          <div className="w-full">
+            <SectionHeading firstTitle="Client" secondTitle="Testimonials" />
+          </div>
 
-        <div className="mt-8 md:mt-12">
-          <Slider className="" {...settings}>
-            {clientTestimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className="!flex px-2"
-                style={{ height: "auto" }}
-              >
+          <div className="mt-8 md:mt-12 relative">
+            <Slider className="" {...settings}>
+              {clientTestimonials.map((testimonial, index) => (
                 <div
-                  className={`flex flex-col items-center justify-between w-full border-[2px] border-white/50 gap-y-4 px-4 py-8 min-h-[400px] ${index % 2 === 0 ? "bg-black" : "bg-[#2B6604]"
-                    }`}
+                  key={index}
+                  className="!flex px-2"
+                  style={{ height: "auto" }}
                 >
-                  <div className=" w-20 h-auto flex items-center  justify-center  rounded-full border-2 object-cover object-top border-primary overflow-hidden">
-                    <img
-                      src={`testimonials/${testimonial.image}`}
-                      alt="w-10 h-auto"
-                    />
-                  </div>
-                  <span className="~sm/xl:~text-base/xl font-bold">
-                    {testimonial.name}
-                  </span>
-                  <div className="flex items-center gap-1">
-                    {renderStars(testimonial.rating)}
-                  </div>
-
-                  <span
-                    className={`~sm/xl:~text-xs/base font-bold  text-center ${index % 2 === 0 ? "text-primary" : "text-white"
+                  <div
+                    className={`flex flex-col items-center justify-between w-full border-[2px] border-white/50 gap-y-4 px-4 py-8 min-h-[400px] ${index % 2 === 0 ? "bg-black" : "bg-primary-dark"
                       }`}
                   >
-                    {testimonial.title}
-                  </span>
-                  <p className="~sm/xl:~text-xs/base flex-1 ">
-                    {testimonial.feedback}
-                  </p>
-                  <div className="flex items-center w-full justify-between">
-                    <span className="~sm/xl:~text-xs/base font-bold">
-                      {testimonial.focus}
-                    </span>
-                    <span>
+                    <div className=" w-20 h-auto flex items-center  justify-center  rounded-full border-2 object-cover object-top border-primary overflow-hidden">
                       <img
-                        src={`${index % 2 === 0
-                          ? "commaSymbolGreen.svg"
-                          : "commaSymbolWhite.svg"
-                          }`}
-                        alt=""
+                        src={`testimonials/${testimonial.image}`}
+                        alt="w-10 h-auto"
                       />
+                    </div>
+                    <span className="~sm/xl:~text-base/xl font-bold">
+                      {testimonial.name}
                     </span>
+                    <div className="flex items-center gap-1">
+                      {renderStars(testimonial.rating)}
+                    </div>
+
+                    <span
+                      className={`~sm/xl:~text-xs/base font-bold  text-center ${index % 2 === 0 ? "text-primary" : "text-white"
+                        }`}
+                    >
+                      {testimonial.title}
+                    </span>
+                    <p className="~sm/xl:~text-xs/base flex-1 ">
+                      {testimonial.feedback}
+                    </p>
+                    <div className="flex items-center w-full justify-between">
+                      <span className="~sm/xl:~text-xs/base font-bold">
+                        {testimonial.focus}
+                      </span>
+                      <span>
+                        <img
+                          src={`${index % 2 === 0
+                            ? "commaSymbolGreen.svg"
+                            : "commaSymbolWhite.svg"
+                            }`}
+                          alt=""
+                        />
+                      </span>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </Slider>
+              ))}
+            </Slider>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <Bar />
+    </>
   );
 };

@@ -25,7 +25,7 @@ const HeroLogoSection = () => {
         strokeDashoffset: 0,
         ease: 'linear',
         duration: 4000,
-        delay: 2000 + (index * 200), // Stagger each path slightly
+        delay: 2000 + (index * 200),
         loop: false,
       });
     });

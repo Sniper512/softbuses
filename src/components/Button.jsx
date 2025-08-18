@@ -1,3 +1,5 @@
+// bg = "transparent" || "green"
+// type = "link" || "button"
 const Button = ({ text = "", type = "link", onClick, href, bg = "transparent" }) => {
   return (
     <>

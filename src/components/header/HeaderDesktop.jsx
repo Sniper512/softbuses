@@ -1,6 +1,6 @@
-import { links } from "./arrays";
-import Bar from "./Bar";
-import { ContactButton } from "./ContactButton";
+import { links } from "../arrays";
+import Bar from "../Bar";
+import { ContactButton } from "../ContactButton";
 import { useState, useEffect } from "react";
 
 export const HeaderDesktop = () => {

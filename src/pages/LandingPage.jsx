@@ -1,12 +1,12 @@
-import { HeaderMobile } from "../components/HeaderMobile";
-import { HeaderDesktop } from "../components/HeaderDesktop";
+import { HeaderMobile } from "../components/header/HeaderMobile";
+import { HeaderDesktop } from "../components/header/HeaderDesktop";
 import { Hero } from "../components/hero/Hero";
 import { About } from "../components/About";
 import Services from "../components/Services";
 import { Testimonials } from "../components/Testimonials";
 import { CoCreateSection } from "../components/CoCreateSection";
 import { Footer } from "../components/Footer";
-import { Blogs } from "../components/Blogs";
+// import { Blogs } from "../components/Blogs";
 import HeroBg from "../components/HeroBg";
 import { ScrollToTopButton } from "../components/ScrollToTopButton";
 import ProjectsBg from "../components/ProjectsBg";
@@ -29,7 +29,7 @@ export const LandingPage = () => {
         <Projects />
       </div>
       <Technologies />
-      <Blogs />
+      {/* <Blogs /> */}
       <Testimonials />
       <CoCreateSection />
       <Footer />

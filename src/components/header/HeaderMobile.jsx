@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { links } from "./arrays";
-import Bar from "./Bar";
+import { links } from "../arrays";
+import Bar from "../Bar";
 
 export const HeaderMobile = () => {
   const [isOpen, setIsOpen] = useState(false);

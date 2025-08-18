@@ -1,3 +1,4 @@
+import Bar from "../Bar";
 import { SectionHeading } from "../SectionHeading";
 import TechMainCard from "./TechMainCard"
 import TechSubCard from "./TechSubCard";
@@ -324,7 +325,7 @@ const technologies = [
 const Technologies = () => {
   return (
     <>
-      <section id="technologies" className="w-full overflow-hidden pt-20 mx-auto flex flex-col items-center gap-y-12">
+      <section id="technologies" className="w-full overflow-hidden py-20 mx-auto flex flex-col items-center gap-y-12">
         <div className="w-full ~md/xl:~px-[3.1rem]/[10rem] max-w-[1660px]">
           <SectionHeading firstTitle="Our" secondTitle="Technologies" />
         </div>
@@ -354,6 +355,7 @@ const Technologies = () => {
           ))}
         </div>
       </section >
+      <Bar />
     </>
   );
 };
