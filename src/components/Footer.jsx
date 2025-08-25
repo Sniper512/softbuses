@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebookF } from "react-icons/fa";
+import { FaDotCircle, FaFacebookF } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
@@ -7,10 +7,10 @@ import { IoIosMail } from "react-icons/io";
 import SoftBuses from "./SoftBuses";
 
 const socialLinks = [
-  { icon: FaFacebookF, url: "https://facebook.com" },
-  { icon: FaLinkedinIn, url: "https://linkedin.com" },
-  { icon: FaInstagram, url: "https://instagram.com" },
-  { icon: FaXTwitter, url: "https://twitter.com" },
+  { icon: FaFacebookF, url: "https://www.facebook.com/profile.php?id=61563772225653" },
+  { icon: FaLinkedinIn, url: "http://linkedin.com/company/softbuses" },
+  { icon: FaInstagram, url: "https://www.instagram.com/softbuses/" },
+  { icon: FaXTwitter, url: "https://x.com/SoftBuses" },
   { icon: IoIosMail, url: "mailto:info@softbuses.com" },
 ];
 
@@ -39,18 +39,17 @@ export const Footer = () => {
   return (
     <>
       <footer className="pt-20 pb-8">
-        <div className="mx-auto max-w-7xl flex flex-col items-start px-10">
+        <div className="mx-auto max-w-7xl flex flex-col items-start ~px-6/10">
           {/* Footer 1 */}
           <div className="w-full mx-auto text-sm">
-            <div className="pl-4 flex flex-col md:flex-row  gap-y-12  relative">
-              <div className="hidden md:block w-[1px] h-[80%] absolute bottom-0 translate-x-1/2 left-[64%] bg-gradient-to-b from-primary/0 via-primary/30 to-primary/0" />
-              <div className="hidden md:block w-[1px] h-[80%] absolute bottom-0 translate-x-1/2 left-[36%] bg-gradient-to-b from-primary/0 via-primary/30 to-primary/0" />
+            <div className="flex flex-col gap-y-12 md:flex-row md:gap-x-8 md:items-center md:justify-between">
+
               {/* Box 1 */}
-              <div className="flex flex-col items-start justify-center md:w-1/3 gap-y-6 p-1">
+              <div className="flex flex-col items-start justify-center gap-y-6">
                 <div className="w-16 h-auto">
                   <img src="verticalLogo.svg" alt="" />
                 </div>
-                <p className="max-w-[250px]">
+                <p className="max-w-[40ch]">
                   <SoftBuses fontSize="text-base md:text-lg" /> is a
                   forward-thinking startup driven by passionate engineers crafting
                   exceptional web and mobile apps. <br /> We leverage cutting-edge
@@ -58,46 +57,54 @@ export const Footer = () => {
                   every project.
                 </p>
               </div>
+
+              <div className="hidden md:block w-[1px] h-60 bg-gradient-to-b from-primary/0 via-primary/30 to-primary/0" />
+
               {/* Box 2 */}
-              <div className="flex flex-col items-start md:items-center justify-center md:w-1/3 gap-y-4 p-1">
-                <h4 className="text-3xl ">
-                  <span className="text-primary font-semibold">Soft</span>
-                  <span>Buses</span>
-                </h4>
-                <ul className="flex flex-col md:items-center gap-y-1">
-                  {sections.map((section, index) => (
-                    <li key={index}>
-                      <a
-                        href={section.href}
-                        className="decoration-white hover:text-primary underline-offset-4 cursor-pointer transition-all duration-500"
-                      >
-                        {section.text}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <ul className="flex flex-col items-start justify-center gap-y-2">
+                <li className="mb-4">
+                  <h4 className="~text-xl/3xl ">
+                    <span className="text-primary font-semibold">Soft</span>
+                    <span>Buses</span>
+                  </h4>
+                </li>
+                {sections.map((section, index) => (
+                  <li key={index} className="flex items-center gap-x-4">
+                    <FaDotCircle size={8} />
+                    <a
+                      href={section.href}
+                      className="decoration-white hover:text-primary underline-offset-4 cursor-pointer transition-all duration-500"
+                    >
+                      {section.text}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="hidden md:block w-[1px] h-60 bg-gradient-to-b from-primary/0 via-primary/30 to-primary/0" />
+
               {/* Box 3 */}
-              <div className="flex flex-col items-start justify-center gap-y-4 p-1 md:w-1/3 md:items-end md:text-right">
-                <h4 className="text-3xl ">
-                  Our{" "}
-                  <span className="text-primary font-semibold">Services</span>
-                </h4>
-                <ul className="flex flex-col gap-y-1">
-                  {services.map((service, index) => (
-                    <li key={index}>
-                      <span>{service}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <ul className="flex flex-col items-start justify-center gap-y-2">
+                <li className="mb-4">
+                  <h4 className="~text-xl/3xl">
+                    Our{" "}
+                    <span className="text-primary font-semibold">Services</span>
+                  </h4>
+                </li>
+                {services.map((service, index) => (
+                  <li key={index} className="flex items-center gap-x-4">
+                    <FaDotCircle size={8} />
+                    <span>{service}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
           <div className="mx-auto md:hidden mt-8 w-[100%] h-[1px] bg-gradient-to-r from-primary/0 via-primary/30 to-primary/0 " />
 
           {/* Footer 2 */}
-          <div className="flex flex-col-reverse md:flex-row w-full justify-between md:~md/xl:~mt-0/8 max-w-[1100px] mx-auto">
-            <div className="flex items-center justify-center py-2">
+          <div className="flex flex-col-reverse md:flex-row w-full justify-between md:mt-8 max-w-[1100px] mx-auto">
+            <div className="flex items-center text-center justify-center py-2 mt-4 md:mt-0">
               <p>
                 <span className="text-primary">©</span> 2024{" "}
                 <SoftBuses /> All rights
