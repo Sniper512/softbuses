@@ -15,6 +15,7 @@ export default {
         consolas: ["Consolas", "monospace"],
       },
       fontSize: {
+        xxxs: ["0.5rem", { lineHeight: "1rem" }],
         xxs: ["0.625rem", { lineHeight: "1rem" }],
       },
       colors: {
@@ -24,7 +25,7 @@ export default {
         dark: "#121212",
       },
       boxShadow: {
-        glow: "0 0 10px rgba(105, 255, 0, 0.3), 0 0 20px rgba(105, 255, 0, 0.2), 0 0 40px rgba(105, 255, 0, 0.1), -5px 0 15px rgba(105, 255, 0, 0.05), 5px 0 15px rgba(105, 255, 0, 0.05)",
+        glow: "0 0 10px rgba(105, 255, 0, 0.1), 0 0 20px rgba(105, 255, 0, 0.2), 0 0 40px rgba(105, 255, 0, 0.1), -5px 0 15px rgba(105, 255, 0, 0.05), 5px 0 15px rgba(105, 255, 0, 0.05)",
         "glow-2":
           "0 0 5px rgba(105, 255, 0, 0.6), 0 0 10px rgba(105, 255, 0, 0.1), 0 0 20px rgba(105, 255, 0, 0.05), -3px 0 8px rgba(105, 255, 0, 0.03), 3px 0 8px rgba(105, 255, 0, 0.03)",
       },
@@ -58,7 +59,7 @@ export default {
             transform: "translate(170px, 170px)",
             opacity: "0.1",
           },
-          "95%": {
+          "98%": {
             transform: "translate(180px, 180px)",
             opacity: "0",
           },
@@ -398,16 +399,16 @@ export default {
         },
       },
       animation: {
-        "float-1": "float-1 100s linear infinite",
-        "float-2": "float-2 100s linear infinite",
-        "float-3": "float-3 100s linear infinite",
-        "float-4": "float-4 100s linear infinite",
-        "float-5": "float-5 100s linear infinite",
-        "float-6": "float-6 300s linear infinite",
-        "float-7": "float-7 100s linear infinite",
-        "float-8": "float-8 100s linear infinite",
-        "float-9": "float-9 100s linear infinite",
-        "float-10": "float-10 100s linear infinite",
+        "float-1": "float-1 30s linear infinite",
+        "float-2": "float-2 30s linear infinite",
+        "float-3": "float-3 30s linear infinite",
+        "float-4": "float-4 30s linear infinite",
+        "float-5": "float-5 30s linear infinite",
+        "float-6": "float-6 100s linear infinite",
+        "float-7": "float-7 30s linear infinite",
+        "float-8": "float-8 30s linear infinite",
+        "float-9": "float-9 30s linear infinite",
+        "float-10": "float-10 30s linear infinite",
         "bar-left-right": "bar-left-right 40s linear infinite",
       },
     },

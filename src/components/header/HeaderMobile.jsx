@@ -35,7 +35,7 @@ export const HeaderMobile = () => {
   return (
     <>
       <header
-        className="md:hidden fixed top-0 left-0 w-full z-50 bg-gradient-to-b from-black"
+        className="md:hidden fixed top-0 left-0 w-full z-50 bg-gradient-to-b from-black via-black/80"
         style={{
           transition: "background 0.2s",
         }}

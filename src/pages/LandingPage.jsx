@@ -4,7 +4,7 @@ import { Hero } from "../components/hero/Hero";
 import { About } from "../components/About";
 import Services from "../components/Services";
 import { Testimonials } from "../components/Testimonials";
-import { CoCreateSection } from "../components/CoCreateSection";
+import { CoCreateSection } from "../components/coCreate/CoCreateSection";
 import { Footer } from "../components/Footer";
 // import { Blogs } from "../components/Blogs";
 import HeroBg from "../components/HeroBg";
