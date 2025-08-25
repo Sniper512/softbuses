@@ -106,8 +106,8 @@ export const Footer = () => {
           <div className="flex flex-col-reverse md:flex-row w-full justify-between md:mt-8 max-w-[1100px] mx-auto">
             <div className="flex items-center text-center justify-center py-2 mt-4 md:mt-0">
               <p>
-                <span className="text-primary">©</span> 2024{" "}
-                <SoftBuses /> All rights
+                &copy; {new Date().getFullYear()}{" "}
+                <SoftBuses /> • All rights
                 reserved
               </p>
             </div>
