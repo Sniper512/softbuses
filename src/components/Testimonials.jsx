@@ -103,7 +103,7 @@ export const Testimonials = () => {
     {
       image: "2.png",
 
-      name: "Jnplnce",
+      name: "iwoolution",
       title: "Exceptional Code & Collaboration",
       feedback: (
         <>
