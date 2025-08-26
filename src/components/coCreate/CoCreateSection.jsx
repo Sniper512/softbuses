@@ -7,7 +7,7 @@ export const CoCreateSection = () => {
     <>
       <section id="co-create" className="py-20">
         <div className="w-full mx-auto max-w-[1660px] ~/xl:~px-6/40 flex flex-col items-center justify-center">
-          <div className="w-full mt-8">
+          <div className="w-full">
             <SectionHeading firstTitle="Co-create " secondTitle="with us" />
           </div>
           <div className="w-full flex flex-col  md:flex-row-reverse bg-white/5 border-[1px] border-primary/25 gap-y-8  mt-8 md:mt-12 md:px-4 md:py-8">

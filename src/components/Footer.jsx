@@ -58,7 +58,7 @@ export const Footer = () => {
                 </p>
               </div>
 
-              <div className="hidden md:block w-[1px] h-60 bg-gradient-to-b from-primary/0 via-primary/30 to-primary/0" />
+              <div className="hidden md:block w-[1px] h-60 bg-gradient-to-b from-primary/0 via-primary/50 to-primary/0" />
 
               {/* Box 2 */}
               <ul className="flex flex-col items-start justify-center gap-y-2">
@@ -81,7 +81,7 @@ export const Footer = () => {
                 ))}
               </ul>
 
-              <div className="hidden md:block w-[1px] h-60 bg-gradient-to-b from-primary/0 via-primary/30 to-primary/0" />
+              <div className="hidden md:block w-[1px] h-60 bg-gradient-to-b from-primary/0 via-primary/50 to-primary/0" />
 
               {/* Box 3 */}
               <ul className="flex flex-col items-start justify-center gap-y-2">
@@ -100,7 +100,7 @@ export const Footer = () => {
               </ul>
             </div>
           </div>
-          <div className="mx-auto md:hidden mt-8 w-[100%] h-[1px] bg-gradient-to-r from-primary/0 via-primary/30 to-primary/0 " />
+          <div className="mx-auto md:hidden mt-8 w-[100%] h-[1px] bg-gradient-to-r from-primary/0 via-primary/50 to-primary/0 " />
 
           {/* Footer 2 */}
           <div className="flex flex-col-reverse md:flex-row w-full justify-between md:mt-8 max-w-[1100px] mx-auto">
@@ -112,7 +112,7 @@ export const Footer = () => {
               </p>
             </div>
 
-            <div className="mx-auto md:hidden  w-[100%] h-[1px] bg-gradient-to-r from-primary/0 via-primary/30 to-primary/0 " />
+            <div className="mx-auto md:hidden w-[100%] h-[1px] bg-gradient-to-r from-primary/0 via-primary/50 to-primary/0 " />
             <ul className="text-2xl text-white flex items-center justify-center gap-x-5 py-4">
               {socialLinks.map((link, index) => (
                 <li key={index}>
@@ -128,7 +128,7 @@ export const Footer = () => {
         </div>
       </footer>
       <div className="relative w-full">
-        <hr className="h-4 border-0 w-full bg-gradient-to-r from-primary/0 via-primary/30 to-primary/0" />
+        <hr className="h-4 border-0 w-full rounded-t-[100%] bg-gradient-to-r from-primary/0 via-primary/50 to-primary/0" />
       </div>
     </>
   );
