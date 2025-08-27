@@ -1,11 +1,25 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import { SectionHeading } from "../SectionHeading";
 import Bar from "../Bar";
 import ProjectsHeader from "./ProjectsHeader";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const projects = [
+  {
+    logo: "/projects/furstLogo.png",
+    title: "Furst",
+    mobile: "/projects/furstMobile.png",
+    laptop: "/projects/furstLaptop.png",
+    facilities: [
+      "Custom Development Solutions",
+      "Cloud Infrastructure Management",
+      "Quality Assurance & Testing Labs",
+      "24/7 Technical Support Center",
+      "Agile Development Studios"
+    ]
+  },
   {
     logo: "/projects/empoweredLearningsLogo.svg",
     title: "Empowered Learnings",
@@ -80,10 +94,19 @@ const projects = [
 
 
 
-const VISIBLE_COUNT = 5; // Number of buttons visible at once (should be odd)
+const VISIBLE_COUNT = 7; // Number of buttons visible at once (should be odd)
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(0);
+
+  // Auto-rotate projects every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSelectedProject((prevProject) => (prevProject + 1) % projects.length);
+    }, 8000); // 8 seconds
+
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, []);
 
   // For infinite scroll, create a window of projects centered on selected
   const getCyclicWindow = (center, count) => {
@@ -121,9 +144,25 @@ const Projects = () => {
           handleProjectSelect={(i) => handleProjectSelect(visibleProjects[i]._realIndex)}
         />
 
-        {/* Second Part (unchanged) */}
+
+
         <div className="w-full mx-auto max-w-[1660px] ~/xl:~px-6/40">
-          <div className="~sm/xl:~mt-4/12 w-full flex flex-col md:flex-row-reverse items-center justify-between shadow-glow-2 ~sm/xl:~py-6/12 border-primary border border-opacity-45 gap-y-12 ~md/xl:~px-6/12 relative">
+          <div className="relative ~sm/xl:~mt-4/12 w-full flex flex-col md:flex-row-reverse items-center justify-between shadow-glow-2 
+          ~sm/xl:~py-6/12 border-primary border border-opacity-45 gap-y-6 ~md/xl:~px-6/12">
+            <button
+              onClick={() => handleProjectSelect((selectedProject - 1 + projects.length) % projects.length)}
+              className="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-primary-dark hover:bg-primary-dark/80 text-white rounded-full flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl md:-left-2 md:-translate-x-full"
+              aria-label="Previous Project"
+            >
+              <FaChevronLeft />
+            </button>
+            <button
+              onClick={() => handleProjectSelect((selectedProject + 1) % projects.length)}
+              className="absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-primary-dark hover:bg-primary-dark/80 text-white rounded-full flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl md:-right-2 md:translate-x-full"
+              aria-label="Next Project"
+            >
+              <FaChevronRight />
+            </button>
             {/* Image Section */}
             <div className="w-full md:w-[55%] xl:w-[65%] flex items-center justify-center md:justify-end">
               <div className="~sm/lg:~w-[23.4rem]/[40rem] h-auto relative project-image-container">

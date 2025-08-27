@@ -2,6 +2,17 @@ export const links = ["Home", "About", "Services", "Solutions", "Technologies"];
 
 export const servicesAvailable = [
   {
+    service: "Web Scraping & Data Services",
+    detail: [
+      "Structured Data Scraping",
+      "E-commerce Scraping Bots",
+      "News & Blog Aggregation",
+      "Real-time Data Monitoring",
+      "Data Cleaning & Processing",
+      "ETL Pipelines (Extract, Transform, Load)",
+    ],
+  },
+  {
     service: "Web Development",
     detail: [
       "Custom Web App Development",
@@ -54,28 +65,6 @@ export const servicesAvailable = [
       "Email & Marketing Automation",
       "CI/CD Pipeline Automation",
       "Testing Automation",
-    ],
-  },
-  {
-    service: "Web Scraping & Data Services",
-    detail: [
-      "Structured Data Scraping",
-      "E-commerce Scraping Bots",
-      "News & Blog Aggregation",
-      "Real-time Data Monitoring",
-      "Data Cleaning & Processing",
-      "ETL Pipelines (Extract, Transform, Load)",
-    ],
-  },
-  {
-    service: "Cloud & DevOps",
-    detail: [
-      "AWS/GCP/Azure Deployment",
-      "Serverless Architecture",
-      "Docker & Kubernetes Setup",
-      "DevOps CI/CD Pipelines",
-      "Cloud Storage & Database Solutions",
-      "Monitoring & Logging",
     ],
   },
 ];

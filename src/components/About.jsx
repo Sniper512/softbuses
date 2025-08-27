@@ -10,13 +10,8 @@ export const About = () => {
           <SectionHeading firstTitle="About" secondTitle="Us" />
           <div className="w-full flex items-center justify-center px-4 ">
             <p className="w-full md:max-w-3xl xl:max-w-4xl px-4 py-6 border border-primary text-white text-base shadow-glow-2 md:text-lg">
-              <SoftBuses /> is a dynamic
-              startup composed of incredibly passionate and exceptionally talented
-              software engineers. They harness the most advanced and innovative
-              cutting-edge technologies to create web and mobile applications that
-              are nothing short of extraordinary. The team is dedicated to pushing
-              the boundaries of what's possible, ensuring every app they develop
-              is a masterpiece of excellence and innovation.
+              <SoftBuses /> develops intelligent, AI-powered automation and web scraping solutions that enable businesses to streamline operations, make data-driven decisions, and gain a competitive edge.
+              We also create customized web and app solutions that integrate with your automated systems, helping you stand out and provide a seamless customer experience.
             </p>
           </div>
         </div>

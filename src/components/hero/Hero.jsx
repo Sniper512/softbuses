@@ -9,9 +9,6 @@ export const Hero = () => {
       <section className="pb-4 pt-24 md:pt-10 md:pb-12 relative z-[1]">
         <div className="w-full mx-auto max-w-[1660px] flex flex-col items-center justify-center px-4 text-center gap-y-6 md:gap-y-12">
           {/* Logo */}
-          {/* <div className="w-[110px] h-auto">
-          <img src="verticalLogo.svg" alt="" className="w-full h-auto" />
-        </div> */}
           <div className="w-32 lg:w-40 h-auto">
             <HeroLogoSection />
           </div>
@@ -25,8 +22,8 @@ export const Hero = () => {
           {/* Sub Text */}
           <div className="w-full flex items-center justify-center">
             <h2 className="text-sm md:text-base text-wrap md:w-3/4 xl:w-1/2 text-center text-white/80 tracking-widest">
-              <SoftBuses /> builds exceptional web and mobile apps using cutting-edge
-              technology and a passionate, talented team.
+              At <SoftBuses />
+              , we're pioneering AI-driven innovations to empower businesses with smarter automation and seamless digital experiences.
             </h2>
           </div>
           {/* Call to Action */}

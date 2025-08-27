@@ -3,27 +3,27 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import SoftBuses from "./SoftBuses";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Bar from "./Bar";
 
 // Custom Arrow Components
 const CustomPrevArrow = ({ onClick }) => (
   <button
     onClick={onClick}
-    className="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-primary-dark hover:bg-primary-dark/80 text-white rounded-full flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl"
+    className="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-primary-dark hover:bg-primary-dark/80 text-white rounded-full flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl md:-left-1 md:-translate-x-full"
     aria-label="Previous testimonial"
   >
-    <FaArrowLeft />
+    <FaChevronLeft />
   </button>
 );
 
 const CustomNextArrow = ({ onClick }) => (
   <button
     onClick={onClick}
-    className="absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-primary-dark hover:bg-primary-dark/80 text-white rounded-full flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl"
+    className="absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-primary-dark hover:bg-primary-dark/80 text-white rounded-full flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl md:-right-1 md:translate-x-full"
     aria-label="Next testimonial"
   >
-    <FaArrowRight />
+    <FaChevronRight />
   </button>
 );
 
