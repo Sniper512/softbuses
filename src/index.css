@@ -76,6 +76,6 @@ body {
 
 /* Technologies Section */
 .technologies_section {
-  mask-image: linear-gradient(90deg, transparent 0%, #d9d9d9 20%, #d9d9d9 80%, transparent 100%), linear-gradient(180deg, transparent 5%, #d9d9d9 15%, #d9d9d9 85%, transparent 95%);
+  mask-image: linear-gradient(90deg, transparent 1%, #d9d9d9 4%, #d9d9d9 96%, transparent 99%), linear-gradient(180deg, transparent 5%, #d9d9d9 10%, #d9d9d9 90%, transparent 95%);
   mask-composite: intersect;
 }
