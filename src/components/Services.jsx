@@ -3,17 +3,31 @@ import Bar from "./Bar";
 import Button from "./Button";
 import { SectionHeading } from "./SectionHeading";
 import { servicesAvailable } from "./arrays";
+// eslint-disable-next-line no-unused-vars
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+import { containerVariants, fadeInUpVariants } from "../utils/onScrollAnimtions";
 
 const Services = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
     <>
       <section id="services" className="py-20">
-        <div className="w-full mx-auto max-w-[1660px] flex flex-col items-center justify-center ~/xl:~px-6/40 gap-y-10">
+        <motion.div
+          ref={ref}
+          className="w-full mx-auto max-w-[1660px] flex flex-col items-center justify-center ~/xl:~px-6/40 gap-y-10"
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          variants={containerVariants}
+        >
           <SectionHeading firstTitle="See Our" secondTitle="Services" />
           <ServicesSections />
-          <Button text="Get a Quote" type="link" href="#co-create" />
-        </div>
+          <motion.div variants={fadeInUpVariants}>
+            <Button text="Get a Quote" type="link" href="#co-create" />
+          </motion.div>
+        </motion.div>
       </section>
       <Bar />
     </>
@@ -21,11 +35,35 @@ const Services = () => {
 };
 
 const ServicesSections = () => {
+  const serviceCardVariants = {
+    hidden: {
+      opacity: 0,
+      y: 50,
+      scale: 0.9,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
   return (
     <div className="w-full flex items-center justify-center z-[1]">
       <div className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 ~gap-4/8">
         {servicesAvailable.map((item, index) => (
-          <div key={index} className="group w-full">
+          <motion.div
+            key={index}
+            className="group w-full"
+            variants={serviceCardVariants}
+            whileHover={{
+              scale: 1.02,
+              transition: { duration: 0.2 }
+            }}
+          >
             <div
               className="z-10 border-2 group bg-[#121212] p-4 h-full transition-all flex flex-col justify-evenly gap-y-2 border-white text-primary group-hover:shadow-[4px_4px_0_0_#4fbd00] group-hover:-translate-x-1 group-hover:-translate-y-1"
             >
@@ -42,7 +80,7 @@ const ServicesSections = () => {
                 ))}
               </ul>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

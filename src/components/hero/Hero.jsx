@@ -1,3 +1,4 @@
+import { containerVariants, fadeInUpVariants } from "../../utils/onScrollAnimtions";
 import Bar from "../Bar";
 import Button from "../Button";
 import SoftBuses from "../SoftBuses";
@@ -6,38 +7,12 @@ import HeroLogoSection from "./HeroLogoSection";
 import { motion } from "framer-motion";
 
 export const Hero = () => {
-  // Gentle animation variants
-  const fadeInUpVariants = {
-    hidden: {
-      opacity: 0,
-      y: 30
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut"
-      }
-    }
-  };
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.1
-      }
-    }
-  };
 
   return (
     <>
       <section className="pb-8 pt-24 md:pt-10 md:pb-12 relative z-[1]">
         <motion.div
-          className="w-full mx-auto max-w-[1660px] flex flex-col items-center justify-center px-4 text-center gap-y-6 md:gap-y-12"
+          className="w-full mx-auto max-w-[1660px] flex flex-col items-center justify-center px-4 text-center gap-y-6 md:gap-y-10"
           initial="hidden"
           animate="visible"
           variants={containerVariants}
@@ -51,7 +26,6 @@ export const Hero = () => {
           </motion.div>
           {/* Main Text */}
           <motion.div
-            className=""
             variants={fadeInUpVariants}
           >
             <h1 className="~sm/xl:~text-2xl/6xl font-bold">

@@ -1,6 +1,12 @@
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion"
+import { fadeInUpVariants } from "../../utils/onScrollAnimtions";
+
 const ProjectsHeader = ({ projects, selectedProject, handleProjectSelect }) => {
   return (
-    <div className="w-full mx-auto flex justify-center items-center overflow-hidden">
+    <motion.div className="w-full mx-auto flex justify-center items-center overflow-hidden"
+      variants={fadeInUpVariants}
+    >
       <div className="flex items-center justify-center gap-4 w-max mx-auto py-8 transition-transform duration-500" style={{ minWidth: 0 }}>
         {projects.map((project, index) => (
           <button
@@ -14,7 +20,7 @@ const ProjectsHeader = ({ projects, selectedProject, handleProjectSelect }) => {
           </button>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

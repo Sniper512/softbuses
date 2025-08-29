@@ -1,11 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 // eslint-disable-next-line no-unused-vars
-import { motion, AnimatePresence } from "framer-motion";
-
+import { motion, AnimatePresence, useInView } from "framer-motion";
 import { SectionHeading } from "../SectionHeading";
 import Bar from "../Bar";
 import ProjectsHeader from "./ProjectsHeader";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { containerVariants, fadeInUpVariants } from "../../utils/onScrollAnimtions";
 
 const projects = [
   {
@@ -93,12 +93,12 @@ const projects = [
   }
 ];
 
-
-
 const VISIBLE_COUNT = 7; // Number of buttons visible at once (should be odd)
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(0);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   // Auto-rotate projects every 5 seconds
   useEffect(() => {
@@ -132,7 +132,12 @@ const Projects = () => {
 
   return (
     <>
-      <section id="solutions" className="py-20 z-[1] relative">
+      <motion.section id="solutions" className="py-20 z-[1] relative"
+        ref={ref}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        variants={containerVariants}
+      >
         <div className="w-full mx-auto max-w-[1660px] ~/xl:~px-6/40">
           <div>
             <SectionHeading firstTitle="Our" secondTitle="Solutions" />
@@ -147,7 +152,9 @@ const Projects = () => {
 
 
 
-        <div className="w-full mx-auto max-w-[1660px] ~/xl:~px-6/40">
+        <motion.div className="w-full mx-auto max-w-[1660px] ~/xl:~px-6/40"
+          variants={fadeInUpVariants}
+        >
           <div className="relative ~sm/xl:~mt-4/12 w-full flex flex-col md:flex-row-reverse items-center justify-between shadow-glow-2 
           ~sm/xl:~py-6/12 border-primary border border-opacity-45 gap-y-6 ~md/xl:~px-6/12">
             <button
@@ -274,8 +281,8 @@ const Projects = () => {
               </div>
             </div>
           </div>
-        </div>
-      </section >
+        </motion.div>
+      </motion.section >
       <Bar />
     </>
   );

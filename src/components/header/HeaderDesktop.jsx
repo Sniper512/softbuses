@@ -4,42 +4,10 @@ import { ContactButton } from "../ContactButton";
 import { useState, useEffect } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
+import { headerContactAndHamVariants, headerLogoVariants } from "../../utils/onScrollAnimtions";
 
 export const HeaderDesktop = () => {
   const [showContactLink, setShowContactLink] = useState(false);
-
-  // Animation variants for logo and contact button
-  const logoVariants = {
-    hidden: {
-      opacity: 0,
-      x: -50
-    },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 0.3,
-        ease: "easeOut",
-        delay: 0.2
-      }
-    }
-  };
-
-  const contactButtonVariants = {
-    hidden: {
-      opacity: 0,
-      x: 50
-    },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 0.3,
-        ease: "easeOut",
-        delay: 0.2
-      }
-    }
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -60,7 +28,7 @@ export const HeaderDesktop = () => {
           className="w-36"
           initial="hidden"
           animate="visible"
-          variants={logoVariants}
+          variants={headerLogoVariants}
         >
           <img src="horizontalLogo.svg" className="w-full h-auto" alt="" />
         </motion.div>
@@ -70,7 +38,7 @@ export const HeaderDesktop = () => {
         <motion.div
           initial="hidden"
           animate="visible"
-          variants={contactButtonVariants}
+          variants={headerContactAndHamVariants}
         >
           <ContactButton />
         </motion.div>
