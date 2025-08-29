@@ -14,11 +14,11 @@ const projects = [
     mobile: "/projects/furstMobile.png",
     laptop: "/projects/furstLaptop.png",
     facilities: [
-      "Custom Development Solutions",
-      "Cloud Infrastructure Management",
-      "Quality Assurance & Testing Labs",
-      "24/7 Technical Support Center",
-      "Agile Development Studios"
+      "Wide Range of Nutritious Dog Foods",
+      "Online Ordering & Home Delivery",
+      "Personalized Feeding Recommendations",
+      "Detailed Ingredient & Nutrition Info",
+      "Loyalty Program for Regular Customers"
     ]
   },
   {
@@ -30,7 +30,6 @@ const projects = [
       "Live & Recorded Learning Options",
       "Expert Tutors & Life Coaches",
       "Personalized Learning Experience",
-      "Built with Modern Web Technologies",
       "Secure Payments & Easy Access",
       "Fast, Scalable, and Reliable Hosting",
     ],
@@ -41,12 +40,11 @@ const projects = [
     mobile: "/projects/mamoonVaanMobile.png",
     laptop: "/projects/mamoonVaanLaptop.png",
     facilities: [
-      "Premium Vehicle Listings",
-      "Advanced Search & Filtering",
-      "Secure Payment Processing",
-      "Real-time Chat Support",
-      "Mobile-First Design",
-      "Fast Loading & SEO Optimized",
+      "Wide Range of Fashion Products",
+      "Secure Online Payments",
+      "Fast & Reliable Shipping",
+      "Easy Returns & Exchanges",
+      "User-friendly Shopping Experience",
     ],
   },
   {
@@ -55,12 +53,11 @@ const projects = [
     mobile: "/projects/shoperzMobile.png",
     laptop: "/projects/shoperzLaptop.png",
     facilities: [
-      "Multi-vendor Marketplace",
-      "Secure Payment Gateway",
-      "Real-time Inventory Management",
-      "Advanced Analytics Dashboard",
-      "Mobile App Integration",
-      "Cloud-based Infrastructure",
+      "Computers & Accessories",
+      "Secure Online Payment Options",
+      "Fast & Reliable Nationwide Delivery",
+      "Detailed Product Specifications",
+      "Dedicated Customer Support",
     ],
   },
   {
@@ -69,12 +66,11 @@ const projects = [
     mobile: "/projects/immersalynxMobile.png",
     laptop: "/projects/immersalynxLaptop.png",
     facilities: [
-      "Immersive VR/AR Experiences",
-      "Cross-platform Compatibility",
-      "Real-time 3D Rendering",
-      "Interactive User Interface",
-      "High-performance Graphics",
-      "Scalable Cloud Architecture",
+      "Multiplayer Online Gaming Platform",
+      "Real-time Leaderboards & Achievements",
+      "In-game Virtual Economy Integration",
+      "Cross-platform Gameplay Support",
+      "User-friendly Interface"
     ],
   },
   {
@@ -88,7 +84,6 @@ const projects = [
       "Interactive Learning Tools",
       "Real-time Progress Tracking",
       "Flexible Scheduling Options",
-      "Secure Payment Processing",
     ],
   }
 ];
@@ -172,7 +167,7 @@ const Projects = () => {
               <FaChevronRight />
             </button>
             {/* Image Section */}
-            <div className="w-full md:w-[55%] xl:w-[65%] flex items-center justify-center md:justify-end">
+            <div className="w-full md:w-[55%] flex items-center justify-center md:justify-end">
               <div className="~sm/lg:~w-[23.4rem]/[40rem] h-auto relative project-image-container">
                 {/* Invisible placeholder for height stability */}
                 <div className="relative w-full h-full opacity-0 pointer-events-none">
@@ -219,7 +214,7 @@ const Projects = () => {
             </div>
 
             {/* Text Section (unchanged) */}
-            <div className="flex w-full h-full md:w-[45%] xl:w-[35%] flex-col items-center md:items-start justify-between gap-y-3 relative">
+            <div className="flex w-full h-full md:w-[45%] flex-col items-center md:items-start justify-between gap-y-3 relative">
               {/* Invisible placeholder for height stability */}
               <div className="w-full opacity-0 pointer-events-none">
                 <h3 className="~sm/xl:~text-lg/3xl font-semibold mb-6">
@@ -229,7 +224,7 @@ const Projects = () => {
                   {projects[selectedProject].facilities.map((facility, index) => (
                     <li
                       key={`placeholder-${selectedProject}-${index}`}
-                      className="text-sm md:text-base xl:text-[17px] font-medium flex items-center justify-start gap-x-5 ~sm/xl:~mt-1.5/3.5"
+                      className="text-sm md:text-base font-normal flex items-center justify-start gap-x-5 ~sm/xl:~mt-2/3"
                     >
                       <div className="relative h-5 w-5 flex-shrink-0">
                         <div className="absolute top-[3px] left-[3px] h-4 w-4 bg-primary"></div>
@@ -259,7 +254,7 @@ const Projects = () => {
                       {projects[selectedProject].facilities.map((facility, index) => (
                         <motion.li
                           key={`${selectedProject}-${index}`}
-                          className="text-sm md:text-base xl:text-[17px] font-medium flex items-center justify-start gap-x-5 ~sm/xl:~mt-1.5/3.5"
+                          className="text-sm md:text-base font-normal flex items-center justify-start gap-x-5 ~sm/xl:~mt-2/3"
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           transition={{

@@ -1,7 +1,10 @@
+import { useRef } from "react";
 import Bar from "../Bar";
 import { SectionHeading } from "../SectionHeading";
 import TechMainCard from "./TechMainCard"
 import TechSubCard from "./TechSubCard";
+// eslint-disable-next-line no-unused-vars
+import { motion, useInView } from "framer-motion";
 
 const technologies = [
   {
@@ -323,12 +326,33 @@ const technologies = [
 ]
 
 const Technologies = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  const technologiesContainerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.05, // Faster stagger for grid items
+        delayChildren: 0.2,    // Shorter delay
+      },
+    },
+  };
+
   return (
     <>
-      <section id="technologies" className="w-full overflow-hidden py-20 mx-auto flex flex-col items-center ~gap-y-4/12">
-        <div className="w-full ~md/xl:~px-[3.1rem]/[10rem] max-w-[1660px]">
+      <motion.section id="technologies" className="w-full overflow-hidden py-20 mx-auto flex flex-col items-center ~gap-y-4/12"
+        ref={ref}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        variants={technologiesContainerVariants}
+      >
+        <motion.div
+          className="w-full ~md/xl:~px-[3.1rem]/[10rem] max-w-[1660px]"
+        >
           <SectionHeading firstTitle="Our" secondTitle="Technologies" />
-        </div>
+        </motion.div>
         <div className="technologies_section w-max overflow-hidden grid grid-cols-8 gap-2 sm:gap-4" >
           {/* Placeholder for additional technology cards */}
           {Array.from({ length: 8 }).map((_, index) => (
@@ -354,7 +378,7 @@ const Technologies = () => {
             </div>
           ))}
         </div>
-      </section >
+      </motion.section >
       <Bar />
     </>
   );

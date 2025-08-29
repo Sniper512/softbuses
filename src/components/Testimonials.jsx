@@ -5,6 +5,10 @@ import Slider from "react-slick";
 import SoftBuses from "./SoftBuses";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Bar from "./Bar";
+// eslint-disable-next-line no-unused-vars
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+import { containerVariants, fadeInUpVariants } from "../utils/onScrollAnimtions";
 
 // Custom Arrow Components
 const CustomPrevArrow = ({ onClick }) => (
@@ -28,6 +32,9 @@ const CustomNextArrow = ({ onClick }) => (
 );
 
 export const Testimonials = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
   var settings = {
     dots: true,
     infinite: true,
@@ -71,6 +78,7 @@ export const Testimonials = () => {
       },
     ],
   };
+
   const renderStars = (rating) => {
     const stars = [];
     for (let i = 0; i < 5; i++) {
@@ -102,7 +110,6 @@ export const Testimonials = () => {
     },
     {
       image: "2.png",
-
       name: "iwoolution",
       title: "Exceptional Code & Collaboration",
       feedback: (
@@ -118,7 +125,6 @@ export const Testimonials = () => {
     },
     {
       image: "3.png",
-
       name: "Manymangoes",
       title: "Fast, Precise, and a Joy to Work With",
       feedback: (
@@ -132,7 +138,6 @@ export const Testimonials = () => {
     },
     {
       image: "3.png",
-
       name: "Rafay Asif",
       title: "Creative, Committed, and Consistently Impressive",
       feedback: (
@@ -150,12 +155,21 @@ export const Testimonials = () => {
   return (
     <>
       <section className="w-full py-20">
-        <div className="w-full mx-auto max-w-[1660px] block flex-col items-center justify-center ~/xl:~px-6/40 gap-y-8 pb-16">
-          <div className="w-full">
+        <motion.div
+          ref={ref}
+          className="w-full mx-auto max-w-[1660px] block flex-col items-center justify-center ~/xl:~px-6/40 gap-y-8 pb-16"
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          variants={containerVariants}
+        >
+          <motion.div variants={fadeInUpVariants}>
             <SectionHeading firstTitle="Client" secondTitle="Testimonials" />
-          </div>
+          </motion.div>
 
-          <div className="mt-8 md:mt-12 relative">
+          <motion.div
+            className="mt-8 md:mt-12 relative"
+            variants={fadeInUpVariants}
+          >
             <Slider className="" {...settings}>
               {clientTestimonials.map((testimonial, index) => (
                 <div
@@ -207,8 +221,8 @@ export const Testimonials = () => {
                 </div>
               ))}
             </Slider>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </section>
       <Bar />
     </>
