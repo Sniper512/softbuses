@@ -2,9 +2,44 @@ import { links } from "../arrays";
 import Bar from "../Bar";
 import { ContactButton } from "../ContactButton";
 import { useState, useEffect } from "react";
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
 
 export const HeaderDesktop = () => {
   const [showContactLink, setShowContactLink] = useState(false);
+
+  // Animation variants for logo and contact button
+  const logoVariants = {
+    hidden: {
+      opacity: 0,
+      x: -50
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.3,
+        ease: "easeOut",
+        delay: 0.2
+      }
+    }
+  };
+
+  const contactButtonVariants = {
+    hidden: {
+      opacity: 0,
+      x: 50
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.3,
+        ease: "easeOut",
+        delay: 0.2
+      }
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,15 +56,24 @@ export const HeaderDesktop = () => {
       {/* Static Logo and Contact Button - scrolls with page */}
       <header className="hidden md:flex justify-between items-center px-10 lg:px-20 xl:px-36 py-3 relative z-[998] lg:py-4">
         {/* Logo */}
-        <div className="w-36">
+        <motion.div
+          className="w-36"
+          initial="hidden"
+          animate="visible"
+          variants={logoVariants}
+        >
           <img src="horizontalLogo.svg" className="w-full h-auto" alt="" />
-        </div>
+        </motion.div>
         {/* Spacer to maintain layout */}
         <div className="flex-1"></div>
         {/* Contact Button */}
-        <div>
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={contactButtonVariants}
+        >
           <ContactButton />
-        </div>
+        </motion.div>
       </header>
       <Bar />
 
@@ -39,13 +83,16 @@ export const HeaderDesktop = () => {
       >
         <div className="flex text-xxs lg:text-xs items-center justify-center">
           {links.map((link, index) => (
-            <a
+            <motion.a
               key={index}
               href={`#${link.toLowerCase()}`}
               className="text-white tracking-widest hover:text-primary-medium cursor-pointer transition-colors duration-200 py-0.5 px-1.5 lg:py-1 lg:px-2"
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.2, delay: index * 0.1 }}
             >
               {link}
-            </a>
+            </motion.a>
           ))}
         </div>
         {/* Contact Us link with animation */}

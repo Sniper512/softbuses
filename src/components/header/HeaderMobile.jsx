@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
 import { links } from "../arrays";
 import Bar from "../Bar";
 
@@ -32,6 +34,40 @@ export const HeaderMobile = () => {
     setIsOpen(!isOpen);
   };
 
+  // Animation variants for logo and contact button
+  const logoVariants = {
+    hidden: {
+      opacity: 0,
+      x: -50
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.3,
+        ease: "easeOut",
+        delay: 0.2
+      }
+    }
+  };
+
+  const hamVariants = {
+    hidden: {
+      opacity: 0,
+      x: 50
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.3,
+        ease: "easeOut",
+        delay: 0.2
+      }
+    }
+  };
+
+
   return (
     <>
       <header
@@ -49,12 +85,16 @@ export const HeaderMobile = () => {
           }}
         >
           {/* Logo */}
-          <div style={{ width: logoWidth, transition: "width 0.2s" }}>
+          <motion.div style={{ width: logoWidth, transition: "width 0.2s" }} variants={logoVariants} initial="hidden" animate="visible">
             <img src="horizontalLogo.svg" className="w-full h-auto" alt="" />
-          </div>
-          <button className="w-9" onClick={toggleMenu}>
+          </motion.div>
+          <motion.button className="w-9" onClick={toggleMenu}
+            initial="hidden"
+            animate="visible"
+            variants={hamVariants}
+          >
             <img src="menuIcon.svg" className="w-full h-auto" alt="Menu Icon" style={{ transform: `scale(${toggleBtnScale})`, transition: "transform 0.2s" }} />
-          </button>
+          </motion.button>
         </div>
         <Bar />
       </header>
