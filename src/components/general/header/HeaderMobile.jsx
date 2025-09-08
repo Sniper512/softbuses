@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
-import { links } from "../arrays";
+import { links } from "../../../assets/sectionsData";
 import Bar from "../Bar";
-import { headerContactAndHamVariants, headerLogoVariants } from "../../utils/onScrollAnimtions";
+import { headerContactAndHamVariants, headerLogoVariants } from "../../../utils/onScrollAnimtions";
+import { HashLink } from "react-router-hash-link";
 
 export const HeaderMobile = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -82,14 +83,14 @@ export const HeaderMobile = () => {
           <div className="overflow-hidden">
             <nav className="flex flex-col space-y-6 p-6 pt-24">
               {links.map((link, index) => (
-                <a
+                <HashLink
                   key={index}
-                  href={`#${link.toLowerCase()}`}
+                  to={link.href}
                   onClick={() => setIsOpen(false)}
                   className="text-left text-white text-lg font-light tracking-wider hover:text-primary transition-colors duration-200 py-2"
                 >
-                  {link}
-                </a>
+                  {link.name}
+                </HashLink>
               ))}
             </nav>
           </div>

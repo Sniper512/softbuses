@@ -1,6 +1,5 @@
-import React from "react";
-import { SectionHeading } from "./SectionHeading";
-import SoftBuses from "./SoftBuses";
+import { SectionHeading } from "../SectionHeading";
+import SoftBuses from "../general/SoftBuses";
 
 export const Blogs = () => {
   return (

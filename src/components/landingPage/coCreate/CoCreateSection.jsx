@@ -1,10 +1,10 @@
-import Bar from "../Bar";
+import Bar from "../../general/Bar";
 import { SectionHeading } from "../SectionHeading";
 import { ContactForm } from "./ContactForm";
 // eslint-disable-next-line no-unused-vars
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { containerVariants, fadeInUpVariants } from "../../utils/onScrollAnimtions";
+import { containerVariants, fadeInUpVariants } from "../../../utils/onScrollAnimtions";
 
 export const CoCreateSection = () => {
   const ref = useRef(null);

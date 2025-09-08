@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Button from "../Button";
-import { sendContactForm } from "../../api/contactForm";
+import Button from "../../general/Button";
+import { sendContactForm } from "../../../api/contactForm";
 import { FaCircleCheck, FaCircleExclamation } from "react-icons/fa6";
 
 export const ContactForm = () => {

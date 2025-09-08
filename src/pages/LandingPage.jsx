@@ -1,24 +1,19 @@
-import { HeaderMobile } from "../components/header/HeaderMobile";
-import { HeaderDesktop } from "../components/header/HeaderDesktop";
-import { Hero } from "../components/hero/Hero";
-import { About } from "../components/About";
-import Services from "../components/Services";
-import { Testimonials } from "../components/Testimonials";
-import { CoCreateSection } from "../components/coCreate/CoCreateSection";
-import { Footer } from "../components/Footer";
+import { Hero } from "../components/landingPage/hero/Hero";
+import { About } from "../components/landingPage/About";
+import Services from "../components/landingPage/services/Services";
+import { Testimonials } from "../components/landingPage/Testimonials";
+import { CoCreateSection } from "../components/landingPage/coCreate/CoCreateSection";
 // import { Blogs } from "../components/Blogs";
-import HeroBg from "../components/HeroBg";
-import { ScrollToTopButton } from "../components/ScrollToTopButton";
-import ProjectsBg from "../components/ProjectsBg";
-import Projects from "../components/projects/Projects";
-import Technologies from "../components/technologies/Technologies";
+import HeroBg from "../components/landingPage/hero/HeroBg";
+import { ScrollToTopButton } from "../components/general/ScrollToTopButton";
+import ProjectsBg from "../components/landingPage/projects/ProjectsBg";
+import Projects from "../components/landingPage/projects/Projects";
+import Technologies from "../components/landingPage/technologies/Technologies";
 
 export const LandingPage = () => {
   return (
-    <div className="">
+    <>
       <div id="home" className="relative">
-        <HeaderMobile />
-        <HeaderDesktop />
         <HeroBg />
         <Hero />
         <About />
@@ -32,10 +27,9 @@ export const LandingPage = () => {
       {/* <Blogs /> */}
       <Testimonials />
       <CoCreateSection />
-      <Footer />
 
       {/* Scroll to Top Button */}
       <ScrollToTopButton />
-    </div>
+    </>
   );
 };

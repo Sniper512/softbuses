@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion"
-import { fadeInUpVariants } from "../../utils/onScrollAnimtions";
+import { fadeInUpVariants } from "../../../utils/onScrollAnimtions";
 
 const ProjectsHeader = ({ projects, selectedProject, handleProjectSelect }) => {
   return (

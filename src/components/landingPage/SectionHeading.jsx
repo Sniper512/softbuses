@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { containerVariants } from "../utils/onScrollAnimtions";
+import { containerVariants } from "../../utils/onScrollAnimtions";
 
 export const SectionHeading = ({ firstTitle = "", secondTitle = "" }) => {
   const ref = useRef(null);

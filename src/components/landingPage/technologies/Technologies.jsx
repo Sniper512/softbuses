@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import Bar from "../Bar";
+import Bar from "../../general/Bar";
 import { SectionHeading } from "../SectionHeading";
 import TechMainCard from "./TechMainCard"
 import TechSubCard from "./TechSubCard";

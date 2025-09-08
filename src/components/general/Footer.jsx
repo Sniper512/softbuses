@@ -1,4 +1,3 @@
-import React from "react";
 import { FaDotCircle, FaFacebookF } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa";
@@ -8,7 +7,9 @@ import SoftBuses from "./SoftBuses";
 // eslint-disable-next-line no-unused-vars
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { containerVariants, fadeInUpVariants } from "../utils/onScrollAnimtions";
+import { containerVariants, fadeInUpVariants } from "../../utils/onScrollAnimtions";
+import { Link } from "react-router";
+import { HashLink } from "react-router-hash-link";
 
 const socialLinks = [
   { icon: FaFacebookF, url: "https://www.facebook.com/profile.php?id=61563772225653" },
@@ -33,19 +34,19 @@ export const Footer = () => {
   ];
 
   const sections = [
-    { text: "Home", href: "#home" },
-    { text: "About Us", href: "#about" },
-    { text: "Services", href: "#services" },
-    { text: "Solutions", href: "#solutions" },
-    { text: "Technologies", href: "#technologies" },
-    // { text: "Blogs", href: "#blogs" },
-    { text: "Contact Us", href: "#co-create" },
+    { text: "Home", href: "/#home" },
+    { text: "About Us", href: "/#about" },
+    { text: "Services", href: "/#services" },
+    { text: "Solutions", href: "/#solutions" },
+    { text: "Technologies", href: "/#technologies" },
+    // { text: "Blogs", href: "/#blogs" },
+    { text: "Contact Us", href: "/#co-create" },
   ];
 
 
   return (
     <>
-      <footer className="pt-20 pb-8">
+      <footer className="bg-dark pt-20 pb-8">
         <motion.div
           ref={ref}
           className="mx-auto max-w-7xl flex flex-col items-start ~px-6/10"
@@ -96,12 +97,12 @@ export const Footer = () => {
                 {sections.map((section, index) => (
                   <li key={index} className="flex items-center gap-x-4">
                     <FaDotCircle size={8} />
-                    <a
-                      href={section.href}
+                    <HashLink
+                      to={section.href}
                       className="decoration-white hover:text-primary underline-offset-4 cursor-pointer transition-all duration-500"
                     >
                       {section.text}
-                    </a>
+                    </HashLink>
                   </li>
                 ))}
               </motion.ul>
@@ -160,11 +161,11 @@ export const Footer = () => {
                   whileHover={{ y: -3, scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <a target="__blank" href={`${link.url}`}>
+                  <HashLink target="__blank" to={`${link.url}`}>
                     <span className="hover:text-primary duration-500 transition-colors">
                       <link.icon />
                     </span>
-                  </a>
+                  </HashLink>
                 </motion.li>
               ))}
             </ul>

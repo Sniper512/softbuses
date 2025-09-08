@@ -2,13 +2,13 @@ import { SectionHeading } from "./SectionHeading";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import SoftBuses from "./SoftBuses";
+import SoftBuses from "../general/SoftBuses";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import Bar from "./Bar";
+import Bar from "../general/Bar";
 // eslint-disable-next-line no-unused-vars
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { containerVariants, fadeInUpVariants } from "../utils/onScrollAnimtions";
+import { containerVariants, fadeInUpVariants } from "../../utils/onScrollAnimtions";
 
 // Custom Arrow Components
 const CustomPrevArrow = ({ onClick }) => (

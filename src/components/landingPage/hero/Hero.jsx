@@ -1,7 +1,7 @@
-import { containerVariants, fadeInUpVariants } from "../../utils/onScrollAnimtions";
-import Bar from "../Bar";
-import Button from "../Button";
-import SoftBuses from "../SoftBuses";
+import { containerVariants, fadeInUpVariants } from "../../../utils/onScrollAnimtions";
+import Bar from "../../general/Bar";
+import Button from "../../general/Button";
+import SoftBuses from "../../general/SoftBuses";
 import HeroLogoSection from "./HeroLogoSection";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
@@ -10,7 +10,7 @@ export const Hero = () => {
 
   return (
     <>
-      <section className="pb-8 pt-24 md:pt-10 md:pb-12 relative z-[1]">
+      <section className="pb-8 pt-32 md:pt-28 md:pb-12 relative z-[1]">
         <motion.div
           className="w-full mx-auto max-w-[1660px] flex flex-col items-center justify-center px-4 text-center gap-y-6 md:gap-y-10"
           initial="hidden"
@@ -48,8 +48,8 @@ export const Hero = () => {
             className="flex flex-col md:flex-row gap-x-20 w-4/5 sm:w-2/3 md:w-auto gap-y-6"
             variants={fadeInUpVariants}
           >
-            <Button text="Get a Quote" type="link" href="#co-create" bg="green" />
-            <Button text="See All Projects" type="link" href="#solutions" bg="transparent" />
+            <Button text="Get a Quote" type="hashlink" href="/#co-create" bg="green" />
+            <Button text="See All Projects" type="hashlink" href="/#solutions" bg="transparent" />
           </motion.div>
         </motion.div>
       </section>

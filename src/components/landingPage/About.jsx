@@ -1,7 +1,7 @@
-import { containerVariants, fadeInUpVariants } from "../utils/onScrollAnimtions";
-import Bar from "./Bar";
+import { containerVariants, fadeInUpVariants } from "../../utils/onScrollAnimtions";
+import Bar from "../general/Bar";
 import { SectionHeading } from "./SectionHeading";
-import SoftBuses from "./SoftBuses";
+import SoftBuses from "../general/SoftBuses";
 // eslint-disable-next-line no-unused-vars
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";

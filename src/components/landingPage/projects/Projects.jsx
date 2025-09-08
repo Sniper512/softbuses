@@ -2,10 +2,10 @@ import { useState, useEffect, useRef } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import { SectionHeading } from "../SectionHeading";
-import Bar from "../Bar";
+import Bar from "../../general/Bar";
 import ProjectsHeader from "./ProjectsHeader";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import { containerVariants, fadeInUpVariants } from "../../utils/onScrollAnimtions";
+import { containerVariants, fadeInUpVariants } from "../../../utils/onScrollAnimtions";
 
 const projects = [
   {
