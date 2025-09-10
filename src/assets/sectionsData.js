@@ -24,6 +24,7 @@ export const links = [
 export const servicesAvailable = [
   {
     service: "Web Scraping & Data Services",
+    link: "/web-scraping-data-services",
     detail: [
       "Structured Data Scraping",
       "E-commerce Scraping Bots",
@@ -35,6 +36,7 @@ export const servicesAvailable = [
   },
   {
     service: "Web Development",
+    link: "/web-development",
     detail: [
       "Custom Web App Development",
       "Responsive Website Design",
@@ -46,6 +48,7 @@ export const servicesAvailable = [
   },
   {
     service: "Mobile App Development",
+    link: "/mobile-app-development",
     detail: [
       "Android Native Apps",
       "iOS Native Apps",
@@ -57,6 +60,7 @@ export const servicesAvailable = [
   },
   {
     service: "AI & Machine Learning",
+    link: "/ai-and-machine-learning",
     detail: [
       "Chatbot Development (NLP)",
       "AI Assistants for Business Automation",
@@ -68,6 +72,7 @@ export const servicesAvailable = [
   },
   {
     service: "UI/UX Design",
+    link: "/ui-ux-design",
     detail: [
       "User Interface (UI) Design",
       "User Experience (UX) Research",
@@ -79,6 +84,7 @@ export const servicesAvailable = [
   },
   {
     service: "Automation Services",
+    link: "/automation-services",
     detail: [
       "Business Workflow Automation",
       "Robotic Process Automation (RPA)",

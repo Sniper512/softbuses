@@ -2,6 +2,8 @@ import { servicesAvailable } from "../../../assets/sectionsData";
 import { FaCircleDot } from "react-icons/fa6";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
+import { Link } from "react-router";
+
 
 export const ServicesSections = () => {
   const serviceCardVariants = {
@@ -33,7 +35,7 @@ export const ServicesSections = () => {
               scale: 1.02,
               transition: { duration: 0.2 },
             }}>
-            <div className="z-10 border-2 group bg-[#121212] p-4 h-full transition-all flex flex-col justify-evenly gap-y-2 border-white text-primary group-hover:shadow-[4px_4px_0_0_#4fbd00] group-hover:-translate-x-1 group-hover:-translate-y-1">
+            <Link to={item.link} className="z-10 border-2 group bg-[#121212]  p-4 h-full transition-all flex flex-col justify-evenly gap-y-2 border-white text-primary group-hover:shadow-[4px_4px_0_0_#4fbd00] group-hover:-translate-x-1 group-hover:-translate-y-1">
               <div className="font-semibold ~text-sm/lg">{item.service}</div>
               <ul className="flex-1">
                 {item.detail.map((detail, detailIndex) => (
@@ -45,7 +47,7 @@ export const ServicesSections = () => {
                   </li>
                 ))}
               </ul>
-            </div>
+            </Link>
           </motion.div>
         ))}
       </div>
