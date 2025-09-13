@@ -4,8 +4,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./ServicesCarouselMobile.css";
 import Button from "../Button";
+import { motion } from "motion/react";
 
-export default function ServicesCarouselMobile({ subServices = [] }) {
+export default function ServicesCarouselMobile({ subServices = [], imgSrc = "" }) {
   // Custom dots component to avoid absolute positioning issues
   const customDots = (dots) => (
     <div className="flex justify-center items-center gap-2 mt-6">{dots}</div>
@@ -43,7 +44,7 @@ export default function ServicesCarouselMobile({ subServices = [] }) {
           >
             <div className="flex flex-col items-center justify-center text-center   gap-y-4 py-5 px-3  transition-colors duration-500 ease-out">
               <div className="w-10 h-auto ">
-                <img src="/temp.svg" alt="" />
+                <img src={`${imgSrc}/${services.icon}.svg`} alt="" />
               </div>
               <h3 className="text-base text-white font-semibold mb-2">
                 {services.title}
@@ -54,9 +55,15 @@ export default function ServicesCarouselMobile({ subServices = [] }) {
         ))}
       </Slider>
       <li className=" flex  items-center justify-center mt-6">
-        <div className="relative group">
+        <motion.div 
+                initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut", delay: 0.3}}
+        viewport={{ once: true, amount: 1 }}
+
+        className="relative group">
           <Button text={"Get a Quote"} type="button" bg="green" />
-        </div>
+        </motion.div>
       </li>
     </ul>
   );

@@ -16,15 +16,15 @@ export const Hero = () => {
         animate="visible"
         variants={containerVariants}
       >
-        <div className="flex flex-col items-center gap-6 md:flex-row md:items-start md:~md:~gap-6/48">
+        <div className="flex flex-col items-center gap-6 md:flex-row md:items-start md:~md:~gap-6/32">
           <div className="flex flex-col items-center justify-center text-center gap-y-6 md:text-left md:items-start">
             {/* Main Text */}
             <motion.div variants={fadeInUpVariants}>
               <h1
-                className="~sm/xl:~text-2xl/6xl font-bold "
+                className="~sm/xl:~text-2xl/6xl font-bold"
                 style={{ lineHeight: "1.2" }}
               >
-                Websites That Drive <br />
+                Seamless{" "}
                 <span
                   className="text-primary"
                   style={{
@@ -32,9 +32,10 @@ export const Hero = () => {
                       "0 0 5px rgba(105, 255, 0, 0.6), 0 0 10px rgba(105, 255, 0, 0.4), 0 0 20px rgba(105, 255, 0, 0.2)",
                   }}
                 >
-                  Growth
-                </span>
-                , Not Just{" "}
+                  Animations
+                </span>{" "}
+                for <br />
+                Modern{" "}
                 <span
                   className="text-primary"
                   style={{
@@ -42,29 +43,30 @@ export const Hero = () => {
                       "0 0 5px rgba(105, 255, 0, 0.6), 0 0 10px rgba(105, 255, 0, 0.4), 0 0 20px rgba(105, 255, 0, 0.2)",
                   }}
                 >
-                  Traffic
+                  Businesses
                 </span>
               </h1>
             </motion.div>
             {/* Sub Text */}
             <motion.h2
-              className="text-sm text-justify text-white/80 tracking-widest md:text-base md:text-left"
+              className="text-sm text-justify text-white/80 tracking-widest md:text-base md:text-left md:max-w-[600px] " 
               variants={fadeInUpVariants}
             >
-              We craft high-performing, user-friendly, and scalable websites
-              designed to attract customers, boost conversions, and fuel
-              business growth. Whether you're a startup, brand, or enterprise we
-              tailor solutions that fit your goals.
+              Harness the power of automation to save time, reduce costs, and
+              scale your operations effortlessly. Whether it’s marketing, sales,
+              finance, or data processing, we design workflows using n8n,
+              Make.com, Zapier, and custom APIs that connect all your tools and
+              ensure your business runs on autopilot.{" "}
             </motion.h2>
           </div>
           <motion.div
-            className="w-3/4 h-auto sm:w-1/2 md:w-full md:max-w-[500px]    "
+            className="w-3/4 h-auto sm:w-1/2  md:w-full md:max-w-[450px]    "
             variants={fadeInUpVariants}
           >
             <img
-              src="/HeroImages/webDevHero.svg"
+              src="/HeroImages/automation.svg"
               alt="Hero Background"
-              className="w-full h-full object-contain"
+              className="w-full h-full object-contain "
             />
           </motion.div>
         </div>

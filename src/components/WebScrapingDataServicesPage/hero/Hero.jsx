@@ -16,15 +16,15 @@ export const Hero = () => {
         animate="visible"
         variants={containerVariants}
       >
-        <div className="flex flex-col items-center gap-6 md:flex-row md:items-start md:~md:~gap-6/48">
+        <div className="flex flex-col items-center gap-6 md:flex-row md:items-start md:~md:~gap-6/32">
           <div className="flex flex-col items-center justify-center text-center gap-y-6 md:text-left md:items-start">
             {/* Main Text */}
             <motion.div variants={fadeInUpVariants}>
               <h1
-                className="~sm/xl:~text-2xl/6xl font-bold "
+                className="~sm/xl:~text-2xl/6xl font-bold lg:text-nowrap"
                 style={{ lineHeight: "1.2" }}
               >
-                Websites That Drive <br />
+                Turn the{" "}
                 <span
                   className="text-primary"
                   style={{
@@ -32,9 +32,9 @@ export const Hero = () => {
                       "0 0 5px rgba(105, 255, 0, 0.6), 0 0 10px rgba(105, 255, 0, 0.4), 0 0 20px rgba(105, 255, 0, 0.2)",
                   }}
                 >
-                  Growth
-                </span>
-                , Not Just{" "}
+                  Web
+                </span>{" "}
+                Into <br />
                 <span
                   className="text-primary"
                   style={{
@@ -42,7 +42,7 @@ export const Hero = () => {
                       "0 0 5px rgba(105, 255, 0, 0.6), 0 0 10px rgba(105, 255, 0, 0.4), 0 0 20px rgba(105, 255, 0, 0.2)",
                   }}
                 >
-                  Traffic
+                  Actionable Data
                 </span>
               </h1>
             </motion.div>
@@ -51,20 +51,18 @@ export const Hero = () => {
               className="text-sm text-justify text-white/80 tracking-widest md:text-base md:text-left"
               variants={fadeInUpVariants}
             >
-              We craft high-performing, user-friendly, and scalable websites
-              designed to attract customers, boost conversions, and fuel
-              business growth. Whether you're a startup, brand, or enterprise we
-              tailor solutions that fit your goals.
+              We help businesses extract, clean, and organize data from the web
+              powering smarter decisions, automation, and growth.{" "}
             </motion.h2>
           </div>
           <motion.div
-            className="w-3/4 h-auto sm:w-1/2 md:w-full md:max-w-[500px]    "
+            className="w-3/4 h-auto sm:w-1/2  md:w-full md:max-w-[500px]    "
             variants={fadeInUpVariants}
           >
             <img
-              src="/HeroImages/webDevHero.svg"
+              src="/HeroImages/webScraping.svg"
               alt="Hero Background"
-              className="w-full h-full object-contain"
+              className="w-full h-full object-contain "
             />
           </motion.div>
         </div>

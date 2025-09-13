@@ -7,10 +7,12 @@ import { AiMachineLearningPage } from "./pages/AiMachineLearningPage";
 import { MobileAppDevelopmentPage } from "./pages/MobileAppDevelopmentPage";
 import { AutomationServicesPage } from "./pages/AutomationServicesPage";
 import MainLayout from "./layouts/MainLayout";
+import ScrollToTop from "./components/general/ScrollToTop";
 
 export const App = () => {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<LandingPage />} />

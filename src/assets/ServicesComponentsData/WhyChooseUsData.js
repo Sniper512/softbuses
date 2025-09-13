@@ -33,24 +33,24 @@ export const FeaturesChooseUsMobileAppDev = [
       "We master Swift, Kotlin, Flutter, React Native - the best tools for your project.",
   },
   {
-    icon: "2",
+    icon: "1",
     title: "User-Centered Design",
     detail:
       "Beautiful interfaces + intuitive flows = apps people actually love to use.",
   },
   {
-    icon: "3",
+    icon: "1",
     title: "End-to-End Services",
     detail: "From app strategy & design to store publishing & ongoing support.",
   },
   {
-    icon: "4",
+    icon: "1",
     title: "Performance First",
     detail:
       "Lightning-fast, secure, and optimized for low battery + data usage.",
   },
   {
-    icon: "5",
+    icon: "1",
     title: "Scalable & Future-Proof",
     detail: "Built with a foundation that grows with your business.",
   },
@@ -68,13 +68,13 @@ export const FeaturesChooseUsAiML = [
     detail: "Predictive and adaptive AI that scales with your growth.",
   },
   {
-    icon: "3",
+    icon: "4",  
     title: "Proven AI Expertise",
     detail:
       "Deep knowledge in NLP, computer vision, analytics, and data engineering.",
   },
   {
-    icon: "4",
+    icon: "3",
     title: "End-to-End Delivery",
     detail: "From idea to deployment, we manage it all.",
   },

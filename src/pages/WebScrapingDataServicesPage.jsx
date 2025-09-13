@@ -3,7 +3,7 @@ import { FeaturesChooseUsWebScraping } from "../assets/ServicesComponentsData/Wh
 import Bar from "../components/general/Bar";
 import SubServices from "../components/general/SubServices";
 import { WhyChooseUsBoxes } from "../components/general/WhyChooseUsBoxes";
-import { Hero } from "../components/webDevelopmentPage/hero/Hero";
+import { Hero } from "../components/WebScrapingDataServicesPage/hero/Hero";
 import HeroBg from "../components/webDevelopmentPage/hero/HeroBg";
 
 export const WebScrapingDataServicesPage = () => {
@@ -12,9 +12,9 @@ export const WebScrapingDataServicesPage = () => {
       <div className="relative">
         <HeroBg />
         <Hero />
-        <WhyChooseUsBoxes featuresData={FeaturesChooseUsWebScraping} subtitle="Reliable, scalable, and compliant scraping solutions tailored to your needs." />
+        <WhyChooseUsBoxes featuresData={FeaturesChooseUsWebScraping} subtitle="Reliable, scalable, and compliant scraping solutions tailored to your needs." imgSrc="/chooseUsImages/webScarping" />
         <Bar/>
-        <SubServices subServices={webScrapingSubServices} />
+        <SubServices subServices={webScrapingSubServices} imgSrc="/servicesDataImages/webScarping" service="Web Scraping & Data" />
       </div>
     </>
   );

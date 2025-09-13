@@ -3,7 +3,7 @@ import { FeaturesChooseUsUiUX } from "../assets/ServicesComponentsData/WhyChoose
 import Bar from "../components/general/Bar";
 import SubServices from "../components/general/SubServices";
 import { WhyChooseUsBoxes } from "../components/general/WhyChooseUsBoxes";
-import { Hero } from "../components/webDevelopmentPage/hero/Hero";
+import { Hero } from "../components/UiUxDesignPage/hero/Hero";
 import HeroBg from "../components/webDevelopmentPage/hero/HeroBg";
 
 export const UiUxDesignPage = () => {
@@ -17,9 +17,10 @@ export const UiUxDesignPage = () => {
           subtitle="Your website is often the first impression your customers get.
             That's why we don't just build websites, we create digital
             experiences that convert."
+          imgSrc="/chooseUsImages/uiUx"
         />
         <Bar />
-        <SubServices subServices={uiUxSubServices} />
+        <SubServices subServices={uiUxSubServices} imgSrc="/servicesDataImages/uiUx" service="UI/UX Design" />
       </div>
     </>
   );

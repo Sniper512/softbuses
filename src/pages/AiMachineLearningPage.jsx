@@ -3,7 +3,7 @@ import { FeaturesChooseUsAiML } from "../assets/ServicesComponentsData/WhyChoose
 import Bar from "../components/general/Bar";
 import SubServices from "../components/general/SubServices";
 import { WhyChooseUsBoxes } from "../components/general/WhyChooseUsBoxes";
-import { Hero } from "../components/webDevelopmentPage/hero/Hero";
+import { Hero } from "../components/AiMachineLearningPage/hero/Hero";
 import HeroBg from "../components/webDevelopmentPage/hero/HeroBg";
 
 export const AiMachineLearningPage = () => {
@@ -15,9 +15,10 @@ export const AiMachineLearningPage = () => {
         <WhyChooseUsBoxes
           featuresData={FeaturesChooseUsAiML}
           subtitle="From Data to Decisions, We Build Intelligence That Scales"
+          imgSrc="/chooseUsImages/ai"
         />
         <Bar />
-        <SubServices subServices={aiSubServices} />
+        <SubServices subServices={aiSubServices} imgSrc="/servicesDataImages/ai" service="AI & Machine Learning" />
       </div>
     </>
   );

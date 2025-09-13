@@ -58,7 +58,7 @@ export const SectionHeading = ({
       animate={isInView ? "visible" : "hidden"}
       variants={containerVariants}
     >
-      <h2 className="~sm/xl:~text-[1.5rem]/[2.5rem] font-bold flex items-center gap-x-2 justify-center">
+      <h2 className="~sm/xl:~text-[1.5rem]/[2.5rem] font-bold space-x-2 text-wrap items-center gap-x-2 justify-center">
         <motion.span variants={firstTitleVariants} className="inline-block">
           {firstTitle}
         </motion.span>
