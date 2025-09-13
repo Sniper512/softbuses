@@ -3,7 +3,7 @@ import Bar from "../general/Bar";
 import { SectionHeading } from "./SectionHeading";
 import SoftBuses from "../general/SoftBuses";
 // eslint-disable-next-line no-unused-vars
-import { motion, useInView } from "framer-motion";
+import { motion, useInView } from "motion/react";
 import { useRef } from "react";
 
 export const About = () => {

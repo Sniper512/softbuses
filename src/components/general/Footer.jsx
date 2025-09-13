@@ -5,7 +5,7 @@ import { FaInstagram } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import SoftBuses from "./SoftBuses";
 // eslint-disable-next-line no-unused-vars
-import { motion, useInView } from "framer-motion";
+import { motion, useInView } from "motion/react";
 import { useRef } from "react";
 import { containerVariants, fadeInUpVariants } from "../../utils/onScrollAnimtions";
 import { Link } from "react-router";

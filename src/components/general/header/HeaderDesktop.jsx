@@ -3,7 +3,7 @@ import Bar from "../Bar";
 import { HeaderContactButton } from "../../general/header/HeaderContactButton";
 import { useState, useEffect } from "react";
 // eslint-disable-next-line no-unused-vars
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { headerContactAndHamVariants, headerLogoVariants } from "../../../utils/onScrollAnimtions";
 import { HashLink } from "react-router-hash-link";
 

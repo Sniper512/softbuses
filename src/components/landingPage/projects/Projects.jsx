@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 // eslint-disable-next-line no-unused-vars
-import { motion, AnimatePresence, useInView } from "framer-motion";
+import { motion, AnimatePresence, useInView } from "motion/react";
 import { SectionHeading } from "../SectionHeading";
 import Bar from "../../general/Bar";
 import ProjectsHeader from "./ProjectsHeader";

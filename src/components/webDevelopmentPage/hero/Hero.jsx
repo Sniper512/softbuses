@@ -2,13 +2,14 @@ import { containerVariants, fadeInUpVariants } from "../../../utils/onScrollAnim
 import Bar from "../../general/Bar";
 import Button from "../../general/Button";
 // eslint-disable-next-line no-unused-vars
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
+import { HeroImage } from "./HeroImage";
 
 export const Hero = () => {
 
   return (
     <>
-      <motion.section className="mx-auto max-w-[1660px] pb-8 pt-28 relative z-[1] ~px-6/40 md:~md/lg:~pt-32/52 md:~md/lg:~pb-8/16"
+      <motion.section className=" mx-auto max-w-[1660px] pb-8 pt-28 relative z-[1] ~px-6/40 md:~md/lg:~pt-32/52 md:~md/lg:~pb-8/16 hero-img"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
@@ -36,12 +37,13 @@ export const Hero = () => {
             </motion.h2>
           </div>
           <motion.div
-            className="w-3/4 h-auto sm:w-1/2 md:w-full"
+            className="w-3/4 h-auto sm:w-1/2 md:w-full    "
             variants={fadeInUpVariants}
           >
-            <img src="/webDevelopmentPage/heroImage.svg" alt="Hero Background"
-              className="w-full h-full object-contain"
-            />
+              {/* <img src="/webDevelopmentPage/heroImage.svg" alt="Hero Background"
+                className="w-full h-full object-contain"
+              /> */}
+              {/* <HeroImage/> */}
           </motion.div>
         </div>
         <motion.div

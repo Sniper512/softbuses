@@ -6,6 +6,38 @@ body {
   @apply bg-black text-white;
 }
 
+.hero-img {
+
+  background: url('/bg.png') no-repeat center center;
+  background-size: cover;
+}
+.our-process-image {
+  background: url('/ourProcessBg.png') no-repeat center center;
+  background-size: cover;
+}
+
+/* ----------------Function------------------- */
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.settings {
+  animation: rotate360 4s linear infinite;
+  transform-origin: 39% 50.5%;
+}
+
+
+
+
+
+
+
+
 /* Slider Slick */
 .slick-slider .slick-list {
   overflow: hidden;

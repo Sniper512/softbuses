@@ -4,7 +4,7 @@ import { SectionHeading } from "../SectionHeading";
 import TechMainCard from "./TechMainCard"
 import TechSubCard from "./TechSubCard";
 // eslint-disable-next-line no-unused-vars
-import { motion, useInView } from "framer-motion";
+import { motion, useInView } from "motion/react";
 
 const technologies = [
   {

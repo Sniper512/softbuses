@@ -3,7 +3,7 @@ import Button from "../../general/Button";
 import { SectionHeading } from "../SectionHeading";
 
 // eslint-disable-next-line no-unused-vars
-import { motion, useInView } from "framer-motion";
+import { motion, useInView } from "motion/react";
 import { useRef } from "react";
 import { containerVariants, fadeInUpVariants } from "../../../utils/onScrollAnimtions";
 import { ServicesSections } from "./ServicesSections";

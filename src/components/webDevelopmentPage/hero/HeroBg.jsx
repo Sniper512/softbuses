@@ -1,6 +1,6 @@
 export default function HeroBg() {
   return (
-    <div className="absolute w-full h-full overflow-x-hidden">
+    <div className="absolute w-full h-full overflow-x-hidden hidden">
       <img src="/webDevelopmentPage/heroBg.png" alt="hero background"
         className="w-full h-full object-cover object-top"
       />

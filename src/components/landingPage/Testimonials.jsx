@@ -6,7 +6,7 @@ import SoftBuses from "../general/SoftBuses";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Bar from "../general/Bar";
 // eslint-disable-next-line no-unused-vars
-import { motion, useInView } from "framer-motion";
+import { motion, useInView } from "motion/react";
 import { useRef } from "react";
 import { containerVariants, fadeInUpVariants } from "../../utils/onScrollAnimtions";
 

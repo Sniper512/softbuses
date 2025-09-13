@@ -4,7 +4,7 @@ import Button from "../../general/Button";
 import SoftBuses from "../../general/SoftBuses";
 import HeroLogoSection from "./HeroLogoSection";
 // eslint-disable-next-line no-unused-vars
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 export const Hero = () => {
 

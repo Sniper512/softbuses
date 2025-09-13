@@ -1,0 +1,40 @@
+/* Custom styles for react-slick center mode */
+.slider-container {
+  @apply my-0 mx-auto
+}
+
+.slick-slide {
+  @apply py-5 px-2.5
+}
+
+.slick-slide>div {
+  @apply my-0 mx-1
+}
+
+
+/* Custom dots styling - Override default slick dots */
+.custom-dots-class {
+  @apply static !important;
+  position: static !important;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  align-items: center;
+}
+
+.custom-dots-class li {
+  @apply m-0;
+}
+
+.custom-dots-class li button {
+  @apply w-3 h-3 rounded-none bg-[#D9D9D9] transition-colors duration-300 border-0 p-0;
+}
+
+.custom-dots-class li button:before {
+  display: none !important;
+}
+
+.custom-dots-class li button:hover,
+.custom-dots-class li.slick-active button {
+  @apply bg-[#69FF00];
+}
