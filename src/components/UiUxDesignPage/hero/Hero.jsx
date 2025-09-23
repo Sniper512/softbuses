@@ -9,9 +9,9 @@ import { motion } from "motion/react";
 
 export const Hero = () => {
   return (
-    <>
-      <motion.section
-        className=" mx-auto max-w-[1660px] pb-8 pt-28 relative z-[1] ~px-6/40 md:~md/lg:~pt-32/52 md:~md/lg:~pb-8/16 hero-img"
+    <section  className="hero-img">
+      <motion.div
+        className=" mx-auto max-w-[1660px] pb-8 pt-28 relative z-[1] ~px-6/40 md:~md/lg:~pt-32/52 md:~md/lg:~pb-8/16 "
         initial="hidden"
         animate="visible"
         variants={containerVariants}
@@ -83,13 +83,13 @@ export const Hero = () => {
         >
           <Button
             text="Build My Website Today"
-            type="link"
+            type="hashlink"
             href="/#co-create"
             bg="green"
           />
         </motion.div>
-      </motion.section>
+      </motion.div>
       <Bar />
-    </>
+    </section>
   );
 };
