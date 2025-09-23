@@ -9,7 +9,7 @@ export default function SubServices({
   service = "",
 }) {
   return (
-    <section className="w-full py-10 sm:py-14 md:py-16 lg:py-28   ">
+    <section className="w-full pt-10 sm:pt-14 md:pt-16 lg:pt-28   ">
       <div className="max-w mx-auto w-full   flex flex-col gap-y-6 md:gap-y-16   ">
         <div className="px-6         text-center">
           <SectionHeading

@@ -9,8 +9,10 @@ import { motion } from "motion/react";
 
 export default function OurProcessDesktop() {
   return (
-    <section className="w-full our-process-image hidden md:block   ">
-      <div className="max-w-[1660px] mx-auto w-full   flex flex-col gap-y-6 md:gap-y-24 ~md/xl:~pt-8/28 ~md/2xl:~pb-16/52 ~md/lg:~px-4/8   ">
+    <>
+    <div className="   md:h-16 lg:h-28   w-full bg-[##121212] "></div>
+    <section className="w-full our-process-image hidden md:block    ">
+      <div className="max-w-[1660px] mx-auto w-full   flex flex-col gap-y-6 md:gap-y-24  ~md/lg:~px-4/8 ~md/[137.5rem]:~py-16/56  ">
         <div className=" text-center">
           <SectionHeading firstTitle="Our " secondTitle="Process " />
         </div>
@@ -29,7 +31,7 @@ export default function OurProcessDesktop() {
               right: `${50 / webDevServiceProcess.length}%`,
               top: "-20px",
             }}
-          />
+            />
 
           {webDevServiceProcess.map((process, index) => (
             <div className="relative flex-1  px-3 " key={index}>
@@ -55,5 +57,6 @@ export default function OurProcessDesktop() {
         </motion.div>
       </div>
     </section>
+          </>
   );
 }

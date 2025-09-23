@@ -8,6 +8,9 @@ import { motion } from "motion/react";
 
 export default function OurProcessMobile() {
   return (
+    <>
+        <div className="   h-10 sm:h-14   w-full bg-[##121212] "></div>
+
     <section className="w-full our-process-image md:hidden">
       <div className="max-w-[1660px] mx-auto w-full flex flex-col gap-y-12 py-10 sm:py-14">
         <div className="text-center">
@@ -51,5 +54,6 @@ export default function OurProcessMobile() {
         </motion.div>
       </div>
     </section>
+    </>
   );
 }
