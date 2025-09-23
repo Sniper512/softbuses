@@ -1,6 +1,7 @@
 import { mobileDevSubServices } from "../assets/ServicesComponentsData/OurServicesData";
 import { FeaturesChooseUsMobileAppDev } from "../assets/ServicesComponentsData/WhyChooseUsData";
 import Bar from "../components/general/Bar";
+import { OurProcess } from "../components/general/OurProcessComponent/OurProcess";
 import SubServices from "../components/general/SubServices";
 import { WhyChooseUsBoxes } from "../components/general/WhyChooseUsBoxes";
 import { Hero } from "../components/mobileAppPage/hero/Hero";
@@ -19,6 +20,7 @@ export const MobileAppDevelopmentPage = () => {
         />
         <Bar />
         <SubServices subServices={mobileDevSubServices} imgSrc="/servicesDataImages/mobileDev" />
+        <OurProcess/>
       </div>
     </>
   );

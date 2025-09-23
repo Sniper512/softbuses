@@ -5,6 +5,7 @@ import SubServices from "../components/general/SubServices";
 import { WhyChooseUsBoxes } from "../components/general/WhyChooseUsBoxes";
 import { Hero } from "../components/AiMachineLearningPage/hero/Hero";
 import HeroBg from "../components/webDevelopmentPage/hero/HeroBg";
+import { OurProcess } from "../components/general/OurProcessComponent/OurProcess";
 
 export const AiMachineLearningPage = () => {
   return (
@@ -19,6 +20,7 @@ export const AiMachineLearningPage = () => {
         />
         <Bar />
         <SubServices subServices={aiSubServices} imgSrc="/servicesDataImages/ai" service="AI & Machine Learning" />
+        <OurProcess/>
       </div>
     </>
   );

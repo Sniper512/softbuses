@@ -1,6 +1,7 @@
 import { uiUxSubServices } from "../assets/ServicesComponentsData/OurServicesData";
 import { FeaturesChooseUsUiUX } from "../assets/ServicesComponentsData/WhyChooseUsData";
 import Bar from "../components/general/Bar";
+import { OurProcess } from "../components/general/OurProcessComponent/OurProcess";
 import SubServices from "../components/general/SubServices";
 import { WhyChooseUsBoxes } from "../components/general/WhyChooseUsBoxes";
 import { Hero } from "../components/UiUxDesignPage/hero/Hero";
@@ -21,6 +22,7 @@ export const UiUxDesignPage = () => {
         />
         <Bar />
         <SubServices subServices={uiUxSubServices} imgSrc="/servicesDataImages/uiUx" service="UI/UX Design" />
+        <OurProcess/>
       </div>
     </>
   );

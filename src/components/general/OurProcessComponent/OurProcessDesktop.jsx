@@ -10,7 +10,7 @@ import { motion } from "motion/react";
 export default function OurProcessDesktop() {
   return (
     <section className="w-full our-process-image hidden md:block   ">
-      <div className="max-w-[1660px] mx-auto w-full   flex flex-col gap-y-6 md:gap-y-24 ~md/lg:~py-16/32 ~md/lg:~px-4/8   ">
+      <div className="max-w-[1660px] mx-auto w-full   flex flex-col gap-y-6 md:gap-y-24 ~md/xl:~pt-8/28 ~md/2xl:~pb-16/52 ~md/lg:~px-4/8   ">
         <div className=" text-center">
           <SectionHeading firstTitle="Our " secondTitle="Process " />
         </div>
