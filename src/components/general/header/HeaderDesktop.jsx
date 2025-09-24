@@ -6,6 +6,8 @@ import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { headerContactAndHamVariants, headerLogoVariants } from "../../../utils/onScrollAnimtions";
 import { HashLink } from "react-router-hash-link";
+import NavDropdown from "./NavDropdown";
+import { Link } from "react-router";
 
 export const HeaderDesktop = () => {
   const [showContactLink, setShowContactLink] = useState(false);
@@ -32,7 +34,9 @@ export const HeaderDesktop = () => {
             animate="visible"
             variants={headerLogoVariants}
           >
-            <img src="horizontalLogo.svg" className="w-full h-auto" alt="" />
+            <Link to="/">
+              <img src="horizontalLogo.svg" className="w-full h-auto" alt="" />
+            </Link>
           </motion.div>
           {/* Spacer to maintain layout */}
           <div className="flex-1"></div>
@@ -59,6 +63,7 @@ export const HeaderDesktop = () => {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.2, delay: index * 0.1 }}
+              className="relative group"
             >
               <HashLink
                 to={link.href}
@@ -66,6 +71,10 @@ export const HeaderDesktop = () => {
               >
                 {link.name}
               </HashLink>
+              {
+                link.subLinks.length > 0 &&
+                <NavDropdown subLinks={link.subLinks} />
+              }
             </motion.li>
           ))}
         </ul>

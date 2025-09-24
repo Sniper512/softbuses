@@ -1,6 +1,6 @@
-import React from "react";
 import { SectionHeading } from "../landingPage/SectionHeading";
-import { motion, useInView } from "motion/react";
+// eslint-disable-next-line no-unused-vars
+import { motion } from "motion/react";
 import {
   containerVariants,
   fadeInUpVariants,
@@ -13,7 +13,7 @@ export const WhyChooseUsBoxes = ({
 }) => {
   return (
     <section className="w-full ">
-      <div className="mx-auto max-w-[1660px] flex flex-col ~sm/lg:~gap-y-6/10 px-10 ~sm/lg:~py-10/24 ">
+      <div className="mx-auto max-w-[1660px] flex flex-col ~sm/lg:~gap-y-6/10 ~px-6/40 ~sm/lg:~py-10/24 ">
         <div className="flex  ~sm/lg:~gap-y-5/7 flex-col items-center justify-center">
           <div>
             <SectionHeading firstTitle="Why" secondTitle="Choose Us" />
@@ -35,13 +35,13 @@ export const WhyChooseUsBoxes = ({
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
-            className="max-w-[1300px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 ~sm/lg:~gap-y-10/16 ~sm/lg:~gap-x-6/11 "
+            className="max-w-[1300px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 ~sm/lg:~gap-y-6/16 ~sm/lg:~gap-x-6/11 "
           >
             {featuresData.map((feature, index) => (
               <motion.li
                 variants={fadeInUpVariants}
                 key={index}
-                className="flex flex-col items-center justify-center text-center mb-8 border border-white/60 hover:border-primary gap-y-4 py-4 px-3 rounded transition-colors duration-500 ease-out"
+                className="flex flex-col items-center justify-center text-center border border-white/60 hover:border-primary gap-y-4 py-4 px-3 rounded transition-colors duration-500 ease-out"
               >
                 <div className="w-10 h-auto">
                   <img src={`${imgSrc}/${feature.icon}.svg`} alt="" />

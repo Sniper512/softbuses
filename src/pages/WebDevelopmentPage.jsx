@@ -15,7 +15,7 @@ export const WebDevelopmentPage = () => {
         <Hero />
         <WhyChooseUsBoxes
           featuresData={FeaturesChooseUsWebDev}
-          
+
           subtitle="Your website is often the first impression your customers get.
             That's why we don't just build websites, we create digital
             experiences that convert."
@@ -23,7 +23,7 @@ export const WebDevelopmentPage = () => {
         />
         <Bar />
         <SubServices subServices={webDevSubServices} imgSrc="/servicesDataImages/webDev" service="Web Development" />
-<OurProcess/>
+        <OurProcess />
       </div>
     </>
   );

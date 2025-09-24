@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./ServicesCarouselMobile.css";
 import Button from "../Button";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "motion/react";
 
 export default function ServicesCarouselMobile({ subServices = [], imgSrc = "" }) {

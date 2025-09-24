@@ -1,7 +1,7 @@
-import React from "react";
 import ServicesCarouselMobile from "./SubServicesParts/ServicesCarouselMobile";
 import { SectionHeading } from "../landingPage/SectionHeading";
 import { SubServicesGrid } from "./SubServicesParts/SubServicesGrid";
+import Bar from "./Bar";
 
 export default function SubServices({
   subServices,
@@ -18,9 +18,10 @@ export default function SubServices({
             thirdTitle="Services"
           />
         </div>
-        <div className="bg-[#1B1B1B]  sm:border-y border-primary/15  ">
+        <div>
           <ServicesCarouselMobile subServices={subServices} imgSrc={imgSrc} />
           <SubServicesGrid subServices={subServices} imgSrc={imgSrc} />
+          <Bar />
         </div>
       </div>
     </section>

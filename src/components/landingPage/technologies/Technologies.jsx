@@ -44,6 +44,12 @@ const technologies = [
     type: "sub"
   },
   {
+    title: "Firebase",
+    icon: "/technologies/firebase.svg",
+    href: "https://firebase.google.com/",
+    type: "sub",
+  },
+  {
     title: "express",
     icon: "/technologies/express.svg",
     href: "https://expressjs.com/",
@@ -110,12 +116,6 @@ const technologies = [
     type: "sub"
   },
   {
-    title: "Scrapy",
-    icon: "/technologies/scrapy.svg",
-    href: "https://scrapy.org",
-    type: "sub"
-  },
-  {
     title: "React",
     icon: "/technologies/react_colored.svg",
     href: "https://reactjs.org",
@@ -128,6 +128,12 @@ const technologies = [
     href: "https://nodejs.org",
     type: "main",
     bg: "/technologies/nodejs_bg.png"
+  },
+  {
+    title: "Scrapy",
+    icon: "/technologies/scrapy.svg",
+    href: "https://scrapy.org",
+    type: "sub"
   },
   {
     title: "Selenium",
@@ -172,17 +178,11 @@ const technologies = [
     type: "sub"
   },
   {
-    title: "Agentic AI",
-    icon: "/technologies/agenticAi.svg",
-    href: "https://agentic.ai/",
-    type: "sub"
-  },
-  {
-    title: "Firebase",
-    icon: "/technologies/firebase_colored.svg",
-    href: "https://firebase.google.com/",
+    title: "Playwright",
+    icon: "/technologies/playwright_colored.svg",
+    href: "https://playwright.dev/",
     type: "main",
-    bg: "/technologies/firebase_bg.png"
+    bg: "/technologies/playwright_bg.png"
   },
   {
     title: "Ethereum",
@@ -190,6 +190,12 @@ const technologies = [
     href: "https://ethereum.org/",
     type: "main",
     bg: "/technologies/ethereum_bg.png"
+  },
+  {
+    title: "Agentic AI",
+    icon: "/technologies/agenticAi.svg",
+    href: "https://agentic.ai/",
+    type: "sub"
   },
   {
     title: "Android Studio",
@@ -220,6 +226,12 @@ const technologies = [
     icon: "/technologies/docker.svg",
     href: "https://www.docker.com/",
     type: "sub"
+  },
+  {
+    title: "Firebase",
+    icon: "/technologies/firebase.svg",
+    href: "https://firebase.google.com/",
+    type: "sub",
   },
   {
     title: "express",
@@ -309,18 +321,6 @@ const technologies = [
     title: "Angular",
     icon: "/technologies/angular.svg",
     href: "https://angular.io/",
-    type: "sub"
-  },
-  {
-    title: "AWS",
-    icon: "/technologies/aws.svg",
-    href: "https://aws.amazon.com/",
-    type: "sub"
-  },
-  {
-    title: "Django",
-    icon: "/technologies/django.svg",
-    href: "https://www.djangoproject.com/",
     type: "sub"
   },
 ]

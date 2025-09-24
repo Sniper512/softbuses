@@ -1,24 +1,39 @@
-//links 
+//links
 export const links = [
   {
     name: "Home",
     href: "/#home",
+    subLinks: [],
   },
   {
     name: "About",
     href: "/#about",
+    subLinks: [],
   },
   {
     name: "Services",
     href: "/#services",
+    subLinks: [
+      {
+        name: "Web Scraping & Data Services",
+        href: "/web-scraping-data-services",
+      },
+      { name: "Web Development", href: "/web-development" },
+      { name: "Mobile App Development", href: "/mobile-app-development" },
+      { name: "AI & Machine Learning", href: "/ai-and-machine-learning" },
+      { name: "UI/UX Design", href: "/ui-ux-design" },
+      { name: "Automation Services", href: "/automation-services" },
+    ],
   },
   {
     name: "Solutions",
     href: "/#solutions",
+    subLinks: [],
   },
   {
     name: "Technologies",
     href: "/#technologies",
+    subLinks: [],
   },
 ];
 

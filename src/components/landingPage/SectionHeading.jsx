@@ -65,11 +65,6 @@ export const SectionHeading = ({
         <motion.span
           variants={secondTitleVariants}
           className="inline-block text-primary"
-          whileHover={{
-            scale: 1.05,
-            textShadow: "0 0 8px rgba(105, 255, 0, 0.6)",
-            transition: { duration: 0.2 },
-          }}
         >
           {secondTitle}
         </motion.span>

@@ -1,12 +1,11 @@
-import React from "react";
 import Button from "../Button";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "motion/react";
 import { childTranslateY, parentTranslateY } from "../MotionFunctions";
-import { fadeInUpVariants } from "../../../utils/onScrollAnimtions";
 
 export const SubServicesGrid = ({ subServices = [], imgSrc = "" }) => {
   return (
-    <div className=" ~sm/lg:~p-8/20  flex-col items-center justify-center bg-[#1B1B1B] hidden sm:flex gap-y-8 lg:gap-y-12">
+    <div className=" ~sm/lg:~p-8/20  flex-col items-center bg-[#1b1b1b] justify-center hidden sm:flex gap-y-8 lg:gap-y-12">
       <motion.div
         variants={parentTranslateY}
         initial="initial"
@@ -35,7 +34,7 @@ export const SubServicesGrid = ({ subServices = [], imgSrc = "" }) => {
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut", delay: 1}}
+        transition={{ duration: 0.6, ease: "easeOut", delay: 1 }}
         viewport={{ once: true, amount: 1 }}
         className="relative group"
       >

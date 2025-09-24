@@ -20,7 +20,7 @@ export const AutomationServicesPage = () => {
         />
         <Bar />
         <SubServices subServices={automationSubServices} imgSrc="/servicesDataImages/automation" service="Automation" />
-        <OurProcess/>
+        <OurProcess />
       </div>
     </>
   );

@@ -24,13 +24,15 @@ export const Footer = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const services = [
-    " Web Development",
-    " Mobile App Development",
-    " AI & Machine Learning",
-    " UI/UX Design",
-    " Automation Services",
-    " Web Scrapping & Data Services",
-    " Cloud & DevOps",
+    {
+      text: "Web Scraping & Data Services",
+      href: "/web-scraping-data-services",
+    },
+    { text: "Web Development", href: "/web-development" },
+    { text: "Mobile App Development", href: "/mobile-app-development" },
+    { text: "AI & Machine Learning", href: "/ai-and-machine-learning" },
+    { text: "UI/UX Design", href: "/ui-ux-design" },
+    { text: "Automation Services", href: "/automation-services" },
   ];
 
   const sections = [
@@ -129,7 +131,9 @@ export const Footer = () => {
                 {services.map((service, index) => (
                   <li key={index} className="flex items-center gap-x-4">
                     <FaDotCircle size={8} />
-                    <span>{service}</span>
+                    <HashLink to={service.href} className="decoration-white hover:text-primary underline-offset-4 cursor-pointer transition-all duration-500">
+                      {service.text}
+                    </HashLink>
                   </li>
                 ))}
               </motion.ul>

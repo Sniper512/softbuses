@@ -5,6 +5,7 @@ import { links } from "../../../assets/sectionsData";
 import Bar from "../Bar";
 import { headerContactAndHamVariants, headerLogoVariants } from "../../../utils/onScrollAnimtions";
 import { HashLink } from "react-router-hash-link";
+import { Link } from "react-router";
 
 export const HeaderMobile = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -54,7 +55,9 @@ export const HeaderMobile = () => {
         >
           {/* Logo */}
           <motion.div style={{ width: logoWidth, transition: "width 0.2s" }} variants={headerLogoVariants} initial="hidden" animate="visible">
-            <img src="horizontalLogo.svg" className="w-full h-auto" alt="" />
+            <Link to="/">
+              <img src="horizontalLogo.svg" className="w-full h-auto" alt="" />
+            </Link>
           </motion.div>
           <motion.button className="w-9" onClick={toggleMenu}
             initial="hidden"

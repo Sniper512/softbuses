@@ -14,9 +14,9 @@ export const WebScrapingDataServicesPage = () => {
         <HeroBg />
         <Hero />
         <WhyChooseUsBoxes featuresData={FeaturesChooseUsWebScraping} subtitle="Reliable, scalable, and compliant scraping solutions tailored to your needs." imgSrc="/chooseUsImages/webScarping" />
-        <Bar/>
+        <Bar />
         <SubServices subServices={webScrapingSubServices} imgSrc="/servicesDataImages/webScarping" service="Web Scraping & Data" />
-        <OurProcess/>
+        <OurProcess />
       </div>
     </>
   );
