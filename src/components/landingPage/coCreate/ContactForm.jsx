@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Button from "../../general/Button";
 import { sendContactForm } from "../../../api/contactForm";
 import { FaCircleCheck, FaCircleExclamation } from "react-icons/fa6";
+import { Turnstile } from "@marsidev/react-turnstile";
 
 export const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -14,6 +15,8 @@ export const ContactForm = () => {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState("");
   const [error, setError] = useState("");
+  const [turnstileToken, setTurnstileToken] = useState("");
+  const turnstileRef = useRef();
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -31,6 +34,10 @@ export const ContactForm = () => {
       company: "",
       serviceOfInterest: "",
     });
+    setTurnstileToken("");
+    if (turnstileRef.current) {
+      turnstileRef.current.reset();
+    }
   };
 
   async function handleSubmit(e) {
@@ -43,12 +50,18 @@ export const ContactForm = () => {
       return;
     }
 
+    if (!turnstileToken) {
+      setError("Please complete the security verification.");
+      return;
+    }
+
     const payload = {
       name: formData.name,
       email: formData.email,
       phone: formData.phone,
       company: formData.company,
       message: formData.serviceOfInterest,
+      turnstileToken: turnstileToken,
     };
 
     setLoading(true);
@@ -126,6 +139,19 @@ export const ContactForm = () => {
             onChange={handleInputChange}
             className="w-full px-4 py-3 bg-white border-2 border-transparent focus:border-primary focus:outline-none text-gray-800 placeholder-gray-500 text-xs md:text-sm resize-none transition-all duration-200"
             required
+          />
+        </div>
+
+        {/* Turnstile CAPTCHA */}
+        <div className="flex justify-center">
+          <Turnstile
+            ref={turnstileRef}
+            siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY}
+            onSuccess={(token) => setTurnstileToken(token)}
+            onError={() => setTurnstileToken("")}
+            onExpire={() => setTurnstileToken("")}
+            theme="light"
+            size="normal"
           />
         </div>
 
