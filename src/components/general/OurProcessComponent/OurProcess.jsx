@@ -1,12 +1,12 @@
-import React from 'react'
-import OurProcessDesktop from './OurProcessDesktop'
-import OurProcessMobile from './OurProcessMobile'
+import React from "react";
+import OurProcessDesktop from "./OurProcessDesktop";
+import OurProcessMobile from "./OurProcessMobile";
 
-export const OurProcess = () => {
+export const OurProcess = ({ ourProcessData }) => {
   return (
     <>
-      <OurProcessDesktop />
-      <OurProcessMobile />
+      <OurProcessDesktop ourProcessData={ourProcessData} />
+      <OurProcessMobile ourProcessData={ourProcessData} />
     </>
-  )
-}
+  );
+};

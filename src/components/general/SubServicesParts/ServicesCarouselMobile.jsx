@@ -7,7 +7,10 @@ import Button from "../Button";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "motion/react";
 
-export default function ServicesCarouselMobile({ subServices = [], imgSrc = "" }) {
+export default function ServicesCarouselMobile({
+  subServices = [],
+  imgSrc = "",
+}) {
   // Custom dots component to avoid absolute positioning issues
   const customDots = (dots) => (
     <div className="flex justify-center items-center gap-2 mt-6">{dots}</div>
@@ -23,7 +26,7 @@ export default function ServicesCarouselMobile({ subServices = [], imgSrc = "" }
   const settings = {
     className: "center",
     centerMode: true,
-    arrows:false,
+    arrows: false,
     dots: true,
     infinite: true,
     centerPadding: "50px",
@@ -56,14 +59,19 @@ export default function ServicesCarouselMobile({ subServices = [], imgSrc = "" }
         ))}
       </Slider>
       <li className=" flex  items-center justify-center mt-6">
-        <motion.div 
-                initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut", delay: 0.3}}
-        viewport={{ once: true, amount: 1 }}
-
-        className="relative group">
-          <Button text={"Get a Quote"} type="button" bg="green" />
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+          viewport={{ once: true, amount: 1 }}
+          className="relative group"
+        >
+          <Button
+            text={"Get a Quote"}
+            type="button"
+            href="/#co-create"
+            bg="green"
+          />
         </motion.div>
       </li>
     </ul>

@@ -6,6 +6,7 @@ import { WhyChooseUsBoxes } from "../components/general/WhyChooseUsBoxes";
 import { Hero } from "../components/AutomationServicesPage/hero/Hero";
 import HeroBg from "../components/webDevelopmentPage/hero/HeroBg";
 import { OurProcess } from "../components/general/OurProcessComponent/OurProcess";
+import { automationServiceProcess } from "../assets/ServicesComponentsData/OurProcessData";
 
 export const AutomationServicesPage = () => {
   return (
@@ -20,7 +21,7 @@ export const AutomationServicesPage = () => {
         />
         <Bar />
         <SubServices subServices={automationSubServices} imgSrc="/servicesDataImages/automation" service="Automation" />
-        <OurProcess />
+        <OurProcess ourProcessData={automationServiceProcess} />
       </div>
     </>
   );

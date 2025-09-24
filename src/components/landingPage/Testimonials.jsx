@@ -8,7 +8,10 @@ import Bar from "../general/Bar";
 // eslint-disable-next-line no-unused-vars
 import { motion, useInView } from "motion/react";
 import { useRef } from "react";
-import { containerVariants, fadeInUpVariants } from "../../utils/onScrollAnimtions";
+import {
+  containerVariants,
+  fadeInUpVariants,
+} from "../../utils/onScrollAnimtions";
 
 // Custom Arrow Components
 const CustomPrevArrow = ({ onClick }) => (
@@ -101,8 +104,8 @@ export const Testimonials = () => {
       title: "Flawless Execution & Fast Response Times",
       feedback: (
         <>
-          <SoftBuses /> showcased
-          excellent cooperation, timely delivery, and quick responsiveness!
+          <SoftBuses /> showcased excellent cooperation, timely delivery, and
+          quick responsiveness!
         </>
       ),
       focus: "Project Delivery & Communication",
@@ -114,10 +117,10 @@ export const Testimonials = () => {
       title: "Exceptional Code & Collaboration",
       feedback: (
         <>
-          <SoftBuses /> did an
-          EXCEPTIONAL job with his professional work and code expertise. His
-          attention to detail and timely delivery were spot on. Plus, his deep
-          understanding and politeness made working together a breeze.
+          <SoftBuses /> did an EXCEPTIONAL job with his professional work and
+          code expertise. His attention to detail and timely delivery were spot
+          on. Plus, his deep understanding and politeness made working together
+          a breeze.
         </>
       ),
       focus: "Technical Excellence & Professionalism",
@@ -137,18 +140,18 @@ export const Testimonials = () => {
       rating: 5,
     },
     {
-      image: "3.png",
-      name: "Rafay Asif",
+      image: "4.png",
+      name: "     John Doe",
       title: "Creative, Committed, and Consistently Impressive",
       feedback: (
         <>
-          Working with <SoftBuses /> has been a fantastic experience. From problem-solving to
-          delivering pixel-perfect UI, everything was done with precision and
-          passion!
+          Working with <SoftBuses /> has been a fantastic experience. From
+          problem-solving to delivering pixel-perfect UI, everything was done
+          with precision and passion!
         </>
       ),
       focus: "Design Precision & Reliability",
-      rating: 4,
+      rating: 5,
     },
   ];
 
@@ -178,10 +181,11 @@ export const Testimonials = () => {
                   style={{ height: "auto" }}
                 >
                   <div
-                    className={`flex flex-col items-center justify-between w-full border-[2px] border-white/50 gap-y-4 px-4 py-8 min-h-[400px] ${index % 2 === 0 ? "bg-black" : "bg-primary-dark"
-                      }`}
+                    className={`flex flex-col items-center justify-between w-full border-[2px] border-white/50 gap-y-4 px-4 py-8 min-h-[400px] ${
+                      index % 2 === 0 ? "bg-black" : "bg-primary-dark"
+                    }`}
                   >
-                    <div className=" w-20 h-auto flex items-center  justify-center  rounded-full border-2 object-cover object-top border-primary overflow-hidden">
+                    <div className=" w-20 h-20 flex items-center  justify-center  rounded-full border-2 object-cover object-top border-primary overflow-hidden">
                       <img
                         src={`testimonials/${testimonial.image}`}
                         alt="w-10 h-auto"
@@ -195,8 +199,9 @@ export const Testimonials = () => {
                     </div>
 
                     <span
-                      className={`~sm/xl:~text-xs/base font-bold  text-center ${index % 2 === 0 ? "text-primary" : "text-white"
-                        }`}
+                      className={`~sm/xl:~text-xs/base font-bold  text-center ${
+                        index % 2 === 0 ? "text-primary" : "text-white"
+                      }`}
                     >
                       {testimonial.title}
                     </span>
@@ -209,10 +214,11 @@ export const Testimonials = () => {
                       </span>
                       <span>
                         <img
-                          src={`${index % 2 === 0
-                            ? "commaSymbolGreen.svg"
-                            : "commaSymbolWhite.svg"
-                            }`}
+                          src={`${
+                            index % 2 === 0
+                              ? "commaSymbolGreen.svg"
+                              : "commaSymbolWhite.svg"
+                          }`}
                           alt=""
                         />
                       </span>

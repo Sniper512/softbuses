@@ -7,7 +7,9 @@ import { webDevSubServices } from "../assets/ServicesComponentsData/OurServicesD
 import Bar from "../components/general/Bar";
 import { OurProcess } from "../components/general/OurProcessComponent/OurProcess";
 
-export const WebDevelopmentPage = () => {
+import { webDevServiceProcess } from "../assets/ServicesComponentsData/OurProcessData";
+
+export const WebDevelopmentPage = (  ) => {
   return (
     <>
       <div className="relative">
@@ -23,7 +25,7 @@ export const WebDevelopmentPage = () => {
         />
         <Bar />
         <SubServices subServices={webDevSubServices} imgSrc="/servicesDataImages/webDev" service="Web Development" />
-        <OurProcess />
+        <OurProcess ourProcessData={webDevServiceProcess} />
       </div>
     </>
   );

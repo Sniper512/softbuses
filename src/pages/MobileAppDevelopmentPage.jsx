@@ -7,6 +7,8 @@ import { WhyChooseUsBoxes } from "../components/general/WhyChooseUsBoxes";
 import { Hero } from "../components/mobileAppPage/hero/Hero";
 import HeroBg from "../components/webDevelopmentPage/hero/HeroBg";
 
+import { mobileDevServiceProcess } from "../assets/ServicesComponentsData/OurProcessData";
+
 export const MobileAppDevelopmentPage = () => {
   return (
     <>
@@ -19,8 +21,12 @@ export const MobileAppDevelopmentPage = () => {
           imgSrc="/chooseUsImages/mobileDev"
         />
         <Bar />
-        <SubServices subServices={mobileDevSubServices} imgSrc="/servicesDataImages/mobileDev" />
-        <OurProcess/>
+        <SubServices
+          subServices={mobileDevSubServices}
+          imgSrc="/servicesDataImages/mobileDev"
+          service="Mobile App "
+        />
+        <OurProcess ourProcessData={mobileDevServiceProcess} />
       </div>
     </>
   );

@@ -1,3 +1,4 @@
+import { uiUxServiceProcess } from "../assets/ServicesComponentsData/OurProcessData";
 import { uiUxSubServices } from "../assets/ServicesComponentsData/OurServicesData";
 import { FeaturesChooseUsUiUX } from "../assets/ServicesComponentsData/WhyChooseUsData";
 import Bar from "../components/general/Bar";
@@ -22,7 +23,7 @@ export const UiUxDesignPage = () => {
         />
         <Bar />
         <SubServices subServices={uiUxSubServices} imgSrc="/servicesDataImages/uiUx" service="UI/UX Design" />
-        <OurProcess/>
+        <OurProcess ourProcessData={uiUxServiceProcess} />
       </div>
     </>
   );

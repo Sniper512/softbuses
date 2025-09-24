@@ -38,7 +38,12 @@ export const SubServicesGrid = ({ subServices = [], imgSrc = "" }) => {
         viewport={{ once: true, amount: 1 }}
         className="relative group"
       >
-        <Button text={"Get a Quote"} type="button" bg="green" />
+        <Button
+          text={"Get a Quote"}
+          type="hashlink"
+          href="/#co-create"
+          bg="green"
+        />
       </motion.div>
     </div>
   );
