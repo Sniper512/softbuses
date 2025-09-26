@@ -9,7 +9,7 @@ import { OurProcess } from "../components/general/OurProcessComponent/OurProcess
 
 import { webDevServiceProcess } from "../assets/ServicesComponentsData/OurProcessData";
 
-export const WebDevelopmentPage = (  ) => {
+export const WebDevelopmentPage = () => {
   return (
     <>
       <div className="relative">
@@ -17,15 +17,19 @@ export const WebDevelopmentPage = (  ) => {
         <Hero />
         <WhyChooseUsBoxes
           featuresData={FeaturesChooseUsWebDev}
-
-          subtitle="Your website is often the first impression your customers get.
-            That's why we don't just build websites, we create digital
-            experiences that convert."
+          subtitle="Your website is often the first impression your customers get. That's why we don't just build websites, we create digital experiences that convert."
           imgSrc="/chooseUsImages/webDev"
         />
         <Bar />
         <SubServices subServices={webDevSubServices} imgSrc="/servicesDataImages/webDev" service="Web Development" />
-        <OurProcess ourProcessData={webDevServiceProcess} />
+        <OurProcess 
+          ourProcessData={webDevServiceProcess} 
+          lineStyles={{
+            left: "32px",
+            top: "1rem",
+            height: "calc(100% - 9rem)"
+          }}
+        />
       </div>
     </>
   );

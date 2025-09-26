@@ -26,7 +26,14 @@ export const MobileAppDevelopmentPage = () => {
           imgSrc="/servicesDataImages/mobileDev"
           service="Mobile App "
         />
-        <OurProcess ourProcessData={mobileDevServiceProcess} />
+        <OurProcess
+          ourProcessData={mobileDevServiceProcess}
+          lineStyles={{
+            left: "32px",
+            top: "1rem",
+            height: "calc(100% - 10rem)",
+          }}
+        />
       </div>
     </>
   );

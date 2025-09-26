@@ -6,10 +6,10 @@ import {
 // eslint-disable-next-line no-unused-vars
 import { motion } from "motion/react";
 
-export default function OurProcessMobile({ ourProcessData = [] }) {
+export default function OurProcessMobile({ ourProcessData = [], lineStyles }) {
   return (
     <>
-      <div className="   h-10 sm:h-14   w-full bg-[##121212] "></div>
+      <div className="   h-10 sm:h-14   w-full bg-[#121212] "></div>
 
       <section className="w-full our-process-image md:hidden">
         <div className="max-w-[1660px] mx-auto w-full flex flex-col gap-y-12 py-10 sm:py-14">
@@ -26,11 +26,7 @@ export default function OurProcessMobile({ ourProcessData = [] }) {
             {/* Vertical connecting line */}
             <div
               className="absolute w-[1px] bg-primary z-0"
-              style={{
-                left: "32px", // Position at center of dots (left margin + half dot width)
-                top: "1rem", // Start at first dot center
-                height: `calc(100% - 9rem)`, // Connect from first to last dot
-              }}
+              style={lineStyles}
             />
 
             {ourProcessData.map((process, index) => (

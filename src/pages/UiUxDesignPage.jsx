@@ -23,7 +23,13 @@ export const UiUxDesignPage = () => {
         />
         <Bar />
         <SubServices subServices={uiUxSubServices} imgSrc="/servicesDataImages/uiUx" service="UI/UX Design" />
-        <OurProcess ourProcessData={uiUxServiceProcess} />
+        <OurProcess ourProcessData={uiUxServiceProcess} 
+                  lineStyles={{
+            left: "32px",
+            top: "1rem",
+            height: "calc(100% - 11rem)"
+          }}
+/>
       </div>
     </>
   );

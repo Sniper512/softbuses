@@ -14,10 +14,25 @@ export const WebScrapingDataServicesPage = () => {
       <div className="relative">
         <HeroBg />
         <Hero />
-        <WhyChooseUsBoxes featuresData={FeaturesChooseUsWebScraping} subtitle="Reliable, scalable, and compliant scraping solutions tailored to your needs." imgSrc="/chooseUsImages/webScarping" />
+        <WhyChooseUsBoxes
+          featuresData={FeaturesChooseUsWebScraping}
+          subtitle="Reliable, scalable, and compliant scraping solutions tailored to your needs."
+          imgSrc="/chooseUsImages/webScarping"
+        />
         <Bar />
-        <SubServices subServices={webScrapingSubServices} imgSrc="/servicesDataImages/webScarping" service="Web Scraping & Data" />
-        <OurProcess ourProcessData={webScrapingServiceProcess} />
+        <SubServices
+          subServices={webScrapingSubServices}
+          imgSrc="/servicesDataImages/webScarping"
+          service="Web Scraping & Data"
+        />
+        <OurProcess
+          ourProcessData={webScrapingServiceProcess}
+          lineStyles={{
+            left: "32px",
+            top: "1rem",
+            height: "calc(100% - 11rem)",
+          }}
+        />
       </div>
     </>
   );

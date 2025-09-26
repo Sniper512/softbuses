@@ -20,8 +20,19 @@ export const AiMachineLearningPage = () => {
           imgSrc="/chooseUsImages/ai"
         />
         <Bar />
-        <SubServices subServices={aiSubServices} imgSrc="/servicesDataImages/ai" service="AI & Machine Learning" />
-        <OurProcess ourProcessData={aiServiceProcess} />
+        <SubServices
+          subServices={aiSubServices}
+          imgSrc="/servicesDataImages/ai"
+          service="AI & Machine Learning"
+        />
+        <OurProcess
+          ourProcessData={aiServiceProcess}
+          lineStyles={{
+            left: "32px",
+            top: "1rem",
+            height: "calc(100% - 14rem)",
+          }}
+        />
       </div>
     </>
   );

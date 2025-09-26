@@ -20,8 +20,19 @@ export const AutomationServicesPage = () => {
           imgSrc="/chooseUsImages/automation"
         />
         <Bar />
-        <SubServices subServices={automationSubServices} imgSrc="/servicesDataImages/automation" service="Automation" />
-        <OurProcess ourProcessData={automationServiceProcess} />
+        <SubServices
+          subServices={automationSubServices}
+          imgSrc="/servicesDataImages/automation"
+          service="Automation"
+        />
+        <OurProcess
+          ourProcessData={automationServiceProcess}
+          lineStyles={{
+            left: "32px",
+            top: "1rem",
+            height: "calc(100% - 8rem)",
+          }}
+        />
       </div>
     </>
   );
