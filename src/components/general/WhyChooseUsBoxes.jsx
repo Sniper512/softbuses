@@ -23,7 +23,7 @@ export const WhyChooseUsBoxes = ({
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true, amount: 1 }}
-            className="lg:max-w-[1000px] text-center ~sm/xl:~text-xs/base"
+            className="lg:max-w-[1000px] text-center ~sm/xl:~text-sm/base"
           >
             {subtitle}
           </motion.p>
@@ -48,7 +48,7 @@ export const WhyChooseUsBoxes = ({
                 <h3 className="text-base text-white font-semibold mb-2">
                   {feature.title}
                 </h3>
-                <p className="flex-1 text-white/75 text-xs">{feature.detail}</p>
+                {/* <p className="flex-1 text-white/75 text-base">{feature.detail}</p> */}
               </motion.li>
             ))}
           </motion.ul>
@@ -77,7 +77,7 @@ export const WhyChooseUsBoxes = ({
                   <h3 className="text-base text-white font-semibold mb-2">
                     {feature.title}
                   </h3>
-                  <p className="flex-1 text-white/75 text-xs">
+                  <p className="flex-1 text-white/75 text-sm">
                     {feature.detail}
                   </p>
                 </motion.li>
@@ -103,7 +103,7 @@ export const WhyChooseUsBoxes = ({
                   <h3 className="text-base text-white font-semibold mb-2">
                     {feature.title}
                   </h3>
-                  <p className="flex-1 text-white/75 text-xs">
+                  <p className="flex-1 text-white/75 text-sm">
                     {feature.detail}
                   </p>
                 </motion.li>
