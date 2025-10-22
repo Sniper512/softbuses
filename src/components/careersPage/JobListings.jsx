@@ -129,10 +129,10 @@ const JobListings = () => {
 									variants={fadeInUpVariants}
 								>
 									<p className="text-lg">
-										No positions available in this department at the moment.
+										No positions available at the moment.
 									</p>
 									<p className="text-sm mt-2">
-										Check back soon or explore other departments!
+										Check back soon!
 									</p>
 								</motion.div>
 							)}
