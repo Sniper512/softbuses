@@ -9,6 +9,7 @@ export async function sendContactForm(payload) {
     body: JSON.stringify(payload),
   });
 
+  
   const body = await res.json().catch(() => ({}));
   if (!res.ok) {
     throw new Error(body.message || `Request failed (${res.status})`);
