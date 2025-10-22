@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from "motion/react";
 import { Turnstile } from "@marsidev/react-turnstile";
@@ -6,9 +6,29 @@ import Button from "../general/Button";
 import { submitCareerApplication } from "../../api/careerApplication";
 
 const JobDetail = ({ job, onClose }) => {
+	// Hide body scrollbar and navbar when modal is open
+	useEffect(() => {
+		// Add class to body to hide scrollbar
+		document.body.style.overflow = "hidden";
+
+		// Hide navbar
+		const navbar = document.querySelector("nav");
+		if (navbar) {
+			navbar.style.display = "none";
+		}
+
+		// Cleanup: restore scrollbar and navbar when modal closes
+		return () => {
+			document.body.style.overflow = "unset";
+			if (navbar) {
+				navbar.style.display = "";
+			}
+		};
+	}, []);
 	const [showApplicationForm, setShowApplicationForm] = useState(false);
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [submitStatus, setSubmitStatus] = useState(null);
+	const [fileError, setFileError] = useState("");
 	const [turnstileToken, setTurnstileToken] = useState("");
 	const [formData, setFormData] = useState({
 		name: "",
@@ -78,6 +98,26 @@ const JobDetail = ({ job, onClose }) => {
 
 	const handleChange = (e) => {
 		const { name, value, files } = e.target;
+
+		// Validate file size for resume uploads
+		if (files && files[0]) {
+			const file = files[0];
+			const maxSize = 5 * 1024 * 1024; // 5MB in bytes
+
+			if (file.size > maxSize) {
+				const fileSizeMB = (file.size / (1024 * 1024)).toFixed(2);
+				setFileError(
+					`File size (${fileSizeMB}MB) exceeds the maximum limit of 5MB. Please choose a smaller file.`
+				);
+				// Clear the file input
+				e.target.value = "";
+				return;
+			} else {
+				// Clear file error if file is valid
+				setFileError("");
+			}
+		}
+
 		setFormData((prev) => ({
 			...prev,
 			[name]: files ? files[0] : value,
@@ -90,7 +130,7 @@ const JobDetail = ({ job, onClose }) => {
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
 				exit={{ opacity: 0 }}
-				className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 overflow-y-auto"
+				className="fixed inset-0 bg-black/90 z-[9999] flex items-center justify-center p-4 overflow-y-auto"
 				onClick={onClose}
 			>
 				<motion.div
@@ -179,8 +219,27 @@ const JobDetail = ({ job, onClose }) => {
 									</ul>
 								</div>
 
+								{/* Required Skills */}
+								{job.skills && job.skills.length > 0 && (
+									<div className="mb-8">
+										<h3 className="text-xl font-bold text-white mb-3">
+											Required Skills
+										</h3>
+										<div className="flex flex-wrap gap-2">
+											{job.skills.map((skill, index) => (
+												<span
+													key={index}
+													className="px-4 py-2 bg-primary/10 text-primary border border-primary/30 rounded-full text-sm hover:bg-primary/20 transition-colors"
+												>
+													{skill}
+												</span>
+											))}
+										</div>
+									</div>
+								)}
+
 								{/* Nice to Have */}
-								{job.niceToHave && (
+								{job.niceToHave && job.niceToHave.length > 0 && (
 									<div className="mb-8">
 										<h3 className="text-xl font-bold text-white mb-3">
 											Nice to Have
@@ -307,11 +366,22 @@ const JobDetail = ({ job, onClose }) => {
 											accept=".pdf,.doc,.docx"
 											onChange={handleChange}
 											disabled={isSubmitting}
-											className="w-full bg-black border border-primary/50 p-3 text-white focus:border-primary focus:outline-none file:mr-4 file:py-2 file:px-4 file:border-0 file:bg-primary file:text-black file:cursor-pointer disabled:opacity-50"
+											className={`w-full bg-black border p-3 text-white focus:outline-none file:mr-4 file:py-2 file:px-4 file:border-0 file:bg-primary file:text-black file:cursor-pointer disabled:opacity-50 ${
+												fileError
+													? "border-red-500 focus:border-red-500"
+													: "border-primary/50 focus:border-primary"
+											}`}
 										/>
-										<p className="text-white/50 text-sm mt-2">
-											Accepted formats: PDF, DOC, DOCX (Max 5MB)
-										</p>
+										{fileError && (
+											<p className="text-red-400 text-sm mt-2 font-semibold">
+												⚠️ {fileError}
+											</p>
+										)}
+										{!fileError && (
+											<p className="text-white/50 text-sm mt-2">
+												Accepted formats: PDF, DOC, DOCX (Max 5MB)
+											</p>
+										)}
 									</div>
 
 									<div>

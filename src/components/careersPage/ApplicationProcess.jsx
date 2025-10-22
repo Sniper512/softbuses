@@ -74,17 +74,17 @@ const ApplicationProcess = () => {
 						variants={fadeInUpVariants}
 					>
 						{/* Timeline line for desktop */}
-						<div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-primary/30 transform -translate-y-1/2"></div>
+						{/* <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-primary/30 transform -translate-y-1/2"></div> */}
 
 						<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative">
 							{steps.map((step, index) => (
 								<motion.div
 									key={index}
-									className="relative bg-black border-2 border-primary/30 p-6 hover:border-primary hover:shadow-glow-2 transition-all duration-300"
+									className="relative bg-black border-2 border-white/60 p-6 hover:border-primary  transition-all duration-300"
 									variants={fadeInUpVariants}
 								>
 									{/* Step Number */}
-									<div className="absolute -top-6 left-6 bg-black px-4 py-2 border-2 border-primary">
+									<div className="absolute -top-6 left-6 bg-black px-4 py-2 border-2 border-white/60">
 										<span className="text-2xl  text-white">{step.number}</span>
 									</div>
 
@@ -98,7 +98,7 @@ const ApplicationProcess = () => {
 									</div>
 
 									{/* Title */}
-									<h3 className="text-xl font-bold text-white mb-3 ">
+									<h3 className="text-xl font-bold text-white mb-3 text-center">
 										{step.title}
 									</h3>
 

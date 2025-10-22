@@ -70,7 +70,7 @@ const WhyJoinUs = () => {
 						{reasons.map((reason, index) => (
 							<motion.div
 								key={index}
-								className="border border-primary/30 p-6 hover:border-primary hover:shadow-glow-2 transition-all duration-300 bg-black/50"
+								className="border border-white/60 p-6 hover:border-primary  transition-all duration-300 bg-black/50"
 								variants={fadeInUpVariants}
 							>
 								<div className="mb-4">

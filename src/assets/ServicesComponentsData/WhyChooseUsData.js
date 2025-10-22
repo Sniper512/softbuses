@@ -26,34 +26,34 @@ export const FeaturesChooseUsWebDev = [
 ];
 
 export const FeaturesChooseUsMobileAppDev = [
-  {
-    icon: "1",
-    title: "Native & Cross-Platform Experts",
-    detail:
-      "We master Swift, Kotlin, Flutter, React Native - the best tools for your project.",
-  },
-  {
-    icon: "1",
-    title: "User-Centered Design",
-    detail:
-      "Beautiful interfaces + intuitive flows = apps people actually love to use.",
-  },
-  {
-    icon: "1",
-    title: "End-to-End Services",
-    detail: "From app strategy & design to store publishing & ongoing support.",
-  },
-  {
-    icon: "1",
-    title: "Performance First",
-    detail:
-      "Lightning-fast, secure, and optimized for low battery + data usage.",
-  },
-  {
-    icon: "1",
-    title: "Scalable & Future-Proof",
-    detail: "Built with a foundation that grows with your business.",
-  },
+	{
+		icon: "Native-cross-platform",
+		title: "Native & Cross-Platform Experts",
+		detail:
+			"We master Swift, Kotlin, Flutter, React Native - the best tools for your project.",
+	},
+	{
+		icon: "User-Centered-Design",
+		title: "User-Centered Design",
+		detail:
+			"Beautiful interfaces + intuitive flows = apps people actually love to use.",
+	},
+	{
+		icon: "End-to-End-Services",
+		title: "End-to-End Services",
+		detail: "From app strategy & design to store publishing & ongoing support.",
+	},
+	{
+		icon: "Performance-First",
+		title: "Performance First",
+		detail:
+			"Lightning-fast, secure, and optimized for low battery + data usage.",
+	},
+	{
+		icon: "Scalable-Future-Proof",
+		title: "Scalable & Future-Proof",
+		detail: "Built with a foundation that grows with your business.",
+	},
 ];
 
 export const FeaturesChooseUsAiML = [
