@@ -68,7 +68,7 @@ export const ContactForm = () => {
 		try {
 			await sendContactForm(payload);
 			setSuccess(
-				"Thanks — your message was sent. We will get back to you shortly."
+				"Thanks - your message was sent. We will get back to you shortly."
 			);
 			resetForm();
 		} catch (err) {

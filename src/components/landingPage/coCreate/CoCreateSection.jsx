@@ -36,7 +36,7 @@ export const CoCreateSection = () => {
                 <p className="text-white/80 text-xs md:text-sm leading-relaxed">
                   Let's bring your digital vision to life! Whether you need a
                   sleek web app, cutting-edge AI integration, intuitive UI/UX, or
-                  powerful automation tools—our expert team is ready to
+                  powerful automation tools, our expert team is ready to
                   collaborate and build something remarkable with you.
                 </p>
               </div>

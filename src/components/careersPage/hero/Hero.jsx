@@ -21,14 +21,8 @@ export const Hero = () => {
 					<motion.div variants={fadeInUpVariants}>
 						<h1 className="~sm/xl:~text-3xl/7xl font-bold">
 							Join Our Team at <br />
-							<span
-								className="text-primary"
-								style={{
-									textShadow:
-										"0 0 5px rgba(105, 255, 0, 0.6), 0 0 10px rgba(105, 255, 0, 0.4), 0 0 20px rgba(105, 255, 0, 0.2)",
-								}}
-							>
-								<SoftBuses />
+							<span className="inline-block mt-4">
+								<SoftBuses fontSize="~sm/xl:~text-3xl/7xl" />
 							</span>
 						</h1>
 					</motion.div>

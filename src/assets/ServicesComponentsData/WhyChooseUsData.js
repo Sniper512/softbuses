@@ -3,166 +3,121 @@ export const FeaturesChooseUsWebDev = [
     icon: "1",
     title: "Mobile-First Development",
     detail:
-      "Since most users browse on their phones, we design with mobile as the priority. This ensures your site works seamlessly across mobile, tablet, and desktop, no clunky resizing, no broken layouts.",
+      "Over 70% of users browse on mobile. We prioritize mobile design first, ensuring flawless experiences across all devices: phones, tablets, and desktops. No compromises, just seamless performance everywhere.",
   },
   {
     icon: "2",
-    title: "SEO-Optimized",
+    title: "SEO-Optimized & Lightning Fast",
     detail:
-      "A beautiful website isn't enough if no one finds it. We build with SEO best practices baked in from clean code to keyword-friendly structures, so your site has a better chance to rank higher in Google and get discovered by the right audience.",
+      "Rank higher on Google with clean, SEO-friendly code and blazing-fast load times. We optimize every element so your site gets discovered, keeps visitors engaged, and converts browsers into buyers.",
   },
   {
     icon: "3",
-    title: "Scalable & Secure",
+    title: "Scalable & Future-Proof",
     detail:
-      "As your business grows, your website should too. We use future-proof architecture that can handle more traffic, more features, and stronger security without slowing you down.",
-  },
-  {
-    icon: "4",
-    title: "Performance Driven",
-    detail:
-      "Studies show that even a 1-second delay can lose visitors. That's why we focus on lightning-fast load times, smooth navigation, and user-friendly flows, turning casual visitors into loyal customers.",
+      "Built to grow with you. Our modern architecture handles increased traffic, new features, and robust security effortlessly, ensuring your website stays powerful as your business scales.",
   },
 ];
 
 export const FeaturesChooseUsMobileAppDev = [
 	{
 		icon: "Native-cross-platform",
-		title: "Native & Cross-Platform Experts",
+		title: "Native & Cross-Platform Mastery",
 		detail:
-			"We master Swift, Kotlin, Flutter, React Native - the best tools for your project.",
+			"We're experts in Swift, Kotlin, Flutter, and React Native. Whether you need native iOS/Android apps or cross-platform solutions, we choose the right technology to maximize performance and reach for your project.",
 	},
 	{
 		icon: "User-Centered-Design",
-		title: "User-Centered Design",
+		title: "User-Centered Design Excellence",
 		detail:
-			"Beautiful interfaces + intuitive flows = apps people actually love to use.",
-	},
-	{
-		icon: "End-to-End-Services",
-		title: "End-to-End Services",
-		detail: "From app strategy & design to store publishing & ongoing support.",
+			"Stunning interfaces meet intuitive navigation. We design apps that users genuinely enjoy using, creating experiences that keep them coming back and drive higher engagement and retention rates.",
 	},
 	{
 		icon: "Performance-First",
-		title: "Performance First",
+		title: "Performance That Impresses",
 		detail:
-			"Lightning-fast, secure, and optimized for low battery + data usage.",
-	},
-	{
-		icon: "Scalable-Future-Proof",
-		title: "Scalable & Future-Proof",
-		detail: "Built with a foundation that grows with your business.",
+			"Lightning-fast, highly secure apps optimized for minimal battery drain and data usage. Built on a scalable foundation that evolves seamlessly as your user base and business needs grow.",
 	},
 ];
 
 export const FeaturesChooseUsAiML = [
   {
     icon: "1",
-    title: "Custom ML Models",
-    detail: "No cookie-cutter AI. We design models unique to your challenges.",
+    title: "Custom AI Solutions, Not Templates",
+    detail: "Forget one-size-fits-all. We build intelligent machine learning models specifically designed for your unique business challenges, ensuring maximum relevance and real-world impact on your bottom line.",
   },
   {
     icon: "2",
-    title: "Future-Ready Solutions",
-    detail: "Predictive and adaptive AI that scales with your growth.",
-  },
-  {
-    icon: "4",  
-    title: "Proven AI Expertise",
+    title: "Deep AI & ML Expertise",
     detail:
-      "Deep knowledge in NLP, computer vision, analytics, and data engineering.",
+      "Our team brings proven experience in natural language processing, computer vision, predictive analytics, and data engineering. We transform complex data into powerful insights that drive strategic decisions.",
   },
   {
     icon: "3",
-    title: "End-to-End Delivery",
-    detail: "From idea to deployment, we manage it all.",
+    title: "Full-Cycle AI Implementation",
+    detail: "From initial concept and data strategy through model development, testing, and production deployment, we handle the entire AI journey, ensuring smooth integration and measurable business results.",
   },
 ];
 
 export const FeaturesChooseUsUiUX = [
   {
     icon: "1",
-    title: "User-First Philosophy",
+    title: "User-First Design Philosophy",
     detail:
-      "We design with empathy, creating experiences that feel intuitive and meaningful for users. Their satisfaction drives our success.",
+      "We design with deep empathy for your users' needs and behaviors. Every interface element is crafted to feel intuitive and delightful, creating experiences that boost satisfaction, trust, and long-term loyalty.",
   },
   {
     icon: "2",
-    title: "Pixel-Perfect Interface",
+    title: "Pixel-Perfect Visual Design",
     detail:
-      "Our designs are polished, consistent, and sprint-reflective. Every detail is crafted to look professional across all devices.",
+      "Stunning, polished interfaces that maintain perfect consistency across every screen and device. Each detail is meticulously crafted to reinforce your brand identity and create a professional, memorable impression.",
   },
   {
     icon: "3",
-    title: "Conversion-Focused UX",
+    title: "Conversion-Driven UX Strategy",
     detail:
-      "We blend beauty with strategy, optimizing layouts, flows, and interactions for maximum conversion and engagement. Every design drives results.",
-  },
-  {
-    icon: "4",
-    title: "End-to-End Design",
-    detail:
-      "From research to final delivery, we manage the entire design journey. You get everything from concept to implementation.",
+      "Beautiful design meets business goals. We optimize user flows, interactions, and layouts using data-driven insights to maximize engagement, reduce friction, and dramatically increase conversions.",
   },
 ];
 
 export const FeaturesChooseUsWebScraping = [
   {
     icon: "1",
-    title: "Data That Drives Decisions",
+    title: "Actionable Data Intelligence",
     detail:
-      "We don't just scrape raw information we deliver tailored datasets designed for your industry. Whether it's e-commerce product details, financial market movements, or research insights, our data helps you make smarter, faster, and more confident business decisions.",
+      "We don't just scrape, we deliver industry-specific datasets tailored to your needs. Transform raw web data into strategic insights for e-commerce, finance, research, or competitive intelligence that fuel smarter decisions.",
   },
   {
     icon: "2",
-    title: "Clean & Structured Outputs",
+    title: "Clean, Ready-to-Use Datasets",
     detail:
-      "Data is only useful if it's organized. We ensure your datasets are ready to use immediately, delivered in formats like Excel, CSV, JSON, or APIs that integrate directly into your workflows, dashboards, or analytics tools.",
+      "Receive perfectly structured data in your preferred format: Excel, CSV, JSON, or direct API integration. No messy cleanup needed. Your data arrives organized and ready to plug into dashboards, analytics tools, or workflows immediately.",
   },
   {
     icon: "3",
-    title: "Scalable & Automated",
+    title: "Scalable & Compliant Solutions",
     detail:
-      "From a one-time scraping project to enterprise-level automated pipelines, our solutions are built to grow with your business. Need hourly updates? Daily feeds? Ongoing monitoring? We make it happen seamlessly.",
-  },
-  {
-    icon: "4",
-    title: "Compliance-First Approach",
-    detail:
-      "We design every project with security, privacy, and compliance in mind. Our methods respect data-use policies and avoid risky scraping practices, so you get the insights you need without legal or ethical concerns.",
+      "From one-time data extraction to enterprise-grade automated pipelines with hourly or daily updates. We build ethical, compliant scraping solutions that respect data policies and scale seamlessly with your growing business needs.",
   },
 ];
 
 export const FeaturesChooseUsAutomation = [
   {
     icon: "1",
-    title: "Seamless Integrations",
+    title: "Seamless System Integration",
     detail:
-      "We connect hundreds of applications, APIs, and databases into a single ecosystem, ensuring smooth data flow and zero silos.",
+      "Connect your entire digital ecosystem: hundreds of apps, APIs, databases, and tools working together in harmony. We eliminate data silos and create smooth information flow across your organization for unified operations.",
   },
   {
     icon: "2",
-    title: "Custom Workflows",
+    title: "Tailored Workflow Automation",
     detail:
-      "No two businesses are the same. We design automation flows tailored specifically to your processes and goals.",
+      "No cookie-cutter solutions. We design intelligent automation workflows specifically mapped to your unique business processes, team structure, and strategic goals, ensuring perfect alignment with how you actually work.",
   },
   {
     icon: "3",
-    title: "Time & Cost Efficiency",
+    title: "Massive Time & Cost Savings",
     detail:
-      "Eliminate repetitive, manual tasks that waste valuable hours every week. Let automation do the heavy lifting for you.",
-  },
-  {
-    icon: "4",
-    title: "Data-Driven Decisions",
-    detail:
-      "Our automations don't just move data they clean, transform, and analyze it, giving you insights you can act on immediately.",
-  },
-  {
-    icon: "5",
-    title: "Secure & Reliable",
-    detail:
-      "Every automation we build follows best security practices, ensuring data safety, uptime, and compliance with industry standards.",
+      "Eliminate hours of repetitive manual tasks every week. Our smart automation handles the heavy lifting: data entry, reporting, notifications, approvals, freeing your team to focus on high-value strategic work that drives real growth.",
   },
 ];

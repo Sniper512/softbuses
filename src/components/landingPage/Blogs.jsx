@@ -36,7 +36,7 @@ export const Blogs = () => {
                     could grow with you?
                   </p>
                   <p className="text-xs font-light">
-                    <SoftBuses fontSize="text-sm" />, we don't just code—we engineer intelligent
+                    <SoftBuses fontSize="text-sm" />, we don't just code, we engineer intelligent
                     ecosystems. We're moving beyond traditional development to
                     build digital organisms: systems that learn, adapt, and
                     evolve with your business.
@@ -45,7 +45,7 @@ export const Blogs = () => {
               </div>
               <div className="w-[90%] mx-auto flex flex-col items-start border-[1px] border-primary px-4 py-6 gap-y-5 mt-6">
                 <h5 className=" ~sm/xl:~text-sm/lg  font-semibold">
-                  Digital Products Are Dead—
+                  Digital Products Are Dead:
                   <span className="text-primary ">
                     {" "}
                     Welcome to Digital Beings
@@ -54,8 +54,8 @@ export const Blogs = () => {
                 <p className="text-xs leading-4 ">
                   We believe the world is shifting away from "digital products"
                   to digital partners. Your website is no longer a static
-                  presence—it's an active contributor. Your apps aren't just
-                  tools—they're team members. <br />
+                  presence, it's an active contributor. Your apps aren't just
+                  tools, they're team members. <br />
                   That's why at <SoftBuses fontSize="text-xs" />, we embed every project with a layer
                   of: <br />
                   Behavioral intelligence (AI that adapts) <br />
@@ -83,7 +83,7 @@ export const Blogs = () => {
                 <p className="text-xs leading-4">
 
                   That's what <SoftBuses fontSize="text-xs" /> is about. <br className="hidden md:block" /> Not just shipping
-                  software—but shaping the next generation of <span className="text-primary">living technology.</span>
+                  software, but shaping the next generation of <span className="text-primary">living technology.</span>
                 </p>
               </div>
             </div>

@@ -44,12 +44,12 @@ export default function OurProcessDesktop({ ourProcessData = [] }) {
                 </div>
                 <motion.div
                   variants={fadeInUpVariants}
-                  className="flex flex-col gap-y-4 group "
+                  className="flex flex-col group "
                 >
-                  <h3 className="text-xl font-semibold mt-4 group-hover:text-primary  transition-colors duration-300">
+                  <h3 className="text-xl font-semibold mt-4 group-hover:text-primary transition-colors duration-300 min-h-[4rem] flex items-center justify-center">
                     {process.title}
                   </h3>
-                  <p className="text-[10px] text-white/60 group-hover:text-primary transition-colors duration-300">
+                  <p className="text-[10px] text-white/60 group-hover:text-primary transition-colors duration-300 mt-4">
                     {process.detail}
                   </p>
                 </motion.div>

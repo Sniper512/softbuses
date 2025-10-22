@@ -23,7 +23,7 @@ export const webDevSubServices = [
     icon: "4",
     title: "API Development & Integration",
     detail:
-      "We help your website connect with other tools and services through APIs—payment systems for online transactions, social media platforms, databases, and makes your digital ecosystem more powerful.",
+      "We help your website connect with other tools and services through APIs: payment systems for online transactions, social media platforms, databases, and makes your digital ecosystem more powerful.",
   },
   {
     icon: "5",

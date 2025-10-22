@@ -79,7 +79,7 @@ export const uiUxServiceProcess = [
   },
   {
     title: "Visual Design",
-    detail: "Once the structure is clear, we craft pixel-perfect UI elements, layouts, and themes. Every detail — typography, color, spacing, and icons — is aligned with your brand identity for maximum impact."
+    detail: "Once the structure is clear, we craft pixel-perfect UI elements, layouts, and themes. Every detail, typography, color, spacing, and icons, is aligned with your brand identity for maximum impact."
   },
   {
     title: "Prototyping & Testing",

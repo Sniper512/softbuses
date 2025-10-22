@@ -70,7 +70,7 @@ export const Hero = () => {
           variants={fadeInUpVariants}
         >
           <Button
-            text="Power up your Business with AI"
+            text="Power up My Business with AI"
             type="hashlink"
             href="/#co-create"
             bg="green"

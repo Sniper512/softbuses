@@ -115,17 +115,18 @@ const ApplicationProcess = () => {
 						variants={fadeInUpVariants}
 					>
 						<p className="text-white/80 text-base mb-4">
-							Our hiring process typically takes 2-4 weeks from application to
+							Our hiring process typically takes 1-2 weeks from application to
 							offer. We're committed to providing a fair, transparent, and
 							respectful experience for all candidates.
 						</p>
 						<p className="text-primary text-sm">
 							Questions about the process? Email us at{" "}
 							<a
-								href="mailto:careers@softbuses.com"
-								className="underline hover:text-primary-medium"
+								href="mailto:hr@softbuses.com"
+								className="underline hover:text-primary-medium cursor-pointer"
+								rel="noopener noreferrer"
 							>
-								careers@softbuses.com
+								hr@softbuses.com
 							</a>
 						</p>
 					</motion.div>

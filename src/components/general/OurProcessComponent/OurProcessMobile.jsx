@@ -35,15 +35,15 @@ export default function OurProcessMobile({ ourProcessData = [], lineStyles }) {
                 className="flex ~/md:~gap-x-3/8 "
                 key={index}
               >
-                <div className="w-8 h-8 rounded-full bg-primary/15 flex items-center justify-center">
+                <div className="w-8 h-8 rounded-full bg-primary/15 flex items-center justify-center flex-shrink-0">
                   <div className="w-4 h-4 rounded-full bg-primary" />
                 </div>
 
-                <div className="flex flex-col gap-y-4   max-w-[250px]">
-                  <h3 className="relative text-lg font-semibold ">
+                <div className="flex flex-col max-w-[250px]">
+                  <h3 className="relative text-lg font-semibold min-h-[3.5rem] flex items-center">
                     {process.title}
                   </h3>
-                  <p className="text-sm text-white/60  px-4">
+                  <p className="text-sm text-white/60 px-4 mt-4">
                     {process.detail}
                   </p>
                 </div>
