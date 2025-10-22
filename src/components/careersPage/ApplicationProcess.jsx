@@ -98,7 +98,7 @@ const ApplicationProcess = () => {
 									</div>
 
 									{/* Title */}
-									<h3 className="text-xl font-bold text-white mb-3">
+									<h3 className="text-xl font-bold text-white mb-3 ">
 										{step.title}
 									</h3>
 

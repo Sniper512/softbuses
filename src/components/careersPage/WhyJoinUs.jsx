@@ -80,10 +80,10 @@ const WhyJoinUs = () => {
 										className="w-12 h-12 mx-auto object-contain"
 									/>
 								</div>
-								<h3 className="text-xl font-bold text-white mb-3">
+								<h3 className="text-xl font-bold text-white mb-3 text-center">
 									{reason.title}
 								</h3>
-								<p className="text-white/80 text-sm md:text-sm">
+								<p className="text-white/80 text-sm md:text-sm text-center">
 									{reason.description}
 								</p>
 							</motion.div>
