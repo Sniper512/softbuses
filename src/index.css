@@ -3,111 +3,149 @@
 @tailwind utilities;
 
 body {
-  @apply bg-black text-white;
+	@apply bg-black text-white;
 }
 
 .hero-img {
-
-  background: url('/bg.png') no-repeat center center;
-  background-size: cover;
+	background: url("/bg.png") no-repeat center center;
+	background-size: cover;
 }
 .our-process-image {
-  background: url('/ourProcessBg.png') no-repeat center center;
-  background-size: cover;
+	background: url("/ourProcessBg.png") no-repeat center center;
+	background-size: cover;
 }
 
 /* ----------------Function------------------- */
 @keyframes rotate360 {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
 }
 
 .settings {
-  animation: rotate360 4s linear infinite;
-  transform-origin: 39% 50.5%;
+	animation: rotate360 4s linear infinite;
+	transform-origin: 39% 50.5%;
 }
-
-
-
-
-
-
-
 
 /* Slider Slick */
 .slick-slider .slick-list {
-  overflow: hidden;
+	overflow: hidden;
 }
 
 .slick-slider .slick-track {
-  display: flex !important;
-  align-items: stretch;
+	display: flex !important;
+	align-items: stretch;
 }
 
 .slick-slider .slick-slide {
-  height: auto;
-  display: flex !important;
-  align-items: stretch;
+	height: auto;
+	display: flex !important;
+	align-items: stretch;
 }
 
-.slick-slider .slick-slide>div {
-  height: 100%;
-  display: flex;
+.slick-slider .slick-slide > div {
+	height: 100%;
+	display: flex;
 }
 
 .custom-dots {
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  margin-top: 24px;
+	display: flex !important;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+	margin-top: 24px;
 }
 
 .custom-dots li {
-  width: 40px;
-  height: 40px;
-  margin: 0;
+	width: 40px;
+	height: 40px;
+	margin: 0;
 }
 
 .custom-dot {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: all 0.3s ease;
 }
 
 .custom-dot:hover {
-  border-color: rgba(255, 255, 255, 0.6);
-  transform: scale(1.1);
+	border-color: rgba(255, 255, 255, 0.6);
+	transform: scale(1.1);
 }
 
 .dot-inner {
-  width: 16px;
-  height: 16px;
-  background-color: rgba(255, 255, 255, 0.3);
+	width: 16px;
+	height: 16px;
+	background-color: rgba(255, 255, 255, 0.3);
 
-  transition: all 0.3s ease;
+	transition: all 0.3s ease;
 }
 
 .slick-active .custom-dot {
-  border-color: #69FF00;
-  background-color: rgba(43, 102, 4, 0.1);
+	border-color: #69ff00;
+	background-color: rgba(43, 102, 4, 0.1);
 }
 
 .slick-active .dot-inner {
-  background-color: #69FF00;
-  transform: scale(1.2);
+	background-color: #69ff00;
+	transform: scale(1.2);
 }
 
 /* Technologies Section */
 .technologies_section {
-  mask-image: linear-gradient(90deg, transparent 1%, #d9d9d9 4%, #d9d9d9 96%, transparent 99%), linear-gradient(180deg, transparent 5%, #d9d9d9 10%, #d9d9d9 90%, transparent 95%);
-  mask-composite: intersect;
+	mask-image: linear-gradient(
+			90deg,
+			transparent 1%,
+			#d9d9d9 4%,
+			#d9d9d9 96%,
+			transparent 99%
+		),
+		linear-gradient(
+			180deg,
+			transparent 5%,
+			#d9d9d9 10%,
+			#d9d9d9 90%,
+			transparent 95%
+		);
+	mask-composite: intersect;
+}
+
+/* Custom Scrollbar for Modal */
+.custom-scrollbar::-webkit-scrollbar {
+	width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+	background: rgba(0, 0, 0, 0.3);
+	border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+	background: #69ff00;
+	border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+	background: #55cc00;
+}
+
+/* Firefox scrollbar */
+.custom-scrollbar {
+	scrollbar-width: thin;
+	scrollbar-color: #69ff00 rgba(0, 0, 0, 0.3);
+}
+
+/* Hide body scrollbar when modal is open */
+body.modal-open {
+	overflow: hidden !important;
+	height: 100vh;
+	position: fixed;
+	width: 100%;
 }

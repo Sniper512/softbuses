@@ -1,6 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from "motion/react";
-
+import { FaBuilding, FaLocationDot,  } from "react-icons/fa6";
+import { IoMdTimer } from "react-icons/io";
 const JobCard = ({ job, onClick }) => {
 	return (
 		<motion.div
@@ -20,15 +21,21 @@ const JobCard = ({ job, onClick }) => {
 
 			<div className="space-y-2 mb-4">
 				<div className="flex items-center text-sm text-white/70">
-					<span className="mr-2">🏢</span>
+					<span className="mr-2">
+						<FaBuilding />
+					</span>
 					<span>{job.department}</span>
 				</div>
 				<div className="flex items-center text-sm text-white/70">
-					<span className="mr-2">📍</span>
+					<span className="mr-2">
+						<FaLocationDot />
+					</span>
 					<span>{job.location}</span>
 				</div>
 				<div className="flex items-center text-sm text-white/70">
-					<span className="mr-2">⏱️</span>
+					<span className="mr-2">
+						<IoMdTimer />
+					</span>
 					<span>{job.experience}</span>
 				</div>
 			</div>

@@ -4,22 +4,32 @@ import { motion, AnimatePresence } from "motion/react";
 import { Turnstile } from "@marsidev/react-turnstile";
 import Button from "../general/Button";
 import { submitCareerApplication } from "../../api/careerApplication";
+import { FaBuilding, FaLocationDot } from "react-icons/fa6";
+import { IoMdTimer } from "react-icons/io";
 
 const JobDetail = ({ job, onClose }) => {
 	// Hide body scrollbar and navbar when modal is open
 	useEffect(() => {
-		// Add class to body to hide scrollbar
-		document.body.style.overflow = "hidden";
+		// Hide body scrollbar
+		document.body.classList.add("modal-open");
 
-		// Hide navbar
+		// Hide header and navbar
+		const header = document.querySelector("header");
 		const navbar = document.querySelector("nav");
+
+		if (header) {
+			header.style.display = "none";
+		}
 		if (navbar) {
 			navbar.style.display = "none";
 		}
 
 		// Cleanup: restore scrollbar and navbar when modal closes
 		return () => {
-			document.body.style.overflow = "unset";
+			document.body.classList.remove("modal-open");
+			if (header) {
+				header.style.display = "";
+			}
 			if (navbar) {
 				navbar.style.display = "";
 			}
@@ -130,14 +140,14 @@ const JobDetail = ({ job, onClose }) => {
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
 				exit={{ opacity: 0 }}
-				className="fixed inset-0 bg-black/90 z-[9999] flex items-center justify-center p-4 overflow-y-auto"
+				className="fixed inset-0 bg-black/90 z-[9999] flex items-center justify-center p-4 overflow-hidden"
 				onClick={onClose}
 			>
 				<motion.div
 					initial={{ scale: 0.9, opacity: 0 }}
 					animate={{ scale: 1, opacity: 1 }}
 					exit={{ scale: 0.9, opacity: 0 }}
-					className="bg-dark border-2 border-primary max-w-4xl w-full my-8 relative"
+					className="bg-dark border-2 border-primary max-w-4xl w-full max-h-[90vh] relative flex flex-col"
 					onClick={(e) => e.stopPropagation()}
 				>
 					{/* Close Button */}
@@ -148,7 +158,7 @@ const JobDetail = ({ job, onClose }) => {
 						×
 					</button>
 
-					<div className="p-8 max-h-[85vh] overflow-y-auto">
+					<div className="p-8 overflow-y-auto flex-1 custom-scrollbar">
 						{!showApplicationForm ? (
 							<>
 								{/* Job Header */}
@@ -158,15 +168,21 @@ const JobDetail = ({ job, onClose }) => {
 									</h2>
 									<div className="flex flex-wrap gap-4 text-sm text-white/70">
 										<span className="flex items-center">
-											<span className="mr-2">🏢</span>
+											<span className="mr-2">
+												<FaBuilding />
+											</span>
 											{job.department}
 										</span>
 										<span className="flex items-center">
-											<span className="mr-2">📍</span>
+											<span className="mr-2">
+												<FaLocationDot />
+											</span>
 											{job.location}
 										</span>
 										<span className="flex items-center">
-											<span className="mr-2">⏱️</span>
+											<span className="mr-2">
+												<IoMdTimer />
+											</span>
 											{job.experience}
 										</span>
 										<span className="px-3 py-1 bg-primary/20 text-primary border border-primary/50">
